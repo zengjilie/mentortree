@@ -1,3 +1,4 @@
+//PARSE INITIAL JSON TO OBJECT
 var tree = {
     gender: 'male',
     color: 'blue',
@@ -29,7 +30,11 @@ function setup() {
 
 function draw() {
     background(51);
+    stroke(255);
+    translate(200, height);
+    branch(100);
+}
 
-    var len = 100;
-    line(200, height, 200, height-len);
+function branch(len){
+    line(0,0,0, -len);
 }
