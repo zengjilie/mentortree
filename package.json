@@ -1,0 +1,24 @@
+{
+  "name": "mentor-tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "d3-hierarchy": "^3.1.1",
+    "node-csv": "^0.1.2"
+  },
+  "scripts": {
+    "start": "node ./experiments/json-svg-converter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zengjilie/mentortree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zengjilie/mentortree/issues"
+  },
+  "homepage": "https://github.com/zengjilie/mentortree#readme"
+}
