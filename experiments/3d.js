@@ -8,7 +8,12 @@ function draw() {
     var box = new Box(0, 0, 0);
     box.draw();
 
-    var box = new Box(100, 100, 100);
+    var box = new Box(-10, 0, 0);
+    box.draw();
+
+    translate(10, 0, 0);
+
+    var box = new Box(-20, 0, 0);
     box.draw();
 }
 
@@ -18,10 +23,10 @@ class Box {
         this.size = 100;
     }
     draw() {
-        rotateX(angle += 0.01);
+        // rotateX(angle += 0.01);
         noStroke();
         fill('rgba(100,100,100,0.5)');
         translate(this.pos.x, this.pos.y, this.pos.z);
-        sphere(100);
+        sphere(10);
     }
 }

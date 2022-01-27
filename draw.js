@@ -12,35 +12,52 @@ function setup() {
     data = data.data;
     console.log(data);
     for (i = 0; i < data.length; i++) {
-        nodes.push(new Node(data[i].x, data[i].y, data[i].color));
+        nodes.push(new Node(data[i].x, data[i].y, 50, data[i].color));
     }
     console.log(nodes);
 }
 
 function draw() {
     background(255);
-    // blendMode(MULTIPLY);
-    translate(10, 10, 10);
-    scale(8);
-    nodes.forEach((c) => {
-        c.draw()
+    scale(6);
+    nodes.forEach((n) => {
+        n.draw()
+        translate(-n.pos.x, -n.pos.y, -n.pos.z);
     })
 }
 
+var angle = 1;
+
 class Node {
+    //3D
     constructor(x, y, z, color) {
         this.pos = createVector(x, y, z);
         this.color = color;
-        this.size = 0.1;
     }
 
     draw() {
-        noStroke();
         fill(this.color);
-        // sphere(this.pos.x, this.pos.y, this.size);
-        translate(0, 0, 0);
-        box(20);
+        noStroke();
+        rotateX(angle += 0.01);
+        rotateY(angle += 0.01);
+        rotateZ(angle += 0.01);
+        translate(this.pos.x, this.pos.y, this.pos.z);
+        sphere(0.3);
     }
+
+
+    //2D plot
+    // constructor(x, y, z, color) {
+    //     this.pos = createVector(x, y, z);
+    //     this.color = color;
+    // }
+
+    // draw() {
+    //     fill(this.color);
+    //     // rotateX(angle += 0.0001);
+    //     // rotateY(angle += 0.0001);
+    //     circle(this.pos.x, this.pos.y, 10);
+    // }
 }
 
 //MAIN FUNCTION
