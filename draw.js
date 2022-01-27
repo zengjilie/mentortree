@@ -39,10 +39,10 @@ class Node {
         fill(this.color);
         noStroke();
         rotateX(angle += 0.01);
-        rotateY(angle += 0.01);
-        rotateZ(angle += 0.01);
+        // rotateY(angle += 0.01);
+        // rotateZ(angle += 0.01);
         translate(this.pos.x, this.pos.y, this.pos.z);
-        sphere(0.3);
+        sphere(0.2);
     }
 
 
