@@ -6,10 +6,11 @@
   "dependencies": {
     "csvtojson": "^2.0.10",
     "d3-hierarchy": "^3.1.1",
+    "express": "^4.17.2",
     "node-csv": "^0.1.2"
   },
   "scripts": {
-    "start": "node ./experiments/json-svg-converter.js"
+    "start": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
