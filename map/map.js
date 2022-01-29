@@ -5,7 +5,7 @@ var nodes = [];
 var button;
 var angle = 0;
 
-//LOADING FILE
+//Load Data
 function preload() {
     data = loadJSON('./PreprocessedData.json');
 }
@@ -67,7 +67,7 @@ class Node {
     // }
 }
 
-//MAIN FUNCTION
+//SVG deprecated
 // function setup() {
 //     createCanvas(window.innerWidth, window.innerHeight, SVG);
 //     // frameRate(24);

@@ -10,7 +10,7 @@
 ## Same direction
 ![tree](tree-1.png)
 
-**Dark Branch Weighted**
+**Dark Weighted Branch**
 
 ![tree](tree-8.png)
 
