@@ -1,11 +1,12 @@
 # Visulization
 ## Conferences
-![image](shot-1.png)
 
-![image](shot-2.png)
+![map](map-rotate.gif)
 
-![image](shot-3.png)
+![map](map-rotate-1.gif)
 
-![image](shot-4.png)
+![tree](tree-1.png)
 
-![image](shot-5.png)
+![tree](tree-2.png)
+
+![tree](tree-3.png)

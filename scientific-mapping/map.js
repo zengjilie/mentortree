@@ -15,10 +15,10 @@ function setup() {
     data = data.data;
     console.log(data);
     for (i = 0; i < data.length; i++) {
-        nodes.push(new Node(data[i].x, data[i].y, 0, data[i].color));
+        nodes.push(new Node(data[i].x, data[i].y, 10, data[i].color));
     }
     console.log(nodes);
-    // frameRate(60);
+    // frameRate(3);
 }
 
 function draw() {
@@ -45,8 +45,10 @@ class Node {
         translate(this.pos.x, this.pos.y, this.pos.z);
         sphere(0.2);
     }
+
     rotate() {
-        // this.angle += 0.00001;
+        this.angle += 0.000001;
+        rotateX(this.angle);
         rotateY(this.angle);
     }
 
