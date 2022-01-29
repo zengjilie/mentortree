@@ -1,5 +1,5 @@
 # Visulization
-## Conferences
+## 3D Map
 
 ![map](map.png)
 
