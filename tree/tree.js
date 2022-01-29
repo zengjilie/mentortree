@@ -88,16 +88,27 @@ function buildTree(children, begin, end, circleSize, angle) {
         const newEnd = createVector(end.x, end.y + 8);
         const fraction = PI / (branchNum + 1);
         stroke(children[i].gender_color);
-        // if (children[i].gender === 'man') {
-        //     newEnd.rotate((i + 1) * -PI / 60);
-        // } else if (children[i].gender === 'woman') {
-        //     newEnd.rotate((i + 1) * PI / 30);
-        // }
+
+        //Weighted, M->L, W->R
+        if (children[i].gender === 'man') {
+            newEnd.rotate((i + 1) * -PI / 60);
+        } else if (children[i].gender === 'woman') {
+            newEnd.rotate((i + 1) * PI /30);
+            //Weighted
+            // newEnd.rotate((i + 1) * PI / angle + 0.4);
+        }
+
+        //Evenly
         // newEnd.rotate(-PI / 2 + (i + 1) * fraction);
-        newEnd.rotate(i * -PI / angle);
+
+        //Same Direction
+        // newEnd.rotate(i * -PI / angle + 0.3);
+        //Weighted
+        // newEnd.rotate(i * -PI / angle);
+
         line(begin.x, begin.y, newEnd.x, newEnd.y);
         circle(newEnd.x, newEnd.y, circleSize - 1.3);
-        buildTree(children[i].children, begin, newEnd, circleSize - 1.3, angle + 15);
+        buildTree(children[i].children, begin, newEnd, circleSize - 1.3, angle + 20);
         translate(-end.x, -end.y);
     }
 
