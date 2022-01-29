@@ -9,6 +9,11 @@
 
 ## Same direction
 ![tree](tree-1.png)
+
+**Dark Branch Weighted**
+
+![tree](tree-8.png)
+
 **Weighted**
 
 ![tree](tree-6.png)
