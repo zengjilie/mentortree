@@ -47,6 +47,7 @@ class Node {
     }
 
     rotate() {
+        //Rotate speed
         this.angle += 0.000001;
         rotateX(this.angle);
         rotateY(this.angle);
