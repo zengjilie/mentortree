@@ -26,7 +26,7 @@ function draw() {
     // stroke(tree.gender_color);
     stroke(data.gender_color);
     const begin = createVector(0, 0);
-    
+
     const end = createVector(0, -140);
     line(begin.x, begin.y, end.x, end.y);
 
@@ -73,9 +73,15 @@ function buildTree(children, begin, end, circleSize, angle) {
         //Weighted
         // newEnd.rotate(i * -PI / angle);
 
+        //Draw Line
         line(begin.x, begin.y, newEnd.x, newEnd.y);
+
+        //Draw Circle
         circle(newEnd.x, newEnd.y, circleSize - 1.3);
+
+        //Recurse
         buildTree(children[i].children, begin, newEnd, circleSize - 1.3, angle + 20);
+
         translate(-end.x, -end.y);
     }
 
