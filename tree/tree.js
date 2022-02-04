@@ -67,12 +67,13 @@ function draw() {
     //Draw line and circle root
     line(begin.x, begin.y, end.x, end.y);
     strokeWeight(strokeW);
+    drawLeaf(begin,end,tree.gender_color);
     // noStroke();
     // circle(end.x, end.y, circleSize);
 
     //children
-    // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    buildTree(tree.children, begin, end, strokeW, circleSize, angle);
+    // buildTree(data.children, begin, end, strokeW, circleSize, angle);
 }
 
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
@@ -94,7 +95,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
 
         // strokeWeight(strokeW);
-        //Weighted, M->L, W->R
+        // Weighted, M->L, W->R
         // if (children[i].gender === 'man') {
         //     newEnd.rotate((i + 1) * -PI / 60);
         // } else if (children[i].gender === 'woman') {
@@ -112,12 +113,6 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         //Weighted
         // newEnd.rotate(i * -PI / angle);
 
-        //Draw Line
-        // line(begin.x, begin.y, newEnd.x, newEnd.y);
-        //Draw curve
-        // bezier(begin.x, begin.y, begin.x - 30, begin.y, newEnd.x - 30, newEnd.y, newEnd.x, newEnd.y);
-
-
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
         childrenNum = buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 0.6, angle);
@@ -129,14 +124,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         stroke(children[i].gender_color);
         line(begin.x, begin.y, newEnd.x, newEnd.y);
 
-        //Try leaf
+        //Draw leaf
         drawLeaf(begin, newEnd, children[i].gender_color);
-        // const newLeaf = new Leaf(begin, newEnd, 'red', -PI / 2 + (i + 1) * fraction);
-        // newLeaf.draw();
-
-        //Draw shape
-        // drawLeaf(begin, newEnd, children[i].gender_color);
-        // console.log(newEnd.x)
 
         //Draw Circle
         // noStroke();
@@ -150,24 +139,6 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
 }
 
-// class Leaf {
-//     constructor(begin, end, color, angle) {
-//         this.begin = begin;
-//         this.end = end;
-//         this.color = color;
-//         this.angle = angle;
-//     }
-
-//     draw() {
-//         ellipseMode(CENTER);
-//         const midP = createVector((this.begin.x + this.end.x) / 2, (this.begin.y + this.end.y) / 2);
-//         // translate();
-//         rotate();
-//         ellipse(midP.x, midP.y, 20, 60);
-//         rotate();
-//         // translate(-midP.x,-midP.y);
-//     }
-// }
 
 function drawLeaf(begin, end, color) {
     // console.log(end.x.toFixed(2));
@@ -225,10 +196,10 @@ tree = {
                 },
             ]
         },
-        {
-            gender: 'woman',
-            gender_color: 'red',
-        },
+        // {
+        //     gender: 'woman',
+        //     gender_color: 'red',
+        // },
         {
             gender: 'woman',
             gender_color: 'red',
