@@ -30,29 +30,33 @@ function draw() {
     const end = createVector(0, -100);
 
     //Tree params
-    const strokeW = 1;
+    const strokeW = 10;
     const circleSize = 10;
     const angle = 1;
 
+    //children
+    // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
+    // const rootWeight = buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    buildTree(data.children, begin, end, strokeW, circleSize, angle);
+
     //Draw line and circle root
+    stroke(data.gender_color)
     line(begin.x, begin.y, end.x, end.y);
-    strokeWeight(strokeW);
-    // drawLeaf(begin, end, tree.gender_color);
-    drawLeaf(begin, end, data.gender_color);
+
+    //Draw Leaf
+    drawLeaf(begin, end, data.gender_color, strokeW);
+
     // noStroke();
     // circle(end.x, end.y, circleSize);
 
-    //children
-    // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    buildTree(data.children, begin, end, strokeW, circleSize, angle);
 }
 
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
     const branchNum = children?.length;
     if (branchNum === 0 || children == null) {
-        return 1;
-        // return;
+        // return 1;
+        return;
     }
 
     totalChilrenNum = 0;
@@ -88,9 +92,11 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        childrenNum = buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 0.6, angle + 0.2);
+        // childrenNum = buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 0.6, angle + 0.2);
+        buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
+
         // strokeWeight(childrenNum * 10);
-        strokeWeight(1);
+        // strokeWeight(1);
 
         //Draw Line
         // console.log(children[i].gender_color)
@@ -98,14 +104,15 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         line(begin.x, begin.y, newEnd.x, newEnd.y);
 
         //Draw Leaf
-        drawLeaf(begin, newEnd, children[i].gender_color);
+        // drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
+        drawLeaf(begin, newEnd, children[i].gender_color, strokeW);
 
         //Draw Circle
         // noStroke();
         // circle(newEnd.x, newEnd.y, circleSize);
 
         translate(-end.x, -end.y);
-        totalChilrenNum += childrenNum;
+        // totalChilrenNum += childrenNum;
     }
 
     return totalChilrenNum;
@@ -113,7 +120,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 }
 
 
-function drawLeaf(begin, end, color) {
+function drawLeaf(begin, end, color, strokeW) {
     // console.log(end);
     let slope = 0;
 
@@ -125,7 +132,9 @@ function drawLeaf(begin, end, color) {
          */
         slope = 0;
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
-        const leafWeight = 5;
+        // const leafWeight = 5;
+        // const leafWeight = 1 * childrenNum;
+        const leafWeight = strokeW;
         const x1 = midPoint.x + leafWeight;
         const y1 = midPoint.y;
         //2
@@ -151,7 +160,10 @@ function drawLeaf(begin, end, color) {
          */
         //1
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
-        const leafWeight = 5;
+        // const leafWeight = 5;
+        // const leafWeight = 1 * childrenNum;
+        const leafWeight = strokeW;
+
         const x1 = midPoint.x;
         const y1 = midPoint.y + leafWeight;
         //2
@@ -170,19 +182,11 @@ function drawLeaf(begin, end, color) {
 
     } else { //normal case
         slope = ((end.y - begin.y) / (end.x - begin.x)).toFixed(2);
-        // console.log(slope);
         const newSlope = -1 / slope;
-        // console.log(newSlope);
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
-        const intercept = midPoint.y - newSlope * midPoint.x;
-        // console.log(intercept);
-
-        //weight leaf
-        // console.log(newSlope);
-        const weight = Math.max(Math.abs(newSlope), Math.abs(slope));
-        // console.log(weight)
-        let leafWeight = 5;
-
+        // const leafWeight = 5;
+        // const leafWeight = 1 * childrenNum;
+        const leafWeight = strokeW;
         /**
          * a
          * 1  2
