@@ -27,7 +27,7 @@ function draw() {
     // stroke(tree.gender_color);
     stroke(data.gender_color);
     const begin = createVector(0, 0);
-    const end = createVector(0, -110);
+    const end = createVector(0, -100);
 
     //Tree params
     const strokeW = 1;
@@ -75,7 +75,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         // }
 
         //Evenly
-        // newEnd.rotate(-PI / 2 + (i + 1) * fraction);
+        newEnd.rotate(-PI / 2 + (i + 1) * fraction);
         // console.log(newEnd);
 
         //Same Direction
@@ -191,16 +191,12 @@ function drawLeaf(begin, end, color) {
         //1
         const x1 = midPoint.x + leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
         const y1 = midPoint.y + newSlope * leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
-        // const x1 = midPoint.x + leafWeight;
-        // const y1 = newSlope * x1 + intercept;
         //2
         const x2 = midPoint.x - leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
         const y2 = midPoint.y - newSlope * leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
-        // const x2 = midPoint.x - leafWeight;
-        // const y2 = newSlope * x2 + intercept;
         noStroke();
-        // console.log(color)
         fill(color);
+
         beginShape();
         curveVertex(begin.x, begin.y);//begin
         curveVertex(begin.x, begin.y);//begin
@@ -220,24 +216,24 @@ tree = {
         {
             gender: 'man',
             gender_color: 'blue',
-            // children: [
-            //     {
-            //         gender: 'man',
-            //         gender_color: 'blue',
-            //     },
-            // {
-            //     gender: 'woman',
-            //     gender_color: 'red',
-            // },
-            // ]
+            children: [
+                {
+                    gender: 'man',
+                    gender_color: 'blue',
+                },
+                {
+                    gender: 'woman',
+                    gender_color: 'red',
+                },
+            ]
         },
-        // {
-        //     gender: 'woman',
-        //     gender_color: 'red',
-        // },
-        // {
-        //     gender: 'woman',
-        //     gender_color: 'red',
-        // },
+        {
+            gender: 'woman',
+            gender_color: 'red',
+        },
+        {
+            gender: 'woman',
+            gender_color: 'red',
+        },
     ]
 }
