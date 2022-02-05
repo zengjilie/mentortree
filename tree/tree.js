@@ -42,8 +42,8 @@ function draw() {
     // circle(end.x, end.y, circleSize);
 
     //children
-    buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    // buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
+    buildTree(data.children, begin, end, strokeW, circleSize, angle);
 }
 
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
@@ -81,7 +81,9 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         //Same Direction
         // newEnd.rotate(i * -PI / angle + 0.3);
         //Weighted
-        newEnd.rotate((i + 1) * -PI / 23);
+        // newEnd.rotate((i + 1) * -PI / 43);
+        // newEnd.rotate((i + 1) * -PI / 23);
+        newEnd.rotate((i + 1) * -PI / 60);
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
@@ -138,6 +140,7 @@ function drawLeaf(begin, end, color) {
         curveVertex(end.x, end.y);//end
         curveVertex(x2, y2);//2
         endShape(CLOSE);
+
     } else if (Math.abs(((end.y - begin.y) / (end.x - begin.x)).toFixed(2)) === 0) {//parallel to X  axis
         // console.log("Y");
         /**
@@ -163,6 +166,7 @@ function drawLeaf(begin, end, color) {
         curveVertex(end.x, end.y);//end
         curveVertex(x2, y2);//2
         endShape(CLOSE);
+
     } else { //normal case
         slope = ((end.y - begin.y) / (end.x - begin.x)).toFixed(2);
         // console.log(slope);
@@ -171,22 +175,48 @@ function drawLeaf(begin, end, color) {
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         const intercept = midPoint.y - newSlope * midPoint.x;
         // console.log(intercept);
-       
+
         //weight leaf
         // console.log(newSlope);
-        const weight = Math.abs(newSlope);
-        const leafWeight = 5/weight;
+        const weight = Math.max(Math.abs(newSlope), Math.abs(slope));
+        // console.log(weight)
+        let leafWeight = 5;
+        // if (weight > 10) {
+        //     leafWeight = 50 / weight;
+        // } else if (weight > 9) {
+        //     leafWeight = 40 / weight;
+        // } else if (weight > 8) {
+        //     leafWeight = 30 / weight;
+        // } else if (weight > 7) {
+        //     leafWeight = 20 / weight;
+        // } else if (weight > 6) {
+        //     leafWeight = 20 / weight;
+        // } else if (weight > 5) {
+        //     leafWeight = 10 / weight;
+        // } else if (weight > 4) {
+        //     leafWeight = 10 / weight;
+        // } else if (weight > 3) {
+        //     leafWeight = 20 / weight;
+        // } else if (weight > 2) {
+        //     leafWeight = 10 / weight;
+        // }
+
         /**
          * a
          * 1  2
          *    b
          */
-        //right
-        const x1 = midPoint.x + leafWeight;
-        const y1 = newSlope * x1 + intercept;
-        //left
-        const x2 = midPoint.x - leafWeight;
-        const y2 = newSlope * x2 + intercept;
+
+        //1
+        const x1 = midPoint.x + leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
+        const y1 = midPoint.y + newSlope * leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
+        // const x1 = midPoint.x + leafWeight;
+        // const y1 = newSlope * x1 + intercept;
+        //2
+        const x2 = midPoint.x - leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
+        const y2 = midPoint.y - newSlope * leafWeight * Math.sqrt(1 / (1 + newSlope * newSlope));
+        // const x2 = midPoint.x - leafWeight;
+        // const y2 = newSlope * x2 + intercept;
         noStroke();
         // console.log(color)
         fill(color);
