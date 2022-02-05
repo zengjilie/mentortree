@@ -6,6 +6,8 @@
 ![map](map-rotate.gif)
 
 ![map](map-rotate-1.gif)
+## Distributed Evenly + Weighted
+![tree](tree-n-1.png)
 
 ## Same direction
 ![tree](tree-1.png)
@@ -31,3 +33,4 @@
 
 ## Distributed Evenly 
 ![tree](tree-3.png)
+

@@ -37,7 +37,8 @@ function draw() {
     //Draw line and circle root
     line(begin.x, begin.y, end.x, end.y);
     strokeWeight(strokeW);
-    drawLeaf(begin, end, tree.gender_color);
+    // drawLeaf(begin, end, tree.gender_color);
+    drawLeaf(begin, end, data.gender_color);
     // noStroke();
     // circle(end.x, end.y, circleSize);
 
