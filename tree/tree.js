@@ -24,8 +24,8 @@ function draw() {
     translate(width / 2, height);
 
     //Draw Root
-    stroke(tree.gender_color);
-    // stroke(data.gender_color);
+    // stroke(tree.gender_color);
+    stroke(data.gender_color);
     const begin = createVector(0, 0);
     const end = createVector(0, -110);
 
@@ -181,25 +181,6 @@ function drawLeaf(begin, end, color) {
         const weight = Math.max(Math.abs(newSlope), Math.abs(slope));
         // console.log(weight)
         let leafWeight = 5;
-        // if (weight > 10) {
-        //     leafWeight = 50 / weight;
-        // } else if (weight > 9) {
-        //     leafWeight = 40 / weight;
-        // } else if (weight > 8) {
-        //     leafWeight = 30 / weight;
-        // } else if (weight > 7) {
-        //     leafWeight = 20 / weight;
-        // } else if (weight > 6) {
-        //     leafWeight = 20 / weight;
-        // } else if (weight > 5) {
-        //     leafWeight = 10 / weight;
-        // } else if (weight > 4) {
-        //     leafWeight = 10 / weight;
-        // } else if (weight > 3) {
-        //     leafWeight = 20 / weight;
-        // } else if (weight > 2) {
-        //     leafWeight = 10 / weight;
-        // }
 
         /**
          * a
