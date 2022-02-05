@@ -67,7 +67,7 @@ function draw() {
     //Draw line and circle root
     line(begin.x, begin.y, end.x, end.y);
     strokeWeight(strokeW);
-    drawLeaf(begin,end,tree.gender_color);
+    drawLeaf(begin, end, tree.gender_color);
     // noStroke();
     // circle(end.x, end.y, circleSize);
 
@@ -105,17 +105,17 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         // }
 
         //Evenly
-        newEnd.rotate(-PI / 2 + (i + 1) * fraction);
+        // newEnd.rotate(-PI / 2 + (i + 1) * fraction);
         // console.log(newEnd);
 
         //Same Direction
         // newEnd.rotate(i * -PI / angle + 0.3);
         //Weighted
-        // newEnd.rotate(i * -PI / angle);
+        newEnd.rotate((i + 1) * -PI / 23);
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        childrenNum = buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 0.6, angle);
+        childrenNum = buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 0.6, angle + 0.2);
         // strokeWeight(childrenNum * 10);
         strokeWeight(1);
 
@@ -141,40 +141,94 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
 
 function drawLeaf(begin, end, color) {
-    // console.log(end.x.toFixed(2));
+    // console.log(end);
     let slope = 0;
-    if (begin.x.toFixed(2) ===end.x.toFixed(2)) {
+
+    if (Math.abs(begin.x.toFixed(2)) === Math.abs(end.x.toFixed(2)) || Math.abs(((end.x - begin.x) / (end.y - begin.y)).toFixed(2)) === 0) {// parallel to Y axis
+        /**
+         *   b
+         * 1   2
+         *   e
+         */
         slope = 0;
-    } else {
-        slope = (end.y - begin.y) / (end.x - begin.x);
+        const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
+        const leafWeight = 5;
+        const x1 = midPoint.x + leafWeight;
+        const y1 = midPoint.y;
+        //2
+        const x2 = midPoint.x - leafWeight;
+        const y2 = midPoint.y;
+        noStroke();
+        fill(color);
+
+        beginShape();
+        curveVertex(begin.x, begin.y);//begin
+        curveVertex(begin.x, begin.y);//begin
+        curveVertex(x1, y1);//1
+        curveVertex(end.x, end.y);//end
+        curveVertex(x2, y2);//2
+        endShape(CLOSE);
+    } else if (Math.abs(((end.y - begin.y) / (end.x - begin.x)).toFixed(2)) === 0) {//parallel to X  axis
+        // console.log("Y");
+        /**
+         *    1 
+         * b     e
+         *    2 
+         */
+        //1
+        const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
+        const leafWeight = 5;
+        const x1 = midPoint.x;
+        const y1 = midPoint.y + leafWeight;
+        //2
+        const x2 = midPoint.x;
+        const y2 = midPoint.y - leafWeight;
+        noStroke();
+        fill(color);
+
+        beginShape();
+        curveVertex(begin.x, begin.y);//begin
+        curveVertex(begin.x, begin.y);//begin
+        curveVertex(x1, y1);//1
+        curveVertex(end.x, end.y);//end
+        curveVertex(x2, y2);//2
+        endShape(CLOSE);
+    } else { //normal case
+        slope = ((end.y - begin.y) / (end.x - begin.x)).toFixed(2);
         // console.log(slope);
+        const newSlope = -1 / slope;
+        // console.log(newSlope);
+        const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
+        const intercept = midPoint.y - newSlope * midPoint.x;
+        // console.log(intercept);
+       
+        //weight leaf
+        // console.log(newSlope);
+        const weight = Math.abs(newSlope);
+        const leafWeight = 5/weight;
+        /**
+         * a
+         * 1  2
+         *    b
+         */
+        //right
+        const x1 = midPoint.x + leafWeight;
+        const y1 = newSlope * x1 + intercept;
+        //left
+        const x2 = midPoint.x - leafWeight;
+        const y2 = newSlope * x2 + intercept;
+        noStroke();
+        // console.log(color)
+        fill(color);
+        beginShape();
+        curveVertex(begin.x, begin.y);//begin
+        curveVertex(begin.x, begin.y);//begin
+        curveVertex(x1, y1);//2
+        curveVertex(end.x, end.y);//end
+        curveVertex(x2, y2);//1
+        endShape(CLOSE);
     }
-    const newSlope = -slope;
-    const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
-    const intercept = midPoint.y - newSlope * midPoint.x;
-    const leafWeight = 5;
-    //right
-    const x1 = midPoint.x + leafWeight;
-    const y1 = newSlope * x1 + intercept;
-    //left
-    const x2 = midPoint.x - leafWeight;
-    const y2 = newSlope * x2 + intercept;
-    noStroke();
-    // console.log(color)
-    fill(color);
-    strokeWeight(1);
-    // bezier(50, 50, 100, 100, 200, 50, 100,0,);
-    beginShape();
-    //start
-    curveVertex(begin.x, begin.y);
-    curveVertex(begin.x, begin.y);
-    //right
-    curveVertex(x1, y1);
-    //bottom
-    curveVertex(end.x, end.y);
-    //left
-    curveVertex(x2, y2);
-    endShape(CLOSE);
+
 }
 
 
@@ -185,25 +239,25 @@ tree = {
         {
             gender: 'man',
             gender_color: 'blue',
-            children: [
-                {
-                    gender: 'man',
-                    gender_color: 'blue',
-                },
-                {
-                    gender: 'woman',
-                    gender_color: 'red',
-                },
-            ]
+            // children: [
+            //     {
+            //         gender: 'man',
+            //         gender_color: 'blue',
+            //     },
+            // {
+            //     gender: 'woman',
+            //     gender_color: 'red',
+            // },
+            // ]
         },
         // {
         //     gender: 'woman',
         //     gender_color: 'red',
         // },
-        {
-            gender: 'woman',
-            gender_color: 'red',
-        },
+        // {
+        //     gender: 'woman',
+        //     gender_color: 'red',
+        // },
     ]
 }
 
