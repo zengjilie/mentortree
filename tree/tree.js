@@ -36,27 +36,31 @@ function draw() {
 
     //children
     // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    // const rootWeight = buildTree(data.children, begin, end, strokeW, circleSize, angle);
-    buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    // const childrenNum = buildTree(tree.children, begin, end, strokeW, circleSize, angle);
+    const childrenNum = buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    // buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    // console.log(childrenNum);
 
     //Draw line and circle root
+    // stroke(tree.gender_color)
     stroke(data.gender_color)
-    line(begin.x, begin.y, end.x, end.y);
+    // line(begin.x, begin.y, end.x, end.y);
 
     //Draw Leaf
-    drawLeaf(begin, end, data.gender_color, strokeW);
+    // drawLeaf(begin, end, tree.gender_color, childrenNum);
+    drawLeaf(begin, end, data.gender_color, childrenNum);
+    // drawLeaf(begin, end, data.gender_color, strokeW);
 
     // noStroke();
     // circle(end.x, end.y, circleSize);
-
 }
 
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
     const branchNum = children?.length;
     if (branchNum === 0 || children == null) {
-        // return 1;
-        return;
+        return 1;
+        // return;
     }
 
     totalChilrenNum = 0;
@@ -92,8 +96,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        // childrenNum = buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 0.6, angle + 0.2);
-        buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
+        childrenNum = buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
+        // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
         // strokeWeight(childrenNum * 10);
         // strokeWeight(1);
@@ -104,15 +108,15 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         line(begin.x, begin.y, newEnd.x, newEnd.y);
 
         //Draw Leaf
-        // drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
-        drawLeaf(begin, newEnd, children[i].gender_color, strokeW);
+        drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
+        // drawLeaf(begin, newEnd, children[i].gender_color, strokeW);
 
         //Draw Circle
         // noStroke();
         // circle(newEnd.x, newEnd.y, circleSize);
 
         translate(-end.x, -end.y);
-        // totalChilrenNum += childrenNum;
+        totalChilrenNum += childrenNum;
     }
 
     return totalChilrenNum;
@@ -120,7 +124,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 }
 
 
-function drawLeaf(begin, end, color, strokeW) {
+// function drawLeaf(begin, end, color, strokeW) {
+function drawLeaf(begin, end, color, childrenNum) {
     // console.log(end);
     let slope = 0;
 
@@ -133,8 +138,21 @@ function drawLeaf(begin, end, color, strokeW) {
         slope = 0;
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
-        // const leafWeight = 1 * childrenNum;
-        const leafWeight = strokeW;
+
+        //normalization
+        let leafWeight = 1 * childrenNum;
+        // if (childrenNum > 500) {
+        //     leafWeight = 0.1 * childrenNum;
+        // } else if (childrenNum > 200) {
+        //     leafWeight = 0.2 * childrenNum;
+        // } else if (childrenNum > 90) {
+        //     leafWeight = 0.5 * childrenNum;
+        // } else if (childrenNum > 50) {
+        //     leafWeight = 0.7 * childrenNum;
+        // } else if (childrenNum > 10) {
+        //     leafWegiht = 0.8 * childrenNum;
+        // }
+        // const leafWeight = strokeW;
         const x1 = midPoint.x + leafWeight;
         const y1 = midPoint.y;
         //2
@@ -161,8 +179,21 @@ function drawLeaf(begin, end, color, strokeW) {
         //1
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
-        // const leafWeight = 1 * childrenNum;
-        const leafWeight = strokeW;
+        //normalization
+        let leafWeight = 1 * childrenNum;
+
+        // if (childrenNum > 500) {
+        //     leafWeight = 0.1 * childrenNum;
+        // } else if (childrenNum > 200) {
+        //     leafWeight = 0.2 * childrenNum;
+        // } else if (childrenNum > 90) {
+        //     leafWeight = 0.5 * childrenNum;
+        // } else if (childrenNum > 50) {
+        //     leafWeight = 0.7 * childrenNum;
+        // } else if (childrenNum > 10) {
+        //     leafWegiht = 0.8 * childrenNum;
+        // }
+        // const leafWeight = strokeW;
 
         const x1 = midPoint.x;
         const y1 = midPoint.y + leafWeight;
@@ -185,8 +216,21 @@ function drawLeaf(begin, end, color, strokeW) {
         const newSlope = -1 / slope;
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
-        // const leafWeight = 1 * childrenNum;
-        const leafWeight = strokeW;
+        //normalization
+        let leafWeight = 1 * childrenNum;
+
+        // if (childrenNum > 500) {
+        //     leafWeight = 0.1 * childrenNum;
+        // } else if (childrenNum > 300) {
+        //     leafWeight = 0.2 * childrenNum;
+        // } else if (childrenNum > 100) {
+        //     leafWeight = 0.5 * childrenNum;
+        // } else if (childrenNum > 50) {
+        //     leafWeight = 0.7 * childrenNum;
+        // } else if (childrenNum > 10) {
+        //     leafWegiht = 0.8 * childrenNum;
+        // }
+        // const leafWeight = strokeW;
         /**
          * a
          * 1  2
