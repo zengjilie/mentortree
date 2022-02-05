@@ -19,37 +19,7 @@ function draw() {
 
     //White background
     background(255);
-    //curve stroke
-    strokeWeight(10);
-    stroke('blue');
-    point(50, 50);
-    //right
-    point(70, 120);
 
-    point(70, 200);
-    point(45, 125);
-
-
-    noFill();
-    stroke('black');
-    strokeWeight(1);
-    // bezier(50, 50, 100, 100, 200, 50, 100,0,);
-
-    beginShape();
-    //start
-    curveVertex(50, 50);
-    curveVertex(50, 50);
-    //right
-    curveVertex(70, 120);
-    //bottom
-    curveVertex(70, 200);
-    //left
-    curveVertex(45, 125);
-    endShape(CLOSE);
-
-    const a = createVector(50, 50);
-    const b = createVector(70, 200);
-    // drawLeaf(a, b, 'blue');
     //Move start point to middle of screen
     translate(width / 2, height);
 
@@ -124,7 +94,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         stroke(children[i].gender_color);
         line(begin.x, begin.y, newEnd.x, newEnd.y);
 
-        //Draw leaf
+        //Draw Leaf
         drawLeaf(begin, newEnd, children[i].gender_color);
 
         //Draw Circle
@@ -260,12 +230,3 @@ tree = {
         // },
     ]
 }
-
-//Branch
-// function buildBranch(begin, end, color, index, branchNum) {
-//     const newEnd = createVector(end.x, end.y);
-//     const fraction = PI / (branchNum + 1);
-//     stroke(color);
-//     newEnd.rotate(-PI / 2 + index * fraction);
-//     line(begin.x, begin.y, newEnd.x, newEnd.y);
-// }
