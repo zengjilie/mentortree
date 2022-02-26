@@ -4,6 +4,7 @@ var tree;
 
 function preload() {
     data = loadJSON('./datasets/psych_id783121.json');
+    // data = loadJSON('./datasets/George_M_Church.json');
 }
 
 function setup() {
@@ -14,10 +15,8 @@ function setup() {
 }
 
 function draw() {
-    //Black background
+    //Background color -> white/black
     // background(0);
-
-    //White background
     background(255);
 
     //Move start point to middle of screen
@@ -37,8 +36,8 @@ function draw() {
     //children
     // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
     // const childrenNum = buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    const childrenNum = buildTree(data.children, begin, end, strokeW, circleSize, angle);
-    // buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    // const childrenNum = buildTree(data.children, begin, end, strokeW, circleSize, angle);
+    buildTree(data.children, begin, end, strokeW, circleSize, angle);
     // console.log(childrenNum);
 
     //Draw line and circle root
@@ -140,7 +139,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         // const leafWeight = 5;
 
         //normalization
-        let leafWeight = 1 * childrenNum;
+        let leafWeight = 0.2 * childrenNum;
         // if (childrenNum > 500) {
         //     leafWeight = 0.1 * childrenNum;
         // } else if (childrenNum > 200) {
@@ -180,7 +179,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
         //normalization
-        let leafWeight = 1 * childrenNum;
+        let leafWeight = 0.2 * childrenNum;
 
         // if (childrenNum > 500) {
         //     leafWeight = 0.1 * childrenNum;
@@ -217,7 +216,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
         //normalization
-        let leafWeight = 1 * childrenNum;
+        let leafWeight = 0.2 * childrenNum;
 
         // if (childrenNum > 500) {
         //     leafWeight = 0.1 * childrenNum;
