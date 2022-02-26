@@ -15,40 +15,41 @@ function setup() {
 }
 
 function draw() {
-    //Background color -> white/black
+    //=== Background color -> white/black ===
     // background(0);
     background(255);
 
-    //Move start point to middle of screen
+    //=== Center root node starting point at middle of screen ===
     translate(width / 2, height);
 
-    //Draw Root
-    // stroke(tree.gender_color);
-    stroke(data.gender_color);
-    const begin = createVector(0, 0);
-    const end = createVector(0, -100);
+    //=== Root setup ->===
+    const begin = createVector(0, 0); // root starting point
+    const end = createVector(0, -100); // root end point
 
-    //Tree params
+    //=== Tree Params ===
     const strokeW = 10;
     const circleSize = 10;
     const angle = 1;
 
-    //children
-    // buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    // const childrenNum = buildTree(tree.children, begin, end, strokeW, circleSize, angle);
-    // const childrenNum = buildTree(data.children, begin, end, strokeW, circleSize, angle);
-    buildTree(data.children, begin, end, strokeW, circleSize, angle);
-    // console.log(childrenNum);
+    //=== Build the tree from -> sampleData / realData ===
+    // const childrenNum = buildTree(tree.children, begin, end, strokeW, circleSize, angle); // sample
+    // const childrenNum = buildTree(data.children, begin, end, strokeW, circleSize, angle); // real
 
-    //Draw line and circle root
-    // stroke(tree.gender_color)
-    stroke(data.gender_color)
-    // line(begin.x, begin.y, end.x, end.y);
+    // buildTree(tree.children, begin, end, strokeW, circleSize, angle); //sample
+    buildTree(data.children, begin, end, strokeW, circleSize, angle); //real
 
-    //Draw Leaf
+    //=== Draw root -> color / line / leaf -> sampleData / realData ===
+    stroke(tree.gender_color) // test
+    // stroke(data.gender_color) // real
+    line(begin.x, begin.y, end.x, end.y); // draw root
+
+    //Leaf Width according to children num
     // drawLeaf(begin, end, tree.gender_color, childrenNum);
-    drawLeaf(begin, end, data.gender_color, childrenNum);
+    // drawLeaf(begin, end, data.gender_color, childrenNum);
+
+    //Leaf Width according to hierarchy
     // drawLeaf(begin, end, data.gender_color, strokeW);
+    drawLeaf(begin, end, tree.gender_color, strokeW);
 
     // noStroke();
     // circle(end.x, end.y, circleSize);
@@ -63,6 +64,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
     }
 
     totalChilrenNum = 0;
+
     //Recurse on all the nodes
     for (let i = 0; i < branchNum; i++) {
         //Move current end point as the start point
@@ -71,6 +73,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         const newEnd = createVector(end.x, end.y);
         const fraction = PI / (branchNum + 1);
 
+
+        // === Rotating Angles ===
 
         // strokeWeight(strokeW);
         // Weighted, M->L, W->R
@@ -95,8 +99,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        childrenNum = buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
-        // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
+        // childrenNum = buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
+        buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
         // strokeWeight(childrenNum * 10);
         // strokeWeight(1);
@@ -107,18 +111,18 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         line(begin.x, begin.y, newEnd.x, newEnd.y);
 
         //Draw Leaf
-        drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
-        // drawLeaf(begin, newEnd, children[i].gender_color, strokeW);
+        // drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
+        drawLeaf(begin, newEnd, children[i].gender_color, strokeW);
 
         //Draw Circle
         // noStroke();
         // circle(newEnd.x, newEnd.y, circleSize);
 
         translate(-end.x, -end.y);
-        totalChilrenNum += childrenNum;
+        // totalChilrenNum += childrenNum;
     }
 
-    return totalChilrenNum;
+    // return totalChilrenNum;
 
 }
 
