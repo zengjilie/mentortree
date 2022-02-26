@@ -23,11 +23,13 @@ function draw() {
     translate(width / 2, height);
 
     //=== Root setup ->===
-    const begin = createVector(0, 0); // root starting point
+    // const begin = createVector(0, 0); // root starting point
+    const begin = createVector(0,0); // root starting point
     const end = createVector(0, -100); // root end point
 
     //=== Tree Params ===
-    const strokeW = 10;
+    // const strokeW = 10;
+    const strokeW = 30;
     const circleSize = 10;
     const angle = 1;
 
@@ -39,17 +41,17 @@ function draw() {
     buildTree(data.children, begin, end, strokeW, circleSize, angle); //real
 
     //=== Draw root -> color / line / leaf -> sampleData / realData ===
-    stroke(tree.gender_color) // test
-    // stroke(data.gender_color) // real
+    // stroke(tree.gender_color) // test
+    stroke(data.gender_color) // real
     line(begin.x, begin.y, end.x, end.y); // draw root
 
-    //Leaf Width according to children num
+    //Leaf -> children num
     // drawLeaf(begin, end, tree.gender_color, childrenNum);
     // drawLeaf(begin, end, data.gender_color, childrenNum);
 
-    //Leaf Width according to hierarchy
-    // drawLeaf(begin, end, data.gender_color, strokeW);
-    drawLeaf(begin, end, tree.gender_color, strokeW);
+    //Leaf -> hierarchy
+    // drawLeaf(begin, end, tree.gender_color, strokeW);
+    drawLeaf(begin, end, data.gender_color, strokeW);
 
     // noStroke();
     // circle(end.x, end.y, circleSize);
@@ -76,18 +78,19 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         // === Rotating Angles ===
 
-        // strokeWeight(strokeW);
-        // Weighted, M->L, W->R
-        // if (children[i].gender === 'man') {
-        //     newEnd.rotate((i + 1) * -PI / 60);
-        // } else if (children[i].gender === 'woman') {
-        //     newEnd.rotate((i + 1) * PI / 30);
-        //     //Weighted
-        //     // newEnd.rotate((i + 1) * PI / angle + 0.4);
-        // }
+        // Weighted, W->L, M->R
+        if (children[i].gender === 'woman') {
+            newEnd.rotate((i + 1) * PI / 20);
+            // newEnd.rotate((i + 1) * -PI / angle + 0.1);
+            newEnd.rotate((i + 1) * PI / angle + 0.2);
+        } else if (children[i].gender === 'man') {
+            // newEnd.rotate((i + 1) * PI / 30);
+            newEnd.rotate((i + 1) * -PI / 60);
+            //Weighted
+        }
 
         //Evenly
-        newEnd.rotate(-PI / 2 + (i + 1) * fraction);
+        // newEnd.rotate(-PI / 2 + (i + 1) * fraction);
         // console.log(newEnd);
 
         //Same Direction
@@ -95,12 +98,13 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         //Weighted
         // newEnd.rotate((i + 1) * -PI / 43);
         // newEnd.rotate((i + 1) * -PI / 23);
-        newEnd.rotate((i + 1) * -PI / 60);
+        // newEnd.rotate((i + 1) * -PI / 60);
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
+        buildTree(children[i].children, begin, newEnd, strokeW - 3, circleSize - 1.3, angle + 20);
         // childrenNum = buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
-        buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
+        // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
         // strokeWeight(childrenNum * 10);
         // strokeWeight(1);

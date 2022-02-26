@@ -6,10 +6,20 @@
 ![map](map-rotate.gif)
 
 ![map](map-rotate-1.gif)
+
+## George Church 
+
+![tree](tree-g-1.png)
+
+![tree](tree-g-2.png)
 ## Distributed Evenly + Weighted
+**Leaf**
+
 ![tree](tree-n-2.png)
 
 ![tree](tree-n-1.png)
+
+![tree](tree-n-3.png)
 
 ## Same direction
 ![tree](tree-1.png)
@@ -24,6 +34,7 @@
 
 ![tree](tree-7.png)
 
+
 ## Man -> Left, Woman -> Right
 ![tree](tree-2.png)
 
@@ -33,6 +44,8 @@
 **Weighted**
 ![tree](tree-5.png)
 
+
 ## Distributed Evenly 
 ![tree](tree-3.png)
+
 
