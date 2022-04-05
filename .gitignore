@@ -1,2 +1,5 @@
 /scientific-mapping/PreprocessedData.json
 /node_modules
+
+.DS_Store
+.vscode
