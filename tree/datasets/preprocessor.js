@@ -1,38 +1,38 @@
-const data = require("./psych_id783121.json");
-// const data = {
-//     name: 'Gege',
-//     gender: 'man',
-//     gender_color: 'blue',
-//     children: [
-//         {
-//             name: 'Jiejie',
-//             gender: 'man',
-//             gender_color: 'blue',
-//             children: [
-//                 {
-//                     name: 'Meimei',
-//                     gender: 'man',
-//                     gender_color: 'blue',
-//                 },
-//                 {
-//                     name: 'Didi',
-//                     gender: 'woman',
-//                     gender_color: 'red',
-//                 },
-//             ]
-//         },
-//         {
-//             name: 'Dama',
-//             gender: 'woman',
-//             gender_color: 'red',
-//         },
-//         {
-//             name: 'Dashu',
-//             gender: 'woman',
-//             gender_color: 'red',
-//         },
-//     ]
-// }
+// const data = require("./psych_id783121.json");
+const data = {
+    name: 'Gege',
+    gender: 'man',
+    gender_color: 'blue',
+    children: [
+        {
+            name: 'Jiejie',
+            gender: 'man',
+            gender_color: 'blue',
+            children: [
+                {
+                    name: 'Meimei',
+                    gender: 'man',
+                    gender_color: 'blue',
+                },
+                {
+                    name: 'Didi',
+                    gender: 'woman',
+                    gender_color: 'red',
+                },
+            ]
+        },
+        {
+            name: 'Dama',
+            gender: 'woman',
+            gender_color: 'red',
+        },
+        {
+            name: 'Dashu',
+            gender: 'woman',
+            gender_color: 'red',
+        },
+    ]
+}
 
 const root = data;
 /**
@@ -89,7 +89,6 @@ function traverse(root) {
     } else {
         root.weight = map.get(root.name);
         for (let i = 0; i < root.children.length; i++) {
-            console.log(root.name);
             traverse(root?.children[i]);
         }
         return;
@@ -97,12 +96,12 @@ function traverse(root) {
 }
 
 traverse(root);
-
+console.log(JSON.stringify(root));
 // === export new data ===
 
-let weightedData = JSON.stringify(root);
-var fs = require('fs');
-fs.writeFile("psych_id783121_new.json", weightedData, function (err) {
-    if (err) console.log('error', err);
-});
+// let weightedData = JSON.stringify(root);
+// var fs = require('fs');
+// fs.writeFile("psych_id783121_new.json", weightedData, function (err) {
+//     if (err) console.log('error', err);
+// });
 

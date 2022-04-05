@@ -3,7 +3,7 @@ var data;
 var tree;
 
 function preload() {
-    data = loadJSON('./datasets/psych_id783121.json');
+    data = loadJSON('./datasets/psych_id783121_new.json');
     // data = loadJSON('./datasets/George_M_Church.json');
 }
 
@@ -16,8 +16,8 @@ function setup() {
 
 function draw() {
     //=== Background color -> white/black ===
-    // background(0);
-    background(255);
+    // background(0); // black
+    background(255);//white
 
     //=== Center root node starting point at middle of screen ===
     translate(width / 2, height);
@@ -28,16 +28,12 @@ function draw() {
     const end = createVector(0, -100); // root end point
 
     //=== Tree Params ===
-    // const strokeW = 10;
-    const strokeW = 30;
+    const strokeW = 200;
     const circleSize = 10;
     const angle = 1;
 
     //=== Build the tree from -> sampleData / realData ===
-    // const childrenNum = buildTree(tree.children, begin, end, strokeW, circleSize, angle); // sample
-    // const childrenNum = buildTree(data.children, begin, end, strokeW, circleSize, angle); // real
-
-    // buildTree(tree.children, begin, end, strokeW, circleSize, angle); //sample
+    // buildTree(tree.children, begin, end, strokeW, circleSize, angle); //test
     buildTree(data.children, begin, end, strokeW, circleSize, angle); //real
 
     //=== Draw root -> color / line / leaf -> sampleData / realData ===
@@ -50,9 +46,9 @@ function draw() {
     // drawLeaf(begin, end, data.gender_color, childrenNum);
 
     //Leaf -> hierarchy
-    // drawLeaf(begin, end, tree.gender_color, strokeW);
-    drawLeaf(begin, end, data.gender_color, strokeW);
-
+    // drawLeaf(begin, end, tree.gender_color, strokeW); // test
+    drawLeaf(begin, end, data.gender_color, strokeW * data.weight); //real
+    // 
     // noStroke();
     // circle(end.x, end.y, circleSize);
 }
@@ -61,11 +57,11 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
     const branchNum = children?.length;
     if (branchNum === 0 || children == null) {
-        return 1;
-        // return;
+        // return 1;
+        return;
     }
 
-    totalChilrenNum = 0;
+    // totalChilrenNum = 0;
 
     //Recurse on all the nodes
     for (let i = 0; i < branchNum; i++) {
@@ -102,7 +98,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        buildTree(children[i].children, begin, newEnd, strokeW - 3, circleSize - 1.3, angle + 20);
+        buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 1.3, angle + 20);
         // childrenNum = buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
@@ -116,7 +112,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Draw Leaf
         // drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
-        drawLeaf(begin, newEnd, children[i].gender_color, strokeW);
+        drawLeaf(begin, newEnd, children[i].gender_color, strokeW * children[i].weight);
 
         //Draw Circle
         // noStroke();
@@ -131,8 +127,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 }
 
 
-// function drawLeaf(begin, end, color, strokeW) {
-function drawLeaf(begin, end, color, childrenNum) {
+function drawLeaf(begin, end, color, strokeW) {
+    // function drawLeaf(begin, end, color, childrenNum) {
     // console.log(end);
     let slope = 0;
 
@@ -147,7 +143,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         // const leafWeight = 5;
 
         //normalization
-        let leafWeight = 0.2 * childrenNum;
+        // let leafWeight = 0.2 * childrenNum;
         // if (childrenNum > 500) {
         //     leafWeight = 0.1 * childrenNum;
         // } else if (childrenNum > 200) {
@@ -159,7 +155,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         // } else if (childrenNum > 10) {
         //     leafWegiht = 0.8 * childrenNum;
         // }
-        // const leafWeight = strokeW;
+        const leafWeight = strokeW;
         const x1 = midPoint.x + leafWeight;
         const y1 = midPoint.y;
         //2
@@ -187,7 +183,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
         //normalization
-        let leafWeight = 0.2 * childrenNum;
+        // let leafWeight = 0.2 * childrenNum;
 
         // if (childrenNum > 500) {
         //     leafWeight = 0.1 * childrenNum;
@@ -200,7 +196,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         // } else if (childrenNum > 10) {
         //     leafWegiht = 0.8 * childrenNum;
         // }
-        // const leafWeight = strokeW;
+        const leafWeight = strokeW;
 
         const x1 = midPoint.x;
         const y1 = midPoint.y + leafWeight;
@@ -224,7 +220,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
         // const leafWeight = 5;
         //normalization
-        let leafWeight = 0.2 * childrenNum;
+        // let leafWeight = 0.2 * childrenNum;
 
         // if (childrenNum > 500) {
         //     leafWeight = 0.1 * childrenNum;
@@ -237,7 +233,7 @@ function drawLeaf(begin, end, color, childrenNum) {
         // } else if (childrenNum > 10) {
         //     leafWegiht = 0.8 * childrenNum;
         // }
-        // const leafWeight = strokeW;
+        const leafWeight = strokeW;
         /**
          * a
          * 1  2
@@ -266,30 +262,42 @@ function drawLeaf(begin, end, color, childrenNum) {
 
 
 tree = {
-    gender: 'man',
-    gender_color: 'blue',
+    name: "Gege",
+    gender: "man",
+    gender_color: "blue",
     children: [
         {
-            gender: 'man',
-            gender_color: 'blue',
+            name: "Jiejie",
+            gender: "man",
+            gender_color: "blue",
             children: [
                 {
-                    gender: 'man',
-                    gender_color: 'blue',
+                    name: "Meimei",
+                    gender: "man",
+                    gender_color: "blue",
+                    weight: 0.09090909090909091
                 },
                 {
-                    gender: 'woman',
-                    gender_color: 'red',
-                },
-            ]
+                    name: "Didi",
+                    gender: "woman",
+                    gender_color: "red",
+                    weight: 0.09090909090909091
+                }
+            ],
+            weight: 0.18181818181818182
         },
         {
-            gender: 'woman',
-            gender_color: 'red',
+            name: "Dama",
+            gender: "woman",
+            gender_color: "red",
+            weight: 0.09090909090909091
         },
         {
-            gender: 'woman',
-            gender_color: 'red',
-        },
-    ]
+            name: "Dashu",
+            gender: "woman",
+            gender_color: "red",
+            weight: 0.09090909090909091
+        }
+    ],
+    weight: 0.45454545454545453
 }
