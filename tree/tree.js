@@ -24,7 +24,7 @@ function draw() {
 
     //=== Root setup ->===
     // const begin = createVector(0, 0); // root starting point
-    const begin = createVector(0,0); // root starting point
+    const begin = createVector(0, 0); // root starting point
     const end = createVector(0, -100); // root end point
 
     //=== Tree Params ===

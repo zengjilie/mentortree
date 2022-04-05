@@ -1,16 +1,10 @@
 {
-  "name": "mentor-tree",
+  "name": "y",
   "version": "1.0.0",
-  "description": "",
+  "description": "![map](map.png)",
   "main": "index.js",
-  "dependencies": {
-    "csvtojson": "^2.0.10",
-    "d3-hierarchy": "^3.1.1",
-    "express": "^4.17.2",
-    "node-csv": "^0.1.2"
-  },
   "scripts": {
-    "start": "nodemon ./index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zengjilie/mentortree/issues"
   },
-  "homepage": "https://github.com/zengjilie/mentortree#readme"
+  "homepage": "https://github.com/zengjilie/mentortree#readme",
+  "dependencies": {
+    "three": "^0.138.3"
+  }
 }
