@@ -16,20 +16,20 @@ function preload() {
     // data = loadJSON('./datasets/psych_id783121_new.json');
     // data = loadJSON('./datasets/George_M_Church_new.json');
     // data = loadJSON('./datasets/Francis_Galton_1_new.json');
-    data = loadJSON('./datasets/WILLIAM_JAMES_Tshape_new.json');
-    // data = loadJSON('./datasets/HENRY_GARRETT_Sshape_new.json');
+    // data = loadJSON('./datasets/WILLIAM_JAMES_Tshape_new.json');
+    data = loadJSON('./datasets/HENRY_GARRETT_Sshape_new.json');
 }
 
 function setup() {
     // createCanvas(window.innerWidth, window.innerHeight);
     createCanvas(window.innerWidth, window.innerHeight, SVG);
-    // createCanvas(500,500);
 
     //use random color
     console.log(data);
     for (let area of data.allResearchAreas) {
         colorMap.set(area, getRandomColor());
     }
+
     // console.log(colorMap);
 }
 

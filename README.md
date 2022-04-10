@@ -4,6 +4,8 @@
 
 ### William James
 
+![william3](./images/version3/william3.png)
+
 ![william2](./images/version3/william2.png)
 
 ![william1](./images/version3/william1.png)
@@ -11,6 +13,8 @@
 ### Hery Garrett
 
 ![hery1](./images/version3/hery1.png)
+
+![hery2](./images/version3/hery2.png)
 
 ### Francis Galton
 ![francis1](./images/version3/francis1.png)
