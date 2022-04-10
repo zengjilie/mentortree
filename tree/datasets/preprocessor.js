@@ -35,7 +35,9 @@
 
 // const data = require("./Francis_Galton_1.json");
 // const data = require("./psych_id783121.json");
-const data = require("./George_M_Church.json");
+// const data = require("./George_M_Church.json");
+const data = require("./HENRY_GARRETT_Sshape.json");
+// const data = require("./WILLIAM _JAMES_Tshape.json");
 
 const root = data;
 /**
@@ -126,13 +128,18 @@ console.log(map);
 for (let [key, value] of map) {
     /**
      * 1. threshold tunning
+     * 2. mean + {x} - value, x increase -> branch thicker
      */
-    // let distFromMean = Math.abs(mean + 50 - value);
-    let distFromMean = Math.abs(mean - value);
-    console.log(distFromMean);
-    // distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;
-    distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean;
-    const prec = distFromMean / (Math.abs(max - min));
+    // let distFromMean = Math.abs(mean + 50 - value);//Francis
+    let distFromMean = Math.abs(mean + 100 - value);//william
+    // let distFromMean = Math.abs(mean - value);//geroge church
+
+    //normalize root 
+    distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;// Francis
+    // distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean; // geroge church
+
+    let max_min = Math.abs(max - min);
+    const prec = distFromMean / max_min;
     map.set(key, prec);
 }
 
@@ -168,8 +175,10 @@ let weightedData = JSON.stringify(root);
 
 fs = require('fs');
 // fs.writeFile("Francis_Galton_1_new.json", weightedData, function (err) {
-    // fs.writeFile("psych_id783121_new.json", weightedData, function (err) {;
-    fs.writeFile("George_M_Church_new.json", weightedData, function (err) {
+// fs.writeFile("psych_id783121_new.json", weightedData, function (err) {;
+// fs.writeFile("George_M_Church_new.json", weightedData, function (err) {
+// fs.writeFile("./WILLIAM_JAMES_Tshape_new.json", weightedData, function (err) {
+fs.writeFile("./HENRY_GARRETT_Sshape_new.json", weightedData, function (err) {
     if (err) console.log('error', err);
 });
 
