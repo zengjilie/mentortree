@@ -2,16 +2,32 @@ var data;
 //Tree is test data
 var tree;
 
+//research areas - > (area, color)
+var colorMap = new Map();
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r},${g},${b})`;
+}
+
 function preload() {
-    data = loadJSON('./datasets/psych_id783121_new.json');
-    // data = loadJSON('./datasets/George_M_Church.json');
+    //some has research color some doesn't have color
+    // data = loadJSON('./datasets/psych_id783121_new.json');
+    // data = loadJSON('./datasets/George_M_Church_new.json');
+    data = loadJSON('./datasets/Francis_Galton_1_new.json');
 }
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     // createCanvas(500,500);
-    console.log(data);
 
+    //use random color
+    console.log(data);
+    for (let area of data.allResearchAreas) {
+        colorMap.set(area, getRandomColor());
+    }
+    // console.log(colorMap);
 }
 
 function draw() {
@@ -28,7 +44,9 @@ function draw() {
     const end = createVector(0, -100); // root end point
 
     //=== Tree Params ===
-    const strokeW = 200;
+    //try different weight
+    const strokeW = 400;
+    // const strokeW = 5000;
     const circleSize = 10;
     const angle = 1;
 
@@ -38,8 +56,8 @@ function draw() {
 
     //=== Draw root -> color / line / leaf -> sampleData / realData ===
     // stroke(tree.gender_color) // test
-    stroke(data.gender_color) // real
-    line(begin.x, begin.y, end.x, end.y); // draw root
+    // stroke(data.gender_color) // real
+    // line(begin.x, begin.y, end.x, end.y); // draw root
 
     //Leaf -> children num
     // drawLeaf(begin, end, tree.gender_color, childrenNum);
@@ -47,7 +65,8 @@ function draw() {
 
     //Leaf -> hierarchy
     // drawLeaf(begin, end, tree.gender_color, strokeW); // test
-    drawLeaf(begin, end, data.gender_color, strokeW * data.weight); //real
+    let color = data.gender_color === 'red' ? 'rgba(255,0,0,0.5)' : 'rgba(101, 132, 248, 0.5)';
+    drawLeaf(begin, end, color, strokeW * data.weight); //real
     // 
     // noStroke();
     // circle(end.x, end.y, circleSize);
@@ -84,7 +103,6 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             newEnd.rotate((i + 1) * -PI / 60);
             //Weighted
         }
-
         //Evenly
         // newEnd.rotate(-PI / 2 + (i + 1) * fraction);
         // console.log(newEnd);
@@ -98,7 +116,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        buildTree(children[i].children, begin, newEnd, strokeW, circleSize - 1.3, angle + 20);
+        buildTree(children[i].children, begin, newEnd, strokeW, circleSize, angle + 20);
         // childrenNum = buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
@@ -107,15 +125,27 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Draw Line
         // console.log(children[i].gender_color)
-        stroke(children[i].gender_color);
+        const color = children[i].gender_color;
+        stroke(color);
         line(begin.x, begin.y, newEnd.x, newEnd.y);
 
         //Draw Leaf
-        // drawLeaf(begin, newEnd, children[i].gender_color, childrenNum);
-        drawLeaf(begin, newEnd, children[i].gender_color, strokeW * children[i].weight);
+        drawLeaf(begin, newEnd, color, strokeW * children[i].weight);
 
         //Draw Circle
         // noStroke();
+        for (let area of children[i].researcharea) {
+            // console.log(colorMap.get(area))
+            // let c = color(children[i].researcharea_color);
+            // console.log(children[i].researcharea_color);
+            // fill();
+            // fill(colorMap.get(area));
+            // circle(newEnd.x, newEnd.y, circleSize);
+        }
+        // let c = color(children[i].researcharea_color);
+        // console.log(children[i].researcharea_color);
+        // fill(children[i].researcharea_color);
+        // console.log(children[i]);
         // circle(newEnd.x, newEnd.y, circleSize);
 
         translate(-end.x, -end.y);
@@ -260,6 +290,9 @@ function drawLeaf(begin, end, color, strokeW) {
 
 }
 
+function drawRec(begin, end, color, strokeW) {
+
+}
 
 tree = {
     name: "Gege",
