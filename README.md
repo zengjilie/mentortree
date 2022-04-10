@@ -1,11 +1,4 @@
-# Visulization
-<!-- ## 3D Map -->
-
-<!-- ![map](map.png) -->
-
-<!-- ![map](map-rotate.gif) -->
-
-<!-- ![map](map-rotate-1.gif) -->
+# Mentor tree
 
 ## Version 3
 
