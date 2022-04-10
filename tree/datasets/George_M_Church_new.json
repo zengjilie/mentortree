@@ -1,7 +1,7 @@
 {
     "name": "GEORGE M CHURCH",
     "gender": "man",
-    "gender_color": "rgba(255,0,0,0.5)",
+    "gender_color": "rgba(82,206,206,0.5)",
     "researcharea": [
         "chemistry"
     ],
@@ -10,7 +10,7 @@
         {
             "name": "AIMEE M DUDLEY",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "microbiology"
             ],
@@ -19,40 +19,40 @@
                 {
                     "name": "GREGORY A CARY",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "microbiology"
                     ],
                     "researcharea_color": "#65B9CA",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "DERETH RENEE PHILLIPS",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "ABIGAIL MANSON MCGUIRE",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "DANA  PE'ER",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "computerscience"
             ],
@@ -61,50 +61,50 @@
                 {
                     "name": "ELHAM  AZIZI",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "bme"
                     ],
                     "researcharea_color": "#A53F58",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "FELIX  SANCHEZ GARCIA",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "computerscience"
                     ],
                     "researcharea_color": "#10887E",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.01
+            "weight": 0.004201680672268908
         },
         {
             "name": "ALLEGRA  PETTI",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "compbio"
             ],
             "researcharea_color": "#7F5D2B",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "SAMIRA  MUSAH",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "MARTHA L BULYK",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "chemistry"
             ],
@@ -113,70 +113,70 @@
                 {
                     "name": "OLGA B BOTVINNIK",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "neuro"
                     ],
                     "researcharea_color": "#F3E09A",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "GAYATRI  RAMAKRISHNAN",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.01
+            "weight": 0.004201680672268908
         },
         {
             "name": "NILI  OSTROV",
             "gender": "woman",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(255,115,189,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "JAMES E DICARLO",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "PHILIPPE  MARC",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "compbio"
             ],
             "researcharea_color": "#7F5D2B",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "SETH L SHIPMAN",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "neuro"
             ],
             "researcharea_color": "#F3E09A",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "JAY  SHENDURE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "genetics"
             ],
@@ -185,127 +185,127 @@
                 {
                     "name": "RUPALI P PATWARDHAN",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "SARAH  NG",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "EMILY  TURNER",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "DARREN A CUSANOVICH",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "neuro"
                     ],
                     "researcharea_color": "#F3E09A",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "JACOB O KITZMAN",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "MARTIN  KIRCHER",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "STEPHEN  SALIPANTE",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "JERROD  SCHWARTZ",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "AARON  MCKENNA",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "MATTHEW  SNYDER",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "JOSHUA N BURTON",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "AKASH  KUMAR",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "ANDREW C ADEY",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
@@ -314,40 +314,40 @@
                         {
                             "name": "KRISTOF A TORKENCZY",
                             "gender": "man",
-                            "gender_color": "rgba(255,0,0,0.5)",
+                            "gender_color": "rgba(82,206,206,0.5)",
                             "researcharea": [
                                 "genetics"
                             ],
                             "researcharea_color": "#6629E2",
-                            "weight": 0.005
+                            "weight": 0.016106442577030814
                         }
                     ],
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "JOSEPH B HIATT",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "VIJAY  RAMANI",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
                     "researcharea_color": "#6629E2",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "BRIAN J O'ROAK",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "genetics"
                     ],
@@ -356,53 +356,53 @@
                         {
                             "name": "MARISSA  CO",
                             "gender": "woman",
-                            "gender_color": "rgba(255,0,0,0.5)",
+                            "gender_color": "rgba(255,115,189,0.5)",
                             "researcharea": [
                                 "neuro"
                             ],
                             "researcharea_color": "#F3E09A",
-                            "weight": 0.005
+                            "weight": 0.016106442577030814
                         },
                         {
                             "name": "DEIDRE  KRUPP",
                             "gender": "woman",
-                            "gender_color": "rgba(255,0,0,0.5)",
+                            "gender_color": "rgba(255,115,189,0.5)",
                             "researcharea": [
                                 "neuro"
                             ],
                             "researcharea_color": "#F3E09A",
-                            "weight": 0.005
+                            "weight": 0.016106442577030814
                         }
                     ],
-                    "weight": 0.01
+                    "weight": 0.004201680672268908
                 }
             ],
-            "weight": 0.095
+            "weight": 0.1981792717086835
         },
         {
             "name": "DANIEL BRYAN GOODMAN",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "JEFF  NIVALA",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "SRIRAM  KOSURI",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
@@ -411,30 +411,30 @@
                 {
                     "name": "JOHNNY  LEE",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "chemistry"
                     ],
                     "researcharea_color": "#B0313D",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "CALIN  PLESA",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "chemistry"
                     ],
                     "researcharea_color": "#B0313D",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.01
+            "weight": 0.004201680672268908
         },
         {
             "name": "ANDREW J LINK",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
@@ -443,60 +443,60 @@
                 {
                     "name": "ADAM R FARLEY",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "chemistry"
                     ],
                     "researcharea_color": "#B0313D",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "CHRISTOPHER MICHAEL BROWNE",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "chemistry"
                     ],
                     "researcharea_color": "#B0313D",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "ROBERT V GERBASI",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "chemistry"
                     ],
                     "researcharea_color": "#B0313D",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.015
+            "weight": 0.007703081232492996
         },
         {
             "name": "REZA  KALHOR",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "VOLKER  BUSSKAMP",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "neuro"
             ],
             "researcharea_color": "#F3E09A",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "URI  LASERSON",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "neuro"
             ],
@@ -505,200 +505,200 @@
                 {
                     "name": "TIMOTHY  O'DONNELL",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "neuro"
                     ],
                     "researcharea_color": "#F3E09A",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "PRESTON W ESTEP",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "JASON DARRYL HUGHES",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "SAEED  TAVAZOIE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "DOUGLAS W SELINGER",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "NIKOS B REPPAS",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "GREGORY J PORRECA",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "YONATAN H GRAD",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "JAKE  JAFFE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "SHAWN M DOUGLAS",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "DANIEL M JANSE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "PETER V KHARCHENKO",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "ALEXANDER W ZARANEK",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "MORTEN O SOMMER",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "ABRAHAM M ROSENBAUM",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "MARK A UMBARGER",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "JOSHUA A MOSBERG",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "MARC J LAJOIE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "ADAM H MARBLESTONE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "DANIEL  SEGRE",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "microbiology"
             ],
@@ -707,50 +707,50 @@
                 {
                     "name": "SARA B COLLINS",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "microbiology"
                     ],
                     "researcharea_color": "#65B9CA",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "EVAN  SNITKIN",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "microbiology"
                     ],
                     "researcharea_color": "#65B9CA",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "NIELS  KLITGORD",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "microbiology"
                     ],
                     "researcharea_color": "#65B9CA",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "ED  REZNIK",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "bme"
                     ],
                     "researcharea_color": "#A53F58",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.02
+            "weight": 0.0196078431372549
         },
         {
             "name": "NATHAN ENOCH LEWIS",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "compbio"
             ],
@@ -759,70 +759,70 @@
                 {
                     "name": "ALYAA M ABDEL-HALEEM",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "JOANNE  LIU",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "ANNE  RICHELLE",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "ALEX  THOMAS",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "HOOMAN  HEFZI",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 },
                 {
                     "name": "JAHIR MAURICIO GUTIERREZ",
                     "gender": "man",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(82,206,206,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.03
+            "weight": 0.04341736694677871
         },
         {
-            "name": "Frgba(255,0,0,0.5)ERICK P ROTH",
+            "name": "FredERICK P ROTH",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "compbio"
             ],
@@ -831,30 +831,30 @@
                 {
                     "name": "ADRINE  DE SOUZA",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "RICHIE E KOHMAN",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "chemistry"
             ],
             "researcharea_color": "#B0313D",
-            "weight": 0.005
+            "weight": 0.016106442577030814
         },
         {
             "name": "KALIM  MIR",
             "gender": "man",
-            "gender_color": "rgba(255,0,0,0.5)",
+            "gender_color": "rgba(82,206,206,0.5)",
             "researcharea": [
                 "neuro"
             ],
@@ -863,15 +863,15 @@
                 {
                     "name": "HEIDI  DVINGE",
                     "gender": "woman",
-                    "gender_color": "rgba(255,0,0,0.5)",
+                    "gender_color": "rgba(255,115,189,0.5)",
                     "researcharea": [
                         "compbio"
                     ],
                     "researcharea_color": "#7F5D2B",
-                    "weight": 0.005
+                    "weight": 0.016106442577030814
                 }
             ],
-            "weight": 0.005
+            "weight": 0.016106442577030814
         }
     ],
     "allResearchAreas": [
@@ -883,5 +883,5 @@
         "neuro",
         "genetics"
     ],
-    "weight": 0.42
+    "weight": 0.2429971988795518
 }

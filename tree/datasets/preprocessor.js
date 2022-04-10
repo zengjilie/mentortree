@@ -33,9 +33,9 @@
 //     ]
 // }
 
-const data = require("./Francis_Galton_1.json");
+// const data = require("./Francis_Galton_1.json");
 // const data = require("./psych_id783121.json");
-// const data = require("./George_M_Church.json");
+const data = require("./George_M_Church.json");
 
 const root = data;
 /**
@@ -44,6 +44,7 @@ const root = data;
  * 3. add precentage property to the data
  * 4. export new JSON file
  */
+
 //render color generator
 
 // the map variable stores keyvalue pairs -> (research's name, childrenNum)
@@ -85,15 +86,53 @@ recurse(root);
 root.allResearchAreas = [...areaSet];
 
 // === get precentage ===
+// normalize the mentee distribution
+/**
+ * 1.divided by sum
+ * 2.divided by max value
+ * 3. |mean - x|/|x_max - x_min| ( x is childNum)
+ **/
 
-// calculate sum
 let sum = 0;
+let max = 0;
+let min = 0;
+let mean = 0;
 for (let [key, value] of map) {
     sum += value;
+    max = value > max ? value : max;
+    min = value < min ? value : min;
 }
 
+mean = sum / map.size;
+
+console.log(sum);
+console.log(map.size);
+console.log(mean);
+console.log(map);
+
+//1. divided by sum
+// for (let [key, value] of map) {
+//     const prec = value / sum;
+//     map.set(key, prec);
+// }
+
+//2. divided by max
+// for (let [key, value] of map) {
+//     const prec = value / max ;
+//     map.set(key, prec);
+// }
+
+// 3. |mean - x|/|x_max - x_min| ( x is childNum)
 for (let [key, value] of map) {
-    const prec = value / sum;
+    /**
+     * 1. threshold tunning
+     */
+    // let distFromMean = Math.abs(mean + 50 - value);
+    let distFromMean = Math.abs(mean - value);
+    console.log(distFromMean);
+    // distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;
+    distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean;
+    const prec = distFromMean / (Math.abs(max - min));
     map.set(key, prec);
 }
 
@@ -102,9 +141,10 @@ for (let [key, value] of map) {
 function traverse(root) {
     //change gender color
     if (root.gender_color == 'blue') {
-        root.gender_color = 'rgba(101,132,248,0.5)';
+        // root.gender_color = 'rgba(101,132,248,0.5)';
+        root.gender_color = 'rgba(82,206,206,0.5)';
     } else {
-        root.gender_color = 'rgba(255,0,0,0.5)';
+        root.gender_color = 'rgba(255,115,189,0.5)';
     }
 
 
@@ -124,12 +164,12 @@ traverse(root);
 // console.log(JSON.stringify(root));
 // === export new data ===
 
-// let weightedData = JSON.stringify(root);
+let weightedData = JSON.stringify(root);
 
-var fs = require('fs');
-fs.writeFile("Francis_Galton_1_new.json", weightedData, function (err) {
-// fs.writeFile("psych_id783121_new.json", weightedData, function (err) {;
-// fs.writeFile("George_M_Church_new.json", weightedData, function (err) {
+fs = require('fs');
+// fs.writeFile("Francis_Galton_1_new.json", weightedData, function (err) {
+    // fs.writeFile("psych_id783121_new.json", weightedData, function (err) {;
+    fs.writeFile("George_M_Church_new.json", weightedData, function (err) {
     if (err) console.log('error', err);
 });
 
