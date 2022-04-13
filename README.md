@@ -34,9 +34,10 @@ Random
 
 ### George Church
 
-Random
+hsb
 ![geroge1-hsb](./images/version3/geroge1-hsb.png)
 
+Random
 ![geroge1](./images/version3/geroge1.png)
 
 ## Version 2
