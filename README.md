@@ -5,7 +5,7 @@
 ### William James
 
 HSB
-![william3](./images/version3/william3-hsb.png)
+![william1-hsb](./images/version3/william1-hsb.png)
 
 Random
 ![william3](./images/version3/william3.png)
