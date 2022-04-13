@@ -26,7 +26,7 @@ Random
 
 ### Francis Galton
 
-HSB Version
+HSB
 ![francis1-hsb](./images/version3/francis1-hsb.png)
 
 Random
@@ -34,7 +34,7 @@ Random
 
 ### George Church
 
-hsb
+HSB
 ![geroge1-hsb](./images/version3/geroge1-hsb.png)
 
 Random
