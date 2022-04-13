@@ -4,6 +4,9 @@
 
 ### William James
 
+HSB Version
+![william3](./images/version3/william3-hsb.png)
+
 ![william3](./images/version3/william3.png)
 
 ![william2](./images/version3/william2.png)
@@ -14,9 +17,13 @@
 
 ![hery1](./images/version3/hery1.png)
 
-![hery2](./images/version3/hery2.png)
+HSB Version
+![hery2](./images/version3/hery2-hsb.png)
 
 ### Francis Galton
+HSB Version
+![francis2](./images/version3/francis2-hsb.png)
+
 ![francis1](./images/version3/francis1.png)
 
 ### George Church
