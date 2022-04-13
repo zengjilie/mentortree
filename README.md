@@ -4,9 +4,10 @@
 
 ### William James
 
-HSB Version
+HSB
 ![william3](./images/version3/william3-hsb.png)
 
+Random
 ![william3](./images/version3/william3.png)
 
 ![william2](./images/version3/william2.png)
@@ -15,19 +16,27 @@ HSB Version
 
 ### Hery Garrett
 
-HSB Version
-![hery2](./images/version3/hery2-hsb.png)
+HSB
+![hery2-hsb](./images/version3/hery2-hsb.png)
 
+![hery1-hsb](./images/version3/hery1-hsb.png)
+
+Random
 ![hery1](./images/version3/hery1.png)
 
 ### Francis Galton
 
 HSB Version
-![francis2](./images/version3/francis2-hsb.png)
+![francis1-hsb](./images/version3/francis1-hsb.png)
 
+Random
 ![francis1](./images/version3/francis1.png)
 
 ### George Church
+
+Random
+![geroge1-hsb](./images/version3/geroge1-hsb.png)
+
 ![geroge1](./images/version3/geroge1.png)
 
 ## Version 2

@@ -33,10 +33,10 @@
 //     ]
 // }
 
+const data = require("./psych_id783121.json");
 // const data = require("./Francis_Galton_1.json");
-// const data = require("./psych_id783121.json");
 // const data = require("./George_M_Church.json");
-const data = require("./HENRY_GARRETT_Sshape.json");
+// const data = require("./HENRY_GARRETT_Sshape.json");
 // const data = require("./WILLIAM _JAMES_Tshape.json");
 
 const root = data;
@@ -149,9 +149,12 @@ function traverse(root) {
     //change gender color
     if (root.gender_color == 'blue') {
         // root.gender_color = 'rgba(101,132,248,0.5)';
-        root.gender_color = 'rgba(82,206,206,0.5)';
+        // root.gender_color = 'rgba(82,206,206,0.5)'; // comb1
+        root.gender_color = 'rgba(115,255,218,0.5)'; // comb2
+
     } else {
-        root.gender_color = 'rgba(255,115,189,0.5)';
+        // root.gender_color = 'rgba(255,115,189,0.5)'; // comb1
+        root.gender_color = 'rgba(255,95,145,0.5)'; // comb2
     }
 
 
@@ -174,11 +177,11 @@ traverse(root);
 let weightedData = JSON.stringify(root);
 
 fs = require('fs');
+fs.writeFile("psych_id783121_new.json", weightedData, function (err) {;
 // fs.writeFile("Francis_Galton_1_new.json", weightedData, function (err) {
-// fs.writeFile("psych_id783121_new.json", weightedData, function (err) {;
 // fs.writeFile("George_M_Church_new.json", weightedData, function (err) {
 // fs.writeFile("./WILLIAM_JAMES_Tshape_new.json", weightedData, function (err) {
-fs.writeFile("./HENRY_GARRETT_Sshape_new.json", weightedData, function (err) {
+// fs.writeFile("./HENRY_GARRETT_Sshape_new.json", weightedData, function (err) {
     if (err) console.log('error', err);
 });
 
