@@ -2,17 +2,33 @@ var data;
 //Tree is test data
 var tree;
 
+/**
+ * 1. use random color RGB mode
+ * 2. 360 / researchNum, HSB mode
+ */
+
 //research areas - > (area, color)
 var colorMap = new Map();
-function getRandomColor() {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    return `rgb(${r},${g},${b})`;
+
+//1. RGB mode
+// function getRandomColor() {
+//     const r = Math.floor(Math.random() * 255);
+//     const g = Math.floor(Math.random() * 255);
+//     const b = Math.floor(Math.random() * 255);
+//     return `rgb(${r},${g},${b})`;
+// }
+
+//2. HSB
+function buildColorMap() {
+    const gap = 360 / data.allResearchAreas.length;
+    let j = 0
+    for (let i = 1; i <= 360; i += gap) {
+        colorMap.set(data.allResearchAreas[j], i);
+        j++;
+    }
 }
 
 function preload() {
-    //some has research color some doesn't have color
     // data = loadJSON('./datasets/psych_id783121_new.json');
     // data = loadJSON('./datasets/George_M_Church_new.json');
     // data = loadJSON('./datasets/Francis_Galton_1_new.json');
@@ -25,12 +41,14 @@ function setup() {
     createCanvas(window.innerWidth, window.innerHeight, SVG);
 
     //use random color
-    console.log(data);
-    for (let area of data.allResearchAreas) {
-        colorMap.set(area, getRandomColor());
-    }
+    // for (let area of data.allResearchAreas) {
+    //     colorMap.set(area,);
+    // }
+    buildColorMap();
 
-    // console.log(colorMap);
+    console.log(colorMap);
+
+    console.log(data.allResearchAreas.length);
 }
 
 function draw() {
@@ -149,7 +167,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             // let c = color(children[i].researcharea_color);
             // console.log(children[i].researcharea_color);
             // fill();
-            fill(colorMap.get(area));
+            colorMode(HSB);
+            fill(colorMap.get(area), 100, 100);
             circle(newEnd.x, newEnd.y, circleSize);
         }
         // let c = color(children[i].researcharea_color);
