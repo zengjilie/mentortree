@@ -36,8 +36,8 @@
 // const data = require("./Francis_Galton_1.json");
 // const data = require("./psych_id783121.json");
 // const data = require("./George_M_Church.json");
-// const data = require("./HENRY_GARRETT_Sshape.json");
-const data = require("./WILLIAM _JAMES_Tshape.json");
+const data = require("./HENRY_GARRETT_Sshape.json");
+// const data = require("./WILLIAM _JAMES_Tshape.json");
 
 const root = data;
 /**
@@ -130,13 +130,13 @@ for (let [key, value] of map) {
      * 1. threshold tunning
      * 2. mean + {x} - value, x increase -> branch thicker
      */
-    let distFromMean = Math.abs(mean + 10 - value);//Francis
+    let distFromMean = Math.abs(mean + 10 - value);//Francis/hery
     // let distFromMean = Math.abs(mean + 100 - value);//william;
     // let distFromMean = Math.abs(mean - value);//geroge church
 
     //normalize root 
-    distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;// Francis
-    // distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean; // geroge church
+    // distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;// Francis / william
+    distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean; // geroge church/hery
 
     let max_min = Math.abs(max - min);
     const prec = distFromMean / max_min;

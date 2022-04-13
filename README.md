@@ -15,12 +15,13 @@ HSB Version
 
 ### Hery Garrett
 
-![hery1](./images/version3/hery1.png)
-
 HSB Version
 ![hery2](./images/version3/hery2-hsb.png)
 
+![hery1](./images/version3/hery1.png)
+
 ### Francis Galton
+
 HSB Version
 ![francis2](./images/version3/francis2-hsb.png)
 
