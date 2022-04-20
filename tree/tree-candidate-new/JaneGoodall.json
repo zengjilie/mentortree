@@ -1,0 +1,15 @@
+{
+    "name": "JANE  GOODALL",
+    "gender": "woman",
+    "gender_color": "rgba(255,95,145,0.5)",
+    "researcharea": [
+        "neuro",
+        "primate"
+    ],
+    "children_num": 0,
+    "allResearchAreas": [
+        "neuro",
+        "primate"
+    ],
+    "weight": 10
+}

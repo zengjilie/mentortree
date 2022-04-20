@@ -29,11 +29,23 @@ function buildColorMap() {
 }
 
 function preload() {
+    //Apr 13
     // data = loadJSON('./datasets/psych_id783121_new.json');
     // data = loadJSON('./datasets/George_M_Church_new.json');
     // data = loadJSON('./datasets/Francis_Galton_1_new.json');
     // data = loadJSON('./datasets/WILLIAM_JAMES_Tshape_new.json');
-    data = loadJSON('./datasets/HENRY_GARRETT_Sshape_new.json');
+    // data = loadJSON('./datasets/HENRY_GARRETT_Sshape_new.json');
+
+    //Apr 20
+    // data = loadJSON("./tree-candidate-new/CharlesSandersPeirce.json");
+    // data = loadJSON("./tree-candidate-new/DonnaHaraway.json");
+    // data = loadJSON("./tree-candidate-new/JaneGoodall.json"); // wierd
+    // data =loadJSON("./tree-candidate-new/JenniferADoudna.json");
+    // data =loadJSON("./tree-candidate-new/LudwigBoltzmann.json");
+    // data =loadJSON("./tree-candidate-new/NielsBohr.json");
+    // data =loadJSON("./tree-candidate-new/RichardPFeynman.json");
+    // data =loadJSON("./tree-candidate-new/StephenHawking.json");
+    data = loadJSON("./tree-candidate-new/WilliamJames.json");
 }
 
 function setup() {
