@@ -15,7 +15,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "NATALIE S LOVELESS",
@@ -25,7 +25,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "ALEXANDRA  KOELLE",
@@ -35,7 +35,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "ASTRID  SCHRADER",
@@ -45,7 +45,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "SCOUT A CALVERT",
@@ -55,7 +55,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "EVA  HAYWARD",
@@ -65,7 +65,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "BARBARA L LEY",
@@ -75,7 +75,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "NANCY  SAN MARTIN",
@@ -85,7 +85,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "LAURA J KUO",
@@ -95,7 +95,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "JOANNE M BARKER",
@@ -105,7 +105,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "SANDY ALLUCQUERE ROSANNE STONE",
@@ -115,7 +115,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "HEATHER M SCHELL",
@@ -125,7 +125,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "JULIAN C BLEECKER",
@@ -135,7 +135,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "MARK  BARTLETT",
@@ -145,7 +145,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "JOSHUA  LABARE",
@@ -155,7 +155,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "ANTHONY J COLLINS",
@@ -165,7 +165,7 @@
                 "literature"
             ],
             "children_num": 0,
-            "weight": 0.55
+            "weight": 0.05
         },
         {
             "name": "RON  EGLASH",
@@ -193,10 +193,10 @@
                                 "microbiology"
                             ],
                             "children_num": 0,
-                            "weight": 0.55
+                            "weight": 0.05
                         }
                     ],
-                    "weight": 0.55
+                    "weight": 0.05
                 },
                 {
                     "name": "JOHN F DRAZAN",
@@ -206,10 +206,10 @@
                         "biomech"
                     ],
                     "children_num": 0,
-                    "weight": 0.55
+                    "weight": 0.05
                 }
             ],
-            "weight": 0.45
+            "weight": 0.05
         }
     ],
     "allResearchAreas": [
@@ -218,5 +218,5 @@
         "microbiology",
         "biomech"
     ],
-    "weight": 0.4
+    "weight": 0.225
 }

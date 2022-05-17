@@ -1,3 +1,4 @@
+// < Data for testing >
 // const data = {
 //     name: 'Gege',
 //     gender: 'man',
@@ -33,6 +34,7 @@
 //     ]
 // }
 
+// < Data import >
 // const data = require("./psych_id783121.json");
 // const data = require("./Francis_Galton_1.json");
 // const data = require("./George_M_Church.json");
@@ -40,34 +42,50 @@
 // const data = require("./WILLIAM _JAMES_Tshape.json");
 
 // const data = require("./tree-candidate/CharlesSandersPeirce.json");
+
 // const data = require("./tree-candidate/DonnaHaraway.json");
-// const data = require("./tree-candidate/JaneGoodall.json");
 // const data = require("./tree-candidate/JenniferADoudna.json");
+
+// const data = require("./tree-candidate/JaneGoodall.json");
 // const data = require("./tree-candidate/LudwigBoltzmann.json");
 // const data = require("./tree-candidate/NielsBohr.json");
 // const data = require("./tree-candidate/RichardPFeynman.json");
 // const data = require("./tree-candidate/StephenHawking.json");
-const data = require("./tree-candidate/WilliamJames.json");
+// const data = require("./tree-candidate/WilliamJames.json");
 
+//Special
+// const data = require("./special/curly-tree.json");
+// const data = require("./special/female-titled-tree.json");
+// const data = require("./special/male-tilted-tree.json");
+// const data = require("./special/tallest-tree.json");
+const data = require("./special/widest-tree.json");
 const root = data;
+
+//< Procedure >
 /**
- * 1. store all the researcher's name and their children number inside map
- * 2. map children number to precentage
- * 3. add precentage property to the data
+ * 1. store all the researcher's name and their children number inside a map
+ * 2. map childrenNum to weighted precentage
+ * 3. add "precentage" property to each researcher
  * 4. export new JSON file
  */
 
-//render color generator
-
-// the map variable stores keyvalue pairs -> (research's name, childrenNum)
+// < Map  (researcher, childrenNum) > 
 let map = new Map();
-let areaSet = new Set();// store research areas
+// < Set researchAreas >
+let areaSet = new Set();
 
-// the recurse function will find the reseracher's name and their chidrenNum;
+/** 
+ * recurse void (root:{
+ * name:stirng,
+ * gender:man,
+ * gender_color:stirng,
+ * researcharea:string[],
+ * children:researcher[] 
+ *  })
+ * recurse function will find the reseracher's name and their chidrenNum
+ * */ 
 function recurse(root) {
-    //base case
-
-    //sometimes research area is not an arary, instead it's a string
+    //< Warning: the "researcharea" property may not a string array, but a string >
     if (typeof root.researcharea === 'string') {
         areaSet.add(root.researcharea);
         root.researcharea = [root.researcharea];
@@ -77,6 +95,7 @@ function recurse(root) {
         }
     }
 
+    // Base case
     if (root?.children == null) {
         map.set(root.name, 1);
         return 1;
@@ -94,11 +113,12 @@ function recurse(root) {
 recurse(root);
 // console.log(areaSet);
 
-// === add all research area to root node ===
+// < Add all researchareas to root node >
 root.allResearchAreas = [...areaSet];
 
-// === get precentage ===
-// normalize the mentee distribution
+// < Calculate the "precentage"
+// undersampling researchers who has too many mentees >
+
 /**
  * 1.divided by sum
  * 2.divided by max value
@@ -117,15 +137,14 @@ for (let [key, value] of map) {
 
 mean = sum / map.size;
 
-console.log(sum);
-console.log(map.size);
-console.log(mean);
+console.log('sum: ' + sum);
+console.log('map size:' + map.size);
+console.log('mean:' + mean);
 console.log(map);
 
 //1. divided by sum
 // for (let [key, value] of map) {
-//     const prec = value / sum;
-//     map.set(key, prec);
+//     const prec = value / sum; //     map.set(key, prec);
 // }
 
 //2. divided by max
@@ -140,13 +159,17 @@ for (let [key, value] of map) {
      * 1. threshold tunning
      * 2. mean + {x} - value, x increase -> branch thicker
      */
-    let distFromMean = Math.abs(mean + 10 - value);//Francis/hery
+    // let distFromMean = Math.abs(mean + 10 - value);//Francis/hery
     // let distFromMean = Math.abs(mean + 100 - value);//william;
-    // let distFromMean = Math.abs(mean - value);//geroge church
+    let distFromMean = Math.abs(mean - value);//geroge church/donna/jennifer
 
     //normalize root 
-    // distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;// Francis / william
-    distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean; // geroge church/hery
+    distFromMean = distFromMean > 1000 ? distFromMean / 4 : distFromMean;// Francis / william / tall
+    // distFromMean = distFromMean > 50 ? distFromMean / 4 : distFromMean; // geroge church/hery
+    // distFromMean = distFromMean > 15 ? distFromMean / 4 : distFromMean; // donnaHarway/jennifer
+    // distFromMean = distFromMean > 10 ? distFromMean / 4 : distFromMean; // female tilted tree
+    // distFromMean = distFromMean > 4 ? distFromMean / 4 : distFromMean; // male tilted tree
+
 
     let max_min = Math.abs(max - min);
     const prec = distFromMean / max_min;
@@ -182,6 +205,7 @@ function traverse(root) {
 
 traverse(root);
 // console.log(JSON.stringify(root));
+
 // === export new data ===
 
 let weightedData = JSON.stringify(root);
@@ -198,21 +222,26 @@ fs = require('fs');
 
 //Apr 20
 // const path = "./tree-candidate-new/CharlesSandersPeirce.json";
+
 // const path = "./tree-candidate-new/DonnaHaraway.json";
+// const path = "./tree-candidate-new/JenniferADoudna.json";
+
 // const path = "./tree-candidate-new/JaneGoodall.json";
-// const path ="./tree-candidate-new/JenniferADoudna.json";
 // const path ="./tree-candidate-new/LudwigBoltzmann.json";
 // const path ="./tree-candidate-new/NielsBohr.json";
 // const path ="./tree-candidate-new/RichardPFeynman.json";
 // const path ="./tree-candidate-new/StephenHawking.json";
 // const path = "./tree-candidate-new/WilliamJames.json";
 
-fs.writeFile(path, weightedData, function (err) {
+//Special path
+// const path = "./special-new/curly-tree.json";
+// const path = "./special-new/female-titled-tree.json";
+// const path = "./special-new/male-titled-tree.json";
+// const path = "./special-new/tallest-tree.json";
+const path = "./special-new/widest-tree.json";
 
-    // fs.writeFile("Francis_Galton_1_new.json", weightedData, function (err) {
-    // fs.writeFile("George_M_Church_new.json", weightedData, function (err) {
-    // fs.writeFile("./WILLIAM_JAMES_Tshape_new.json", weightedData, function (err) {
-    // fs.writeFile("./HENRY_GARRETT_Sshape_new.json", weightedData, function (err) {
+// Write File
+fs.writeFile(path, weightedData, function (err) {
     if (err) console.log('error', err);
 });
 
