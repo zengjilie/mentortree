@@ -28,19 +28,21 @@ function preload() {
     // data = loadJSON("./special-new/curly-tree.json");
     // data = loadJSON("./special-new/female-titled-tree.json");
     // data = loadJSON("./special-new/male-titled-tree.json");
-    data = loadJSON("./special-new/tallest-tree.json");
+    // data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
 }
 
 
-// Color Mode: Using HSB over RGB makes it easier to assign research areas colors that are
-
+// Color Mode: Using HSB over RGB makes it easier to assign research areas colors
 // Color(Hue) ranges between 0 to 360, 
-//research areas - > (area, color)
+
+//research areas --> (area, color)
 var colorMap = new Map();
 
-// HSB 
-function buildColorMap() {
+/**
+ * assignColor function 
+ */
+function assignColor() {
     const gap = 360 / data.allResearchAreas.length;
     let j = 0
     for (let i = 1; i <= 360; i += gap) {
@@ -50,55 +52,59 @@ function buildColorMap() {
 }
 
 function setup() {
-    // createCanvas(window.innerWidth, window.innerHeight);
-    createCanvas(window.innerWidth, window.innerHeight, SVG);
+    createCanvas(window.innerWidth, window.innerHeight);
+    // createCanvas(window.innerWidth, window.innerHeight, SVG);
 
     // Assign color to individual research area
-    buildColorMap();
+    assignColor();
 
     console.log(colorMap);
     console.log(data.allResearchAreas.length);
 
+    // slider = createSlider(0,255, 100);
+    // slider.position(10, 10);
+    // slider.style('width', '80px');
+
     slider = createSlider(0, TWO_PI, PI / 4);
     slider.position(10, 10);
-    slider.style('width', '80px');
+    slider.style('width', '130px');
 
     // frameRate(10);
 }
 
 
-let degree;
+
+var degree;
+
 function draw() {
-    //tilting angle
-    // degree = (slider.value() * 0.01).toFixed(2);
+    //slider value
+    degree = (slider.value() * 0.1).toFixed(1);
+    // degree = slider.value();
+
     // console.log(degree);
 
-
-    //=== Background color -> white/black ===
+    //< Background color >
     background(0); // black
     // background(255);//white
 
-    //=== Center root node starting point at middle of screen ===
+    // < Center the root branch at the middle-bottom of the screen >
     translate(width / 2, height);
 
-    //=== Root setup ->===
-    // const begin = createVector(0, 0); // root starting point
-    const begin = createVector(0, 0); // root starting point
-    const end = createVector(0, -100); // root end point
+    // < Root setup >
+    const begin = createVector(0, 0); // root trunk starting point
+    const end = createVector(0, -100); // root trunk end point
 
-    //=== Tree Params ===
-    //try different weight
+    // < Tree Params >
     const strokeW = 100;
     // const strokeW = 5000;
     const circleSize = 3;
     const angle = 1;
 
-    //=== Build the tree from -> sampleData / realData ===
-    // buildTree(tree.children, begin, end, strokeW, circleSize, angle); //test
-    buildTree(data.children, begin, end, strokeW, circleSize, angle); //real
+    const degree2 = degree;
+    // < Build the tree >
+    buildTree(data.children, begin, end, strokeW, circleSize, angle, degree2);
 
-    //=== Draw root -> color / line / leaf -> sampleData / realData ===
-    // stroke(tree.gender_color) // test
+    //  < Draw root -> color / line / leaf >
     // stroke(data.gender_color) // real
     // line(begin.x, begin.y, end.x, end.y); // draw root
 
@@ -119,15 +125,14 @@ function draw() {
     // noLoop(); // we just want to export once
 }
 
-function buildTree(children, begin, end, strokeW, circleSize, angle) {
+function buildTree(children, begin, end, strokeW, circleSize, angle, degree2) {
 
     const branchNum = children?.length;
+
     if (branchNum === 0 || children == null) {
         // return 1;
         return;
     }
-
-    // totalChilrenNum = 0;
 
     //Recurse on all the nodes
     for (let i = 0; i < branchNum; i++) {
@@ -144,9 +149,9 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         if (children[i].gender === 'woman') {
             // newEnd.rotate((i + 1) * PI / 20);
 
-            newEnd.rotate((i + 1) * PI / 30);
-            // console.log(degree);
-            // newEnd.rotate((i + 1) * PI / 30 + degree);
+            // newEnd.rotate((i + 1) * PI / 30 );
+            console.log("degree2 " + degree2);
+            newEnd.rotate((i + 1) * PI / 30 + degree);
 
             // newEnd.rotate(degree);
 
@@ -157,7 +162,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             // newEnd.rotate((i + 1) * PI / 30);
             // newEnd.rotate((i + 1) * -PI / 60);
             // newEnd.rotate((i + 1) * -PI / 80);
-            newEnd.rotate((i + 1) * -PI / 30);
+            // newEnd.rotate((i + 1) * -PI / 30);
+            newEnd.rotate((i + 1) * -PI / 30 - degree);
         }
 
         //Evenly
@@ -173,7 +179,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        buildTree(children[i].children, begin, newEnd, strokeW, circleSize, angle + 20);
+        buildTree(children[i].children, begin, newEnd, strokeW, circleSize, angle + 20, degree2);
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
         // strokeWeight(childrenNum * 10);
@@ -308,66 +314,66 @@ function drawRec(begin, end, color, strokeW) {
 
 }
 
-// data = {
-//     name: "Gege",
-//     gender: "man",
-//     gender_color: "blue",
-//     "researcharea": [
-//         "1"
-//     ],
-//     children: [
-//         {
-//             name: "Jiejie",
-//             gender: "man",
-//             gender_color: "blue",
-//             "researcharea": [
-//                 "2"
-//             ],
-//             children: [
-//                 {
-//                     name: "Meimei",
-//                     gender: "man",
-//                     gender_color: "blue",
-//                     weight: 0.09090909090909091,
-//                     "researcharea": [
-//                         "3"
-//                     ],
-//                 },
-//                 {
-//                     name: "Didi",
-//                     gender: "woman",
-//                     gender_color: "red",
-//                     weight: 0.09090909090909091,
-//                     "researcharea": [
-//                         "3"
-//                     ],
-//                 }
-//             ],
-//             weight: 0.18181818181818182
-//         },
-//         {
-//             name: "Dama",
-//             gender: "woman",
-//             gender_color: "red",
-//             weight: 0.09090909090909091,
-//             "researcharea": [
-//                 "2"
-//             ],
-//         },
-//         {
-//             name: "Dashu",
-//             gender: "woman",
-//             gender_color: "red",
-//             weight: 0.09090909090909091,
-//             "researcharea": [
-//                 "2"
-//             ],
-//         }
-//     ],
-//     weight: 0.45454545454545453,
-//     allResearchAreas: [
-//         "1",
-//         "2",
-//         "3"
-//     ]
-// }
+data = {
+    name: "Gege",
+    gender: "man",
+    gender_color: "blue",
+    "researcharea": [
+        "1"
+    ],
+    children: [
+        {
+            name: "Jiejie",
+            gender: "man",
+            gender_color: "blue",
+            "researcharea": [
+                "2"
+            ],
+            // children: [
+            //     {
+            //         name: "Meimei",
+            //         gender: "man",
+            //         gender_color: "blue",
+            //         weight: 0.09090909090909091,
+            //         "researcharea": [
+            //             "3"
+            //         ],
+            //     },
+            //     {
+            //         name: "Didi",
+            //         gender: "woman",
+            //         gender_color: "red",
+            //         weight: 0.09090909090909091,
+            //         "researcharea": [
+            //             "3"
+            //         ],
+            //     }
+            // ],
+            weight: 0.18181818181818182
+        },
+        {
+            name: "Dama",
+            gender: "woman",
+            gender_color: "red",
+            weight: 0.09090909090909091,
+            "researcharea": [
+                "2"
+            ],
+        },
+        {
+            name: "Dashu",
+            gender: "woman",
+            gender_color: "red",
+            weight: 0.09090909090909091,
+            "researcharea": [
+                "2"
+            ],
+        }
+    ],
+    weight: 0.45454545454545453,
+    allResearchAreas: [
+        "1",
+        "2",
+        "3"
+    ]
+}
