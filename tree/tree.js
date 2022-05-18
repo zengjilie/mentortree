@@ -27,7 +27,7 @@ function preload() {
     //Special Trees
     // data = loadJSON("./special-new/curly-tree.json");
     // data = loadJSON("./special-new/female-titled-tree.json");
-    // data = loadJSON("./special-new/male-titled-tree.json");
+    data = loadJSON("./special-new/male-titled-tree.json");
     // data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
 }
@@ -100,9 +100,8 @@ function draw() {
     const circleSize = 3;
     const angle = 1;
 
-    const degree2 = degree;
     // < Build the tree >
-    buildTree(data.children, begin, end, strokeW, circleSize, angle, degree2);
+    buildTree(data.children, begin, end, strokeW, circleSize, angle);
 
     //  < Draw root -> color / line / leaf >
     // stroke(data.gender_color) // real
@@ -125,7 +124,7 @@ function draw() {
     // noLoop(); // we just want to export once
 }
 
-function buildTree(children, begin, end, strokeW, circleSize, angle, degree2) {
+function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
     const branchNum = children?.length;
 
@@ -150,8 +149,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle, degree2) {
             // newEnd.rotate((i + 1) * PI / 20);
 
             // newEnd.rotate((i + 1) * PI / 30 );
-            console.log("degree2 " + degree2);
-            newEnd.rotate((i + 1) * PI / 30 + degree);
+            newEnd.rotate((i + 1) * PI / 30 - degree);
 
             // newEnd.rotate(degree);
 
@@ -179,7 +177,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle, degree2) {
 
         //Recurse
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.5, circleSize - 1.3, angle + 20);
-        buildTree(children[i].children, begin, newEnd, strokeW, circleSize, angle + 20, degree2);
+        buildTree(children[i].children, begin, newEnd, strokeW, circleSize, angle + 20);
         // buildTree(children[i].children, begin, newEnd, strokeW - 0.8, circleSize - 0.6, angle + 0.2);
 
         // strokeWeight(childrenNum * 10);
