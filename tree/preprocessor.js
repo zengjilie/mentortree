@@ -84,6 +84,7 @@ let areaSet = new Set();
  *  })
  * recurse function will find the reseracher's name and their chidrenNum
  * */ 
+
 function recurse(root) {
     //< Warning: the "researcharea" property may not a string array, but a string >
     if (typeof root.researcharea === 'string') {
