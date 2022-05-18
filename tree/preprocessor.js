@@ -56,8 +56,8 @@
 //Special
 // const data = require("./special/curly-tree.json");
 // const data = require("./special/female-titled-tree.json");
-const data = require("./special/male-tilted-tree.json");
-// const data = require("./special/tallest-tree.json");
+// const data = require("./special/male-tilted-tree.json");
+const data = require("./special/tallest-tree.json");
 // const data = require("./special/widest-tree.json");
 const root = data;
 
@@ -129,47 +129,52 @@ root.allResearchAreas = [...areaSet];
 let sum = 0;
 let max = 0;
 let min = 1;
-let mean = 0;
+let mean;
+let max_min;
 for (let [key, value] of map) {
     sum += value;
     max = value > max ? value : max;
     min = value < min ? value : min;
 }
 
-mean = sum / map.size;
+max_min = Math.abs(max - min);
+
+// mean = sum / map.size;
+mean = (max - min) / 2;
 
 console.log('sum: ' + sum);
 console.log('map size:' + map.size);
 console.log('mean:' + mean);
 console.log('max:' + max);
 console.log('min:' + min);
-console.log(map);
+// console.log(map);
 
 //  |mean - x|/|x_max - x_min| ( x is childNum)
 for (let [key, value] of map) {
 
     /**
      * 1. oversampling/undersampling
-     * 2. mean + {sigma} - value, x increase -> branch thicker
+     * 2. "transformRate" bigger --> branch contrast smaller --> thicker leaf and thinner trunk 
      */
 
     let newValue;
-    //If value bigger then the mean * {x} --> undersampling
-    if (value > mean * 0.8) {
-        const distFromMean = value - mean * 0.8;
-        newValue = value - distFromMean * 4 / 5;
+    let transformRate = 0.03;
 
-        //If value less then the mean * {y} --> oversampling
-    } else if (value < mean * 0.5) {
-        const distFromMean = value - mean * 0.5;
-        newValue = value + distFromMean / 2;
+    //If value bigger then the mean --> undersampling
+    if (value > mean) {
+        const distFromMean = value - mean;
+        newValue = value - distFromMean * transformRate;
+
+        //If value less then the mean --> oversampling
+    } else if (value < mean) {
+        const distFromMean = mean - value;
+        newValue = value + distFromMean * transformRate;
     } else {
         newValue = value;
     }
 
-    let max_min = Math.abs(max - min);
 
-    const prec = newValue / max_min;
+    const prec = newValue / sum;
     map.set(key, prec);
 }
 
@@ -233,8 +238,8 @@ fs = require('fs');
 //Special path
 // const path = "./special-new/curly-tree.json";
 // const path = "./special-new/female-titled-tree.json";
-const path = "./special-new/male-titled-tree.json";
-// const path = "./special-new/tallest-tree.json";
+// const path = "./special-new/male-titled-tree.json";
+const path = "./special-new/tallest-tree.json";
 // const path = "./special-new/widest-tree.json";
 
 // Write File

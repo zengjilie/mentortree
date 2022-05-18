@@ -27,8 +27,8 @@ function preload() {
     //Special Trees
     // data = loadJSON("./special-new/curly-tree.json");
     // data = loadJSON("./special-new/female-titled-tree.json");
-    data = loadJSON("./special-new/male-titled-tree.json");
-    // data = loadJSON("./special-new/tallest-tree.json");
+    // data = loadJSON("./special-new/male-titled-tree.json");
+    data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
 }
 
@@ -63,7 +63,7 @@ function setup() {
     slider.position(10, 10);
     slider.style('width', '80px');
 
-    frameRate(10);
+    // frameRate(10);
 }
 
 
@@ -90,7 +90,7 @@ function draw() {
     //try different weight
     const strokeW = 100;
     // const strokeW = 5000;
-    const circleSize = 5;
+    const circleSize = 3;
     const angle = 1;
 
     //=== Build the tree from -> sampleData / realData ===
