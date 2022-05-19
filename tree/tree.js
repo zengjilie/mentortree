@@ -65,7 +65,7 @@ function setup() {
     // slider.position(10, 10);
     // slider.style('width', '80px');
 
-    slider = createSlider(0, TWO_PI, PI / 4);
+    slider = createSlider(0, 5, 0.02);
     slider.position(10, 10);
     slider.style('width', '130px');
 
@@ -149,10 +149,8 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             // newEnd.rotate((i + 1) * PI / 20);
 
             // newEnd.rotate((i + 1) * PI / 30 );
-            newEnd.rotate((i + 1) * PI / 30 - degree);
-
-            // newEnd.rotate(degree);
-
+            // console.log(degree);
+            newEnd.rotate((i + 1) * PI / 30 + degree/2);
             // newEnd.rotate((i + 1) * -PI / angle + 0.1);
             // newEnd.rotate((i + 1) * PI / angle + 0.2);
             // newEnd.rotate((i + 1) * PI / angle + 0.5);
@@ -161,6 +159,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             // newEnd.rotate((i + 1) * -PI / 60);
             // newEnd.rotate((i + 1) * -PI / 80);
             // newEnd.rotate((i + 1) * -PI / 30);
+            // console.log(degree);
             newEnd.rotate((i + 1) * -PI / 30 - degree);
         }
 

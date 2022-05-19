@@ -1,0 +1,85 @@
+{
+    "name": "BRAD A MYERS",
+    "gender": "man",
+    "gender_color": "blue",
+    "researcharea": [
+        "computerscience"
+    ],
+    "children_num": 8,
+    "children": [
+        {
+            "name": "JOHN F PANE",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "JACOB O WOBBROCK",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "JEFFREY  NICHOLS",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "ANDREW J KO",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "JEFFREY  STYLOS",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "THOMAS D LATOZA",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "JAMES  LANDAY",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "computerscience"
+            ],
+            "children_num": 1,
+            "children": [
+                {
+                    "name": "SCOTT  KLEMMER",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        }
+    ]
+}

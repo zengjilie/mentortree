@@ -57,8 +57,16 @@
 // const data = require("./special/curly-tree.json");
 // const data = require("./special/female-titled-tree.json");
 // const data = require("./special/male-tilted-tree.json");
-const data = require("./special/tallest-tree.json");
+// const data = require("./special/tallest-tree.json");
 // const data = require("./special/widest-tree.json");
+
+//May 19
+const data = require("./tree-candidate/BradAMyers.json");
+// const data = require("./tree-candidate/HiroshiIshii.json");
+// const data = require("./tree-candidate/RobertHare.json");
+// const data = require("./tree-candidate/WilliamSpencerHutchinson.json");
+
+
 const root = data;
 
 //< Procedure >
@@ -158,14 +166,13 @@ for (let [key, value] of map) {
      */
 
     let newValue;
-    let transformRate = 0.03;
+    let transformRate = 0.02;
 
     //If value bigger then the mean --> undersampling
+    //If value less then the mean --> oversampling
     if (value > mean) {
         const distFromMean = value - mean;
         newValue = value - distFromMean * transformRate;
-
-        //If value less then the mean --> oversampling
     } else if (value < mean) {
         const distFromMean = mean - value;
         newValue = value + distFromMean * transformRate;
@@ -181,15 +188,15 @@ for (let [key, value] of map) {
 //=== add weight to data ===
 
 function traverse(root) {
-    //change gender color
+    //< Gender color palette >
     if (root.gender_color == 'blue') {
         // root.gender_color = 'rgba(101,132,248,0.5)';
-        // root.gender_color = 'rgba(82,206,206,0.5)'; // comb1
-        root.gender_color = 'rgba(115,255,218,0.5)'; // comb2
+        // root.gender_color = 'rgba(82,206,206,0.5)'; // color palette 1
+        root.gender_color = 'rgba(115,255,218,0.5)'; // color palette 2
 
     } else {
-        // root.gender_color = 'rgba(255,115,189,0.5)'; // comb1
-        root.gender_color = 'rgba(255,95,145,0.5)'; // comb2
+        // root.gender_color = 'rgba(255,115,189,0.5)'; // color palette 1
+        root.gender_color = 'rgba(255,95,145,0.5)'; // color paletta 2
     }
 
 
@@ -215,11 +222,11 @@ let weightedData = JSON.stringify(root);
 fs = require('fs');
 
 //Apr 13
-// const data ="./tree-candidate-new/psych_id783121.json";
-// const data ="./tree-candidate-new/Francis_Galton_1.json";
-// const data ="./tree-candidate-new/George_M_Church.json";
-// const data ="./tree-candidate-new/HENRY_GARRETT_Sshape.json";
-// const data ="./tree-candidate-new/WILLIAM _JAMES_Tshape.json";
+// const path ="./tree-candidate-new/psych_id783121.json";
+// const path ="./tree-candidate-new/Francis_Galton_1.json";
+// const path ="./tree-candidate-new/George_M_Church.json";
+// const path ="./tree-candidate-new/HENRY_GARRETT_Sshape.json";
+// const path ="./tree-candidate-new/WILLIAM _JAMES_Tshape.json";
 // const path ="./tree-candidate-new/tree-candidate-new/Francis_Galton_1.json";
 
 //Apr 20
@@ -239,8 +246,14 @@ fs = require('fs');
 // const path = "./special-new/curly-tree.json";
 // const path = "./special-new/female-titled-tree.json";
 // const path = "./special-new/male-titled-tree.json";
-const path = "./special-new/tallest-tree.json";
+// const path = "./special-new/tallest-tree.json";
 // const path = "./special-new/widest-tree.json";
+
+//May 19
+const path = "./tree-candidate-new/BradAMyers.json";
+// const path = "./tree-candidate-new/HiroshiIshii.json";
+// const path = "./tree-candidate-new/RobertHare.json";
+// const path = "./tree-candidate-new/WilliamSpencerHutchinson.json";
 
 // Write File
 fs.writeFile(path, weightedData, function (err) {

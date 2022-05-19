@@ -1,0 +1,1009 @@
+{
+    "name": "WILLIAM SPENCER HUTCHINSON",
+    "gender": "man",
+    "gender_color": "blue",
+    "researcharea": [
+        "chemistry",
+        "physics"
+    ],
+    "children_num": 104,
+    "children": [
+        {
+            "name": "JOHN TORREY NORTON",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "chemistry",
+                "physics"
+            ],
+            "children_num": 103,
+            "children": [
+                {
+                    "name": "ROBERT E OGILVIE",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 10,
+                    "children": [
+                        {
+                            "name": "THOMAS OWENS ZIEBOLD",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 9,
+                            "children": [
+                                {
+                                    "name": "G ROBERT  ODETTE",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 8,
+                                    "children": [
+                                        {
+                                            "name": "BRIAN  WIRTH",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "physics"
+                                            ],
+                                            "children_num": 3,
+                                            "children": [
+                                                {
+                                                    "name": "PAUL RENE MONASTERIO",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "physics"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "NAJEB M ABDUL-JABBAR",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "physics"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "AARON A KOHNERT",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "physics"
+                                                    ],
+                                                    "children_num": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "HOWARD J RATHBUN",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "physics"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "MATTHEW J ALINGER",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "physics"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "MICHAEL L HRIBERNIK",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "physics"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "NICHOLAS J CUNNINGHAM",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "physics"
+                                            ],
+                                            "children_num": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "JOSEPH  GURLAND",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "etree"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "MORRIS  COHEN",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 90,
+                    "children": [
+                        {
+                            "name": "CARL JOSEPH ALTSTETTER",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "chemistry"
+                            ],
+                            "children_num": 7,
+                            "children": [
+                                {
+                                    "name": "DANIEL  ABRAHAM",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "chemistry",
+                                        "etree"
+                                    ],
+                                    "children_num": 6,
+                                    "children": [
+                                        {
+                                            "name": "MATILDA  KLETT",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "chemistry"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "YAN  LI",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "chemistry"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "KAUSHIK  KALAGA",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "chemistry"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "MARTIN  BETTGE",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "biomech"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "MARCO  RODRIGUES",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "chemistry"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "JAVIER  BARENO",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "chemistry",
+                                                "etree"
+                                            ],
+                                            "children_num": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "EUGENE SOLOMON MACHLIN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "WALTER SHEPHERD OWEN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "chemistry"
+                            ],
+                            "children_num": 52,
+                            "children": [
+                                {
+                                    "name": "JOHN E HILLIARD",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "chemistry"
+                                    ],
+                                    "children_num": 51,
+                                    "children": [
+                                        {
+                                            "name": "THOMAS  TSAKALAKOS",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "etree"
+                                            ],
+                                            "children_num": 2,
+                                            "children": [
+                                                {
+                                                    "name": "BRANDON S BERKE",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "WILLIAM A PAXTON",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "chemistry"
+                                                    ],
+                                                    "children_num": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "DIDIER  DEFONTAINE",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "chemistry"
+                                            ],
+                                            "children_num": 47,
+                                            "children": [
+                                                {
+                                                    "name": "DANE D MORGAN",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "physics",
+                                                        "chemistry"
+                                                    ],
+                                                    "children_num": 20,
+                                                    "children": [
+                                                        {
+                                                            "name": "JULIE D TUCKER",
+                                                            "gender": "woman",
+                                                            "gender_color": "red",
+                                                            "researcharea": [
+                                                                "physics"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "AMELIA K BENGTSON",
+                                                            "gender": "woman",
+                                                            "gender_color": "red",
+                                                            "researcharea": [
+                                                                "physics"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "LELAND  BARNARD",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "physics"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "MILIND J GADRE",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "physics"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "RIZA  DERVISOGLU",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "RIDWAN  SAKIDJA",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "etree"
+                                                            ],
+                                                            "children_num": 12,
+                                                            "children": [
+                                                                {
+                                                                    "name": "JOY  DATTA",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "SABILA KADER PINKY",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "EMILY  JUSTUS",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "KWABENA  ASANTE-BOAHEN",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "MATTHEW  BOESER",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "DAVID T MAGNESS",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "PAUL  SIMANJUNTAK",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "ANTHONY  ASCONE",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "NIRMAL  BAISHNAB",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "RAJAN  KHADKA",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "ALIN  NIRAULA",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "BIKASH  TIMALSINA",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "EDWARD F HOLBY",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "physics"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "NATHAN D PINNEY",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "physics"
+                                                            ],
+                                                            "children_num": 0
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "GERBRAND  CEDER",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "chemistry"
+                                                    ],
+                                                    "children_num": 23,
+                                                    "children": [
+                                                        {
+                                                            "name": "SHIRLEY  MENG",
+                                                            "gender": "woman",
+                                                            "gender_color": "red",
+                                                            "researcharea": [
+                                                                "chemistry",
+                                                                "etree"
+                                                            ],
+                                                            "children_num": 10,
+                                                            "children": [
+                                                                {
+                                                                    "name": "MAHSA  SINA",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "etree"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "HYOJUNG CHLOE YOON",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "DANNA  QIAN",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "CYRUS  RUSTOMJI",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "MICHAEL  VERDE",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "YOUNG-SANG  YU",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "TOM  YERSAK",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "DANIEL  GOSTOVIC",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "BO  XU",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "DAE HOE LEE",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "KRISTIN ASLAUG CEDER-PERSSON",
+                                                            "gender": "woman",
+                                                            "gender_color": "red",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "ALAN KENT DOZIER",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "physics"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "AXEL  VAN DE WALLE",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 3,
+                                                            "children": [
+                                                                {
+                                                                    "name": "SARA  KADKHODAEI",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "STEVEN  DEMERS",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "GREGORY  POMREHN",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "GEOFFROY  HAUTIER",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "STEFANO  CURTAROLO",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 2,
+                                                            "children": [
+                                                                {
+                                                                    "name": "NEHA  AWASTHI",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "WAHYU  SETYAWAN",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "ANTON  VAN DER VEN",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 1,
+                                                            "children": [
+                                                                {
+                                                                    "name": "ELIZABETH R DECOLVENAERE",
+                                                                    "gender": "woman",
+                                                                    "gender_color": "red",
+                                                                    "researcharea": [
+                                                                        "chemistry"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "MARK  ASTA",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "chemistry"
+                                                    ],
+                                                    "children_num": 1,
+                                                    "children": [
+                                                        {
+                                                            "name": "ENZE  CHEN",
+                                                            "gender": "woman",
+                                                            "gender_color": "red",
+                                                            "researcharea": [
+                                                                "chemistry"
+                                                            ],
+                                                            "children_num": 0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "MATS  HILLERT",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 3,
+                            "children": [
+                                {
+                                    "name": "MALIN  SELLEBY",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "JOHN  AGREN",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "BO  SUNDMAN",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "BENJAMIN L AVERBACH",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 23,
+                            "children": [
+                                {
+                                    "name": "ROBERT W BALLUFFI",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 22,
+                                    "children": [
+                                        {
+                                            "name": "ERIC  KVAM",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "etree"
+                                            ],
+                                            "children_num": 2,
+                                            "children": [
+                                                {
+                                                    "name": "VIDYUT  GOPAL",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "MEHMED C AKATAY",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "DAVID  SEIDMAN",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "etree"
+                                            ],
+                                            "children_num": 18,
+                                            "children": [
+                                                {
+                                                    "name": "EMMANUELLE A MARQUIS",
+                                                    "gender": "woman",
+                                                    "gender_color": "red",
+                                                    "researcharea": [
+                                                        "biomech"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "DENISE C FORD",
+                                                    "gender": "woman",
+                                                    "gender_color": "red",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "MARSHA  VAN DALEN",
+                                                    "gender": "woman",
+                                                    "gender_color": "red",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "CHANTAL K SUDBRACK",
+                                                    "gender": "woman",
+                                                    "gender_color": "red",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "DMITRIY V GORELIKOV",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "JASON T SEBASTIAN",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "KEVIN E YOON",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "STEPHAN S GERSTL",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "CHRISTOPHER  BOOTH-MORRISON",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "DANIEL K SCHREIBER",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "PRANEET  ADUSUMILLI",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "MICHAEL D MULHOLLAND",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "ALLEN H HUNTER",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "DIETER G AST",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "etree"
+                                                    ],
+                                                    "children_num": 4,
+                                                    "children": [
+                                                        {
+                                                            "name": "SERGEI M KRASULYA",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "etree"
+                                                            ],
+                                                            "children_num": 0
+                                                        },
+                                                        {
+                                                            "name": "EUGENE A FITZGERALD",
+                                                            "gender": "man",
+                                                            "gender_color": "blue",
+                                                            "researcharea": [
+                                                                "materials"
+                                                            ],
+                                                            "children_num": 2,
+                                                            "children": [
+                                                                {
+                                                                    "name": "NATHANIEL J QUITORIANO",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "materials"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                },
+                                                                {
+                                                                    "name": "KUNAL  MUKHERJEE",
+                                                                    "gender": "man",
+                                                                    "gender_color": "blue",
+                                                                    "researcharea": [
+                                                                        "materials"
+                                                                    ],
+                                                                    "children_num": 0
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
