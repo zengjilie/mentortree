@@ -1,6 +1,6 @@
 // Global variables
 var data;
-let slider;
+var slider;
 
 // < Loading Data > 
 function preload() {
@@ -27,9 +27,15 @@ function preload() {
     //Special Trees
     // data = loadJSON("./special-new/curly-tree.json");
     // data = loadJSON("./special-new/female-titled-tree.json");
-    data = loadJSON("./special-new/male-titled-tree.json");
+    // data = loadJSON("./special-new/male-titled-tree.json");
     // data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
+
+    //May 19
+    data = loadJSON("./tree-candidate-new/BradAMyers.json");
+    // data = loadJSON("./tree-candidate-new/HiroshiIshii.json");
+    // data = loadJSON("./tree-candidate-new/RobertHare.json");
+    // data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
 }
 
 
@@ -61,20 +67,16 @@ function setup() {
     console.log(colorMap);
     console.log(data.allResearchAreas.length);
 
-    // slider = createSlider(0,255, 100);
-    // slider.position(10, 10);
-    // slider.style('width', '80px');
-
-    slider = createSlider(0, 5, 0.02);
+    slider = createSlider(0, 5, 1);
     slider.position(10, 10);
-    slider.style('width', '130px');
+    slider.style('width', '150px');
 
     // frameRate(10);
 }
 
 
 
-var degree;
+var degree = 0;
 
 function draw() {
     //slider value
@@ -146,11 +148,11 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         // Weighted, W->L, M->R
         if (children[i].gender === 'woman') {
+            const coefficient = 80;
             // newEnd.rotate((i + 1) * PI / 20);
-
             // newEnd.rotate((i + 1) * PI / 30 );
-            // console.log(degree);
-            newEnd.rotate((i + 1) * PI / 30 + degree/2);
+            // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
+            newEnd.rotate((i + 1) * PI / coefficient);
             // newEnd.rotate((i + 1) * -PI / angle + 0.1);
             // newEnd.rotate((i + 1) * PI / angle + 0.2);
             // newEnd.rotate((i + 1) * PI / angle + 0.5);
@@ -160,7 +162,9 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             // newEnd.rotate((i + 1) * -PI / 80);
             // newEnd.rotate((i + 1) * -PI / 30);
             // console.log(degree);
-            newEnd.rotate((i + 1) * -PI / 30 - degree);
+            const coefficient = 20;
+            newEnd.rotate((i + 1) * -PI / coefficient);
+            // newEnd.rotate((i + 1) * -PI / coefficient - degree);
         }
 
         //Evenly
@@ -326,26 +330,26 @@ data = {
             "researcharea": [
                 "2"
             ],
-            // children: [
-            //     {
-            //         name: "Meimei",
-            //         gender: "man",
-            //         gender_color: "blue",
-            //         weight: 0.09090909090909091,
-            //         "researcharea": [
-            //             "3"
-            //         ],
-            //     },
-            //     {
-            //         name: "Didi",
-            //         gender: "woman",
-            //         gender_color: "red",
-            //         weight: 0.09090909090909091,
-            //         "researcharea": [
-            //             "3"
-            //         ],
-            //     }
-            // ],
+            children: [
+                {
+                    name: "Meimei",
+                    gender: "man",
+                    gender_color: "blue",
+                    weight: 0.09090909090909091,
+                    "researcharea": [
+                        "3"
+                    ],
+                },
+                {
+                    name: "Didi",
+                    gender: "woman",
+                    gender_color: "red",
+                    weight: 0.09090909090909091,
+                    "researcharea": [
+                        "3"
+                    ],
+                }
+            ],
             weight: 0.18181818181818182
         },
         {

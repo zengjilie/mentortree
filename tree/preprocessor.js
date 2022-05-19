@@ -1,5 +1,6 @@
+var data;
 // < Data for testing >
-// const data = {
+// data = {
 //     name: 'Gege',
 //     gender: 'man',
 //     gender_color: 'blue',
@@ -35,36 +36,36 @@
 // }
 
 // < Data import >
-// const data = require("./psych_id783121.json");
-// const data = require("./Francis_Galton_1.json");
-// const data = require("./George_M_Church.json");
-// const data = require("./HENRY_GARRETT_Sshape.json");
-// const data = require("./WILLIAM _JAMES_Tshape.json");
+//  data = require("./psych_id783121.json");
+//  data = require("./Francis_Galton_1.json");
+//  data = require("./George_M_Church.json");
+//  data = require("./HENRY_GARRETT_Sshape.json");
+//  data = require("./WILLIAM _JAMES_Tshape.json");
 
-// const data = require("./tree-candidate/CharlesSandersPeirce.json");
+//  data = require("./tree-candidate/CharlesSandersPeirce.json");
 
-// const data = require("./tree-candidate/DonnaHaraway.json");
-// const data = require("./tree-candidate/JenniferADoudna.json");
+//  data = require("./tree-candidate/DonnaHaraway.json");
+//  data = require("./tree-candidate/JenniferADoudna.json");
 
-// const data = require("./tree-candidate/JaneGoodall.json");
-// const data = require("./tree-candidate/LudwigBoltzmann.json");
-// const data = require("./tree-candidate/NielsBohr.json");
-// const data = require("./tree-candidate/RichardPFeynman.json");
-// const data = require("./tree-candidate/StephenHawking.json");
-// const data = require("./tree-candidate/WilliamJames.json");
+//  data = require("./tree-candidate/JaneGoodall.json");
+//  data = require("./tree-candidate/LudwigBoltzmann.json");
+//  data = require("./tree-candidate/NielsBohr.json");
+//  data = require("./tree-candidate/RichardPFeynman.json");
+//  data = require("./tree-candidate/StephenHawking.json");
+//  data = require("./tree-candidate/WilliamJames.json");
 
 //Special
-// const data = require("./special/curly-tree.json");
-// const data = require("./special/female-titled-tree.json");
-// const data = require("./special/male-tilted-tree.json");
-// const data = require("./special/tallest-tree.json");
-// const data = require("./special/widest-tree.json");
+//  data = require("./special/curly-tree.json");
+//  data = require("./special/female-titled-tree.json");
+//  data = require("./special/male-tilted-tree.json");
+//  data = require("./special/tallest-tree.json");
+//  data = require("./special/widest-tree.json");
 
 //May 19
-const data = require("./tree-candidate/BradAMyers.json");
-// const data = require("./tree-candidate/HiroshiIshii.json");
-// const data = require("./tree-candidate/RobertHare.json");
-// const data = require("./tree-candidate/WilliamSpencerHutchinson.json");
+data = require("./tree-candidate/BradAMyers.json");
+//  data = require("./tree-candidate/HiroshiIshii.json");
+// data = require("./tree-candidate/RobertHare.json");
+// data = require("./tree-candidate/WilliamSpencerHutchinson.json");
 
 
 const root = data;
@@ -109,7 +110,7 @@ function recurse(root) {
         map.set(root.name, 1);
         return 1;
     } else {
-        let num = 0;
+        let num = 1;
         for (let i = 0; i < root.children.length; i++) {
             const childNum = recurse(root?.children[i]);
             num += childNum;
@@ -166,7 +167,7 @@ for (let [key, value] of map) {
      */
 
     let newValue;
-    let transformRate = 0.02;
+    let transformRate = 0.5;
 
     //If value bigger then the mean --> undersampling
     //If value less then the mean --> oversampling
@@ -215,45 +216,46 @@ function traverse(root) {
 traverse(root);
 // console.log(JSON.stringify(root));
 
-// === export new data ===
+// < Export new data >
 
 let weightedData = JSON.stringify(root);
 
 fs = require('fs');
 
+var path;
 //Apr 13
-// const path ="./tree-candidate-new/psych_id783121.json";
-// const path ="./tree-candidate-new/Francis_Galton_1.json";
-// const path ="./tree-candidate-new/George_M_Church.json";
-// const path ="./tree-candidate-new/HENRY_GARRETT_Sshape.json";
-// const path ="./tree-candidate-new/WILLIAM _JAMES_Tshape.json";
-// const path ="./tree-candidate-new/tree-candidate-new/Francis_Galton_1.json";
+//  path ="./tree-candidate-new/psych_id783121.json";
+//  path ="./tree-candidate-new/Francis_Galton_1.json";
+//  path ="./tree-candidate-new/George_M_Church.json";
+//  path ="./tree-candidate-new/HENRY_GARRETT_Sshape.json";
+//  path ="./tree-candidate-new/WILLIAM _JAMES_Tshape.json";
+//  path ="./tree-candidate-new/tree-candidate-new/Francis_Galton_1.json";
 
 //Apr 20
-// const path = "./tree-candidate-new/CharlesSandersPeirce.json";
+//  path = "./tree-candidate-new/CharlesSandersPeirce.json";
 
-// const path = "./tree-candidate-new/DonnaHaraway.json";
-// const path = "./tree-candidate-new/JenniferADoudna.json";
+//  path = "./tree-candidate-new/DonnaHaraway.json";
+//  path = "./tree-candidate-new/JenniferADoudna.json";
 
-// const path = "./tree-candidate-new/JaneGoodall.json";
-// const path ="./tree-candidate-new/LudwigBoltzmann.json";
-// const path ="./tree-candidate-new/NielsBohr.json";
-// const path ="./tree-candidate-new/RichardPFeynman.json";
-// const path ="./tree-candidate-new/StephenHawking.json";
-// const path = "./tree-candidate-new/WilliamJames.json";
+//  path = "./tree-candidate-new/JaneGoodall.json";
+//  path ="./tree-candidate-new/LudwigBoltzmann.json";
+//  path ="./tree-candidate-new/NielsBohr.json";
+//  path ="./tree-candidate-new/RichardPFeynman.json";
+//  path ="./tree-candidate-new/StephenHawking.json";
+//  path = "./tree-candidate-new/WilliamJames.json";
 
 //Special path
-// const path = "./special-new/curly-tree.json";
-// const path = "./special-new/female-titled-tree.json";
-// const path = "./special-new/male-titled-tree.json";
-// const path = "./special-new/tallest-tree.json";
-// const path = "./special-new/widest-tree.json";
+//  path = "./special-new/curly-tree.json";
+//  path = "./special-new/female-titled-tree.json";
+//  path = "./special-new/male-titled-tree.json";
+//  path = "./special-new/tallest-tree.json";
+//  path = "./special-new/widest-tree.json";
 
 //May 19
-const path = "./tree-candidate-new/BradAMyers.json";
-// const path = "./tree-candidate-new/HiroshiIshii.json";
-// const path = "./tree-candidate-new/RobertHare.json";
-// const path = "./tree-candidate-new/WilliamSpencerHutchinson.json";
+path = "./tree-candidate-new/BradAMyers.json";//0.5
+//  path = "./tree-candidate-new/HiroshiIshii.json";
+// path = "./tree-candidate-new/RobertHare.json";//0.05
+// path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.06
 
 // Write File
 fs.writeFile(path, weightedData, function (err) {
