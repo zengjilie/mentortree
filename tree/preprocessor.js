@@ -42,30 +42,29 @@ var data;
 //  data = require("./HENRY_GARRETT_Sshape.json");
 //  data = require("./WILLIAM _JAMES_Tshape.json");
 
-//  data = require("./tree-candidate/CharlesSandersPeirce.json");
-
-//  data = require("./tree-candidate/DonnaHaraway.json");
-//  data = require("./tree-candidate/JenniferADoudna.json");
+// data = require("./tree-candidate/CharlesSandersPeirce.json");
+// data = require("./tree-candidate/DonnaHaraway.json");
+data = require("./tree-candidate/JenniferADoudna.json");
 
 //  data = require("./tree-candidate/JaneGoodall.json");
-//  data = require("./tree-candidate/LudwigBoltzmann.json");
-//  data = require("./tree-candidate/NielsBohr.json");
-//  data = require("./tree-candidate/RichardPFeynman.json");
-//  data = require("./tree-candidate/StephenHawking.json");
+// data = require("./tree-candidate/LudwigBoltzmann.json");
+// data = require("./tree-candidate/NielsBohr.json");
+// data = require("./tree-candidate/RichardPFeynman.json");
+// data = require("./tree-candidate/StephenHawking.json");
 //  data = require("./tree-candidate/WilliamJames.json");
 
 //Special
-//  data = require("./special/curly-tree.json");
+// data = require("./special/curly-tree.json");
 //  data = require("./special/female-titled-tree.json");
 //  data = require("./special/male-tilted-tree.json");
-//  data = require("./special/tallest-tree.json");
-//  data = require("./special/widest-tree.json");
+// data = require("./special/tallest-tree.json");
+// data = require("./special/widest-tree.json");
 
 //May 19
-data = require("./tree-candidate/BradAMyers.json");
-//  data = require("./tree-candidate/HiroshiIshii.json");
+// data = require("./tree-candidate/BradAMyers.json");
+// data = require("./tree-candidate/HiroshiIshii.json");
 // data = require("./tree-candidate/RobertHare.json");
-// data = require("./tree-candidate/WilliamSpencerHutchinson.json");
+data = require("./tree-candidate/WilliamSpencerHutchinson.json"); 
 
 
 const root = data;
@@ -163,11 +162,11 @@ for (let [key, value] of map) {
 
     /**
      * 1. oversampling/undersampling
-     * 2. "transformRate" bigger --> branch contrast smaller --> thicker leaf and thinner trunk 
+     * 2. "transformRate" bigger --> thicker leaf and thinner trunk 
      */
 
     let newValue;
-    let transformRate = 0.5;
+    let transformRate = 0.1;
 
     //If value bigger then the mean --> undersampling
     //If value less then the mean --> oversampling
@@ -232,30 +231,29 @@ var path;
 //  path ="./tree-candidate-new/tree-candidate-new/Francis_Galton_1.json";
 
 //Apr 20
-//  path = "./tree-candidate-new/CharlesSandersPeirce.json";
+// path = "./tree-candidate-new/CharlesSandersPeirce.json";// 0.1
+// path = "./tree-candidate-new/DonnaHaraway.json"; // 0.4
+path = "./tree-candidate-new/JenniferADoudna.json";
 
-//  path = "./tree-candidate-new/DonnaHaraway.json";
-//  path = "./tree-candidate-new/JenniferADoudna.json";
-
-//  path = "./tree-candidate-new/JaneGoodall.json";
-//  path ="./tree-candidate-new/LudwigBoltzmann.json";
-//  path ="./tree-candidate-new/NielsBohr.json";
-//  path ="./tree-candidate-new/RichardPFeynman.json";
-//  path ="./tree-candidate-new/StephenHawking.json";
-//  path = "./tree-candidate-new/WilliamJames.json";
+//  path = "./tree-candidate-new/JaneGoodall.json"; // too few mentees
+// path = "./tree-candidate-new/LudwigBoltzmann.json";// 0.06
+// path = "./tree-candidate-new/NielsBohr.json";// 0.07
+// path = "./tree-candidate-new/RichardPFeynman.json"; //0.1
+// path = "./tree-candidate-new/StephenHawking.json";//0.1
+//  path = "./tree-candidate-new/WilliamJames.json";//
 
 //Special path
-//  path = "./special-new/curly-tree.json";
+// path = "./special-new/curly-tree.json"; // 0.1
 //  path = "./special-new/female-titled-tree.json";
 //  path = "./special-new/male-titled-tree.json";
-//  path = "./special-new/tallest-tree.json";
-//  path = "./special-new/widest-tree.json";
+// path = "./special-new/tallest-tree.json"; //0.1
+// path = "./special-new/widest-tree.json";//0.1
 
 //May 19
-path = "./tree-candidate-new/BradAMyers.json";//0.5
+// path = "./tree-candidate-new/BradAMyers.json";//0.5
 //  path = "./tree-candidate-new/HiroshiIshii.json";
 // path = "./tree-candidate-new/RobertHare.json";//0.05
-// path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.06
+path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.1
 
 // Write File
 fs.writeFile(path, weightedData, function (err) {

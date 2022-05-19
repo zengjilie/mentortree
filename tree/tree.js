@@ -18,10 +18,10 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/DonnaHaraway.json");
     // data = loadJSON("./tree-candidate-new/JenniferADoudna.json");
     // data = loadJSON("./tree-candidate-new/JaneGoodall.json"); // wierd
-    // data =loadJSON("./tree-candidate-new/LudwigBoltzmann.json");
-    // data =loadJSON("./tree-candidate-new/NielsBohr.json");
-    // data =loadJSON("./tree-candidate-new/RichardPFeynman.json");
-    // data =loadJSON("./tree-candidate-new/StephenHawking.json");
+    // data = loadJSON("./tree-candidate-new/LudwigBoltzmann.json");
+    // data = loadJSON("./tree-candidate-new/NielsBohr.json");
+    // data = loadJSON("./tree-candidate-new/RichardPFeynman.json");
+    // data = loadJSON("./tree-candidate-new/StephenHawking.json");
     // data = loadJSON("./tree-candidate-new/WilliamJames.json");
 
     //Special Trees
@@ -32,10 +32,10 @@ function preload() {
     // data = loadJSON("./special-new/widest-tree.json");
 
     //May 19
-    data = loadJSON("./tree-candidate-new/BradAMyers.json");
+    // data = loadJSON("./tree-candidate-new/BradAMyers.json");
     // data = loadJSON("./tree-candidate-new/HiroshiIshii.json");
     // data = loadJSON("./tree-candidate-new/RobertHare.json");
-    // data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
+    data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
 }
 
 
@@ -71,7 +71,6 @@ function setup() {
     slider.position(10, 10);
     slider.style('width', '150px');
 
-    // frameRate(10);
 }
 
 
@@ -123,7 +122,7 @@ function draw() {
 
     // save("tree.svg"); // give file name
     // print("saved svg");
-    // noLoop(); // we just want to export once
+    // noLoop(); // export once
 }
 
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
@@ -144,25 +143,16 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         const fraction = PI / (branchNum + 1);
 
 
-        // === Rotating Angles ===
+        // < Tree Tilting Schema>
 
         // Weighted, W->L, M->R
         if (children[i].gender === 'woman') {
             const coefficient = 80;
-            // newEnd.rotate((i + 1) * PI / 20);
-            // newEnd.rotate((i + 1) * PI / 30 );
-            // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
             newEnd.rotate((i + 1) * PI / coefficient);
-            // newEnd.rotate((i + 1) * -PI / angle + 0.1);
-            // newEnd.rotate((i + 1) * PI / angle + 0.2);
-            // newEnd.rotate((i + 1) * PI / angle + 0.5);
+            // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
+
         } else if (children[i].gender === 'man') {
-            // newEnd.rotate((i + 1) * PI / 30);
-            // newEnd.rotate((i + 1) * -PI / 60);
-            // newEnd.rotate((i + 1) * -PI / 80);
-            // newEnd.rotate((i + 1) * -PI / 30);
-            // console.log(degree);
-            const coefficient = 20;
+            const coefficient = 80;
             newEnd.rotate((i + 1) * -PI / coefficient);
             // newEnd.rotate((i + 1) * -PI / coefficient - degree);
         }
