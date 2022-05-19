@@ -5,19 +5,18 @@ var slider;
 // < Loading Data > 
 function preload() {
     //First batch
-    // data = loadJSON('./datasets/psych_id783121_new.json');
+    // data = loadJSON('./tree-candidate-new/psych_id783121_new.json');
 
     //Second batch
-    // data = loadJSON('./datasets/George_M_Church_new.json');
-    // data = loadJSON('./datasets/Francis_Galton_1_new.json');
-    // data = loadJSON('./datasets/WILLIAM_JAMES_Tshape_new.json');
-    // data = loadJSON('./datasets/HENRY_GARRETT_Sshape_new.json');
+    // data = loadJSON('./tree-candidate-new/FrancisGalton.json');
+    // data = loadJSON('./tree-candidate-new/GeorgeMChurch.json');
+    // data = loadJSON('./tree-candidate-new/HenryGarret.json');
 
     //Thrid batch
     // data = loadJSON("./tree-candidate-new/CharlesSandersPeirce.json");
     // data = loadJSON("./tree-candidate-new/DonnaHaraway.json");
     // data = loadJSON("./tree-candidate-new/JenniferADoudna.json");
-    // data = loadJSON("./tree-candidate-new/JaneGoodall.json"); // wierd
+    // data = loadJSON("./tree-candidate-new/JaneGoodall.json"); // too few mentees
     // data = loadJSON("./tree-candidate-new/LudwigBoltzmann.json");
     // data = loadJSON("./tree-candidate-new/NielsBohr.json");
     // data = loadJSON("./tree-candidate-new/RichardPFeynman.json");
@@ -26,7 +25,7 @@ function preload() {
 
     //Special Trees
     // data = loadJSON("./special-new/curly-tree.json");
-    // data = loadJSON("./special-new/female-titled-tree.json");
+    data = loadJSON("./special-new/female-titled-tree.json");
     // data = loadJSON("./special-new/male-titled-tree.json");
     // data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
@@ -35,7 +34,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/BradAMyers.json");
     // data = loadJSON("./tree-candidate-new/HiroshiIshii.json");
     // data = loadJSON("./tree-candidate-new/RobertHare.json");
-    data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
+    // data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
 }
 
 
@@ -58,8 +57,8 @@ function assignColor() {
 }
 
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
-    // createCanvas(window.innerWidth, window.innerHeight, SVG);
+    // createCanvas(window.innerWidth, window.innerHeight);
+    createCanvas(window.innerWidth, window.innerHeight, SVG);
 
     // Assign color to individual research area
     assignColor();
@@ -78,11 +77,9 @@ function setup() {
 var degree = 0;
 
 function draw() {
-    //slider value
+    //< Slider Value > 
     degree = (slider.value() * 0.1).toFixed(1);
-    // degree = slider.value();
-
-    // console.log(degree);
+    console.log(degree);
 
     //< Background color >
     background(0); // black

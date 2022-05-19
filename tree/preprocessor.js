@@ -36,26 +36,25 @@ var data;
 // }
 
 // < Data import >
-//  data = require("./psych_id783121.json");
-//  data = require("./Francis_Galton_1.json");
-//  data = require("./George_M_Church.json");
-//  data = require("./HENRY_GARRETT_Sshape.json");
-//  data = require("./WILLIAM _JAMES_Tshape.json");
+//  data = require("./datasets/psych_id783121.json");
+// data = require("./tree-candidate/FrancisGalton.json");
+// data = require("./tree-candidate/GeorgeMChurch.json");
+// data = require("./tree-candidate/HenryGarret.json");
 
 // data = require("./tree-candidate/CharlesSandersPeirce.json");
 // data = require("./tree-candidate/DonnaHaraway.json");
-data = require("./tree-candidate/JenniferADoudna.json");
+// data = require("./tree-candidate/JenniferADoudna.json");
 
 //  data = require("./tree-candidate/JaneGoodall.json");
 // data = require("./tree-candidate/LudwigBoltzmann.json");
 // data = require("./tree-candidate/NielsBohr.json");
 // data = require("./tree-candidate/RichardPFeynman.json");
 // data = require("./tree-candidate/StephenHawking.json");
-//  data = require("./tree-candidate/WilliamJames.json");
+// data = require("./tree-candidate/WilliamJames.json");
 
 //Special
 // data = require("./special/curly-tree.json");
-//  data = require("./special/female-titled-tree.json");
+data = require("./special/female-titled-tree.json");
 //  data = require("./special/male-tilted-tree.json");
 // data = require("./special/tallest-tree.json");
 // data = require("./special/widest-tree.json");
@@ -64,7 +63,7 @@ data = require("./tree-candidate/JenniferADoudna.json");
 // data = require("./tree-candidate/BradAMyers.json");
 // data = require("./tree-candidate/HiroshiIshii.json");
 // data = require("./tree-candidate/RobertHare.json");
-data = require("./tree-candidate/WilliamSpencerHutchinson.json"); 
+// data = require("./tree-candidate/WilliamSpencerHutchinson.json");
 
 
 const root = data;
@@ -224,27 +223,25 @@ fs = require('fs');
 var path;
 //Apr 13
 //  path ="./tree-candidate-new/psych_id783121.json";
-//  path ="./tree-candidate-new/Francis_Galton_1.json";
-//  path ="./tree-candidate-new/George_M_Church.json";
-//  path ="./tree-candidate-new/HENRY_GARRETT_Sshape.json";
-//  path ="./tree-candidate-new/WILLIAM _JAMES_Tshape.json";
-//  path ="./tree-candidate-new/tree-candidate-new/Francis_Galton_1.json";
+// path = "./tree-candidate-new/FrancisGalton.json";//0.1
+// path = "./tree-candidate-new/GeorgeMChurch.json";//0.1
+path = "./tree-candidate-new/HenryGarret.json";
 
 //Apr 20
 // path = "./tree-candidate-new/CharlesSandersPeirce.json";// 0.1
 // path = "./tree-candidate-new/DonnaHaraway.json"; // 0.4
-path = "./tree-candidate-new/JenniferADoudna.json";
+// path = "./tree-candidate-new/JenniferADoudna.json"; // 0.1
 
 //  path = "./tree-candidate-new/JaneGoodall.json"; // too few mentees
 // path = "./tree-candidate-new/LudwigBoltzmann.json";// 0.06
 // path = "./tree-candidate-new/NielsBohr.json";// 0.07
 // path = "./tree-candidate-new/RichardPFeynman.json"; //0.1
 // path = "./tree-candidate-new/StephenHawking.json";//0.1
-//  path = "./tree-candidate-new/WilliamJames.json";//
+// path = "./tree-candidate-new/WilliamJames.json";// 0.1
 
 //Special path
 // path = "./special-new/curly-tree.json"; // 0.1
-//  path = "./special-new/female-titled-tree.json";
+path = "./special-new/female-titled-tree.json";// 0.1
 //  path = "./special-new/male-titled-tree.json";
 // path = "./special-new/tallest-tree.json"; //0.1
 // path = "./special-new/widest-tree.json";//0.1
@@ -253,7 +250,7 @@ path = "./tree-candidate-new/JenniferADoudna.json";
 // path = "./tree-candidate-new/BradAMyers.json";//0.5
 //  path = "./tree-candidate-new/HiroshiIshii.json";
 // path = "./tree-candidate-new/RobertHare.json";//0.05
-path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.1
+// path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.1
 
 // Write File
 fs.writeFile(path, weightedData, function (err) {
