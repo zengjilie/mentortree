@@ -1,6 +1,7 @@
 // Global variables
 var data;
-var slider;
+var sliderA;
+var sliderF;
 
 // < Loading Data > 
 function preload() {
@@ -25,7 +26,7 @@ function preload() {
 
     //Special Trees
     // data = loadJSON("./special-new/curly-tree.json");
-    data = loadJSON("./special-new/female-titled-tree.json");
+    // data = loadJSON("./special-new/female-titled-tree.json");
     // data = loadJSON("./special-new/male-titled-tree.json");
     // data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
@@ -66,19 +67,20 @@ function setup() {
     console.log(colorMap);
     console.log(data.allResearchAreas.length);
 
-    slider = createSlider(0, 5, 1);
-    slider.position(10, 10);
-    slider.style('width', '150px');
+    sliderA = createSlider(0, 5, 1);
+    sliderA.position(10, 10);
+    sliderA.style('width', '150px');
 
 }
 
 
 
 var degree = 0;
+var degreeF = 0;
 
 function draw() {
     //< Slider Value > 
-    degree = (slider.value() * 0.1).toFixed(1);
+    degree = (sliderA.value() * 0.1).toFixed(1);
     console.log(degree);
 
     //< Background color >
@@ -145,13 +147,13 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         // Weighted, W->L, M->R
         if (children[i].gender === 'woman') {
             const coefficient = 80;
-            newEnd.rotate((i + 1) * PI / coefficient);
-            // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
+            // newEnd.rotate((i + 1) * PI / coefficient);
+            newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
 
         } else if (children[i].gender === 'man') {
             const coefficient = 80;
-            newEnd.rotate((i + 1) * -PI / coefficient);
-            // newEnd.rotate((i + 1) * -PI / coefficient - degree);
+            // newEnd.rotate((i + 1) * -PI / coefficient);
+            newEnd.rotate((i + 1) * -PI / coefficient - degree);
         }
 
         //Evenly
