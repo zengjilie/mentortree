@@ -225,7 +225,7 @@ var path;
 //  path ="./tree-candidate-new/psych_id783121.json";
 // path = "./tree-candidate-new/FrancisGalton.json";//0.1
 // path = "./tree-candidate-new/GeorgeMChurch.json";//0.1
-path = "./tree-candidate-new/HenryGarret.json";
+// path = "./tree-candidate-new/HenryGarret.json";
 
 //Apr 20
 // path = "./tree-candidate-new/CharlesSandersPeirce.json";// 0.1
@@ -241,7 +241,7 @@ path = "./tree-candidate-new/HenryGarret.json";
 
 //Special path
 // path = "./special-new/curly-tree.json"; // 0.1
-path = "./special-new/female-titled-tree.json";// 0.1
+path = "./special-new/female-titled-tree.json";
 //  path = "./special-new/male-titled-tree.json";
 // path = "./special-new/tallest-tree.json"; //0.1
 // path = "./special-new/widest-tree.json";//0.1

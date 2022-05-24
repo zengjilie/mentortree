@@ -120,12 +120,40 @@ function draw() {
     circle(end.x, end.y, circleSize);
 
     //legend
-    
+    let lgWidth = width - 1500;
+    let lgHeight = - 60;
+    let counter = 1;
+    for (const [key, value] of colorMap) {
+        if (counter === 1) {
+            lgWidth += 100;
+            drawLegend(key, value, lgWidth, lgHeight);
+            counter++
+        } else if (counter == 2) {
+            lgWidth += 100;
+            drawLegend(key, value, lgWidth, lgHeight);
+            counter++
+        } else if (counter == 3) {
+            lgWidth += 100;
+            drawLegend(key, value, lgWidth, lgHeight);
+            counter = 1;
+            lgWidth -= 300;
+            lgHeight -= 20;
+        }
+
+    }
     // save("tree.svg"); // give file name
     // print("saved svg");
     // noLoop(); // export once
 }
 
+function drawLegend(key, value, x, y) {
+    colorMode(HSB);
+    fill(value, 100, 100);
+    rect(x, y, 10, 10);
+    fill(180, 255, 100);
+    textSize(10);
+    text(key, x + 20, y + 7);
+}
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
     const branchNum = children?.length;
