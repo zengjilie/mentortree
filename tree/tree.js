@@ -28,7 +28,7 @@ function preload() {
     // data = loadJSON("./special-new/curly-tree.json");
     // data = loadJSON("./special-new/female-titled-tree.json");
     // data = loadJSON("./special-new/male-titled-tree.json");
-    // data = loadJSON("./special-new/tallest-tree.json");
+    data = loadJSON("./special-new/tallest-tree.json");
     // data = loadJSON("./special-new/widest-tree.json");
 
     //May 19
@@ -119,6 +119,8 @@ function draw() {
     // noStroke();
     circle(end.x, end.y, circleSize);
 
+    //legend
+
     // save("tree.svg"); // give file name
     // print("saved svg");
     // noLoop(); // export once
@@ -146,12 +148,12 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
         // Weighted, W->L, M->R
         if (children[i].gender === 'woman') {
-            const coefficient = 80;
+            const coefficient = 210;
             // newEnd.rotate((i + 1) * PI / coefficient);
             newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
 
         } else if (children[i].gender === 'man') {
-            const coefficient = 80;
+            const coefficient = 210;
             // newEnd.rotate((i + 1) * -PI / coefficient);
             newEnd.rotate((i + 1) * -PI / coefficient - degree);
         }
