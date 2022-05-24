@@ -120,7 +120,7 @@ function draw() {
     circle(end.x, end.y, circleSize);
 
     //legend
-
+    
     // save("tree.svg"); // give file name
     // print("saved svg");
     // noLoop(); // export once
