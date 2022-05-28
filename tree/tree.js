@@ -51,20 +51,23 @@ function setup() {
     console.log(colorMap);
     console.log(data.allResearchAreas.length);
 
-    sliderA = createSlider(0, 10, 1);
+    sliderA = createSlider(0, 20, 1);
     sliderA.position(10, 10);
     sliderA.style('width', '150px');
 
+    sliderB = createSlider(0, 20, 1);
+    sliderB.position(200, 10);
+    sliderB.style('width', '150px');
 }
 
 
 
-var degree = 0;
-
+var degreeA = 0;
+var degreeB = 0;
 function draw() {
     //< Slider Value > 
-    degree = sliderA.value();
-    console.log(degree);
+    degreeA = sliderA.value();
+    degreeB = sliderB.value();
 
     //< Background color >
     background(0); // black
@@ -181,13 +184,13 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         const coefficient = 40;
         //W->R, M->L
         if (children[i].gender === 'woman') {
-            newEnd.rotate((womanNum + 1) * PI / (coefficient - degree));
+            newEnd.rotate((womanNum + 1) * PI / (coefficient - degreeA - degreeB));
             womanNum++;
             // newEnd.rotate((i + 1) * PI / 46);
             // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
 
         } else if (children[i].gender === 'man') {
-            newEnd.rotate((maleNum + 1) * -PI / (coefficient - degree));
+            newEnd.rotate((maleNum + 1) * -PI / (coefficient - degreeA));
             maleNum++;
             // newEnd.rotate((i + 1) * -PI / 23);
             // newEnd.rotate((i + 1) * -PI / coefficient - degree);
