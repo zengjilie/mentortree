@@ -16,7 +16,5 @@
     "url": "https://github.com/zengjilie/mentortree/issues"
   },
   "homepage": "https://github.com/zengjilie/mentortree#readme",
-  "dependencies": {
-    "three": "^0.138.3"
-  }
+  "dependencies": {}
 }
