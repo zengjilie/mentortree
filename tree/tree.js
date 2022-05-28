@@ -3,26 +3,30 @@ var data;
 var sliderA;
 var sliderB;
 
+// Coefficient bigger -> male and female gap smaller
+var coefficient = 60;
+
 // < Loading Data > 
 function preload() {
 
     // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
-    data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40
-    // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");
-    // data = loadJSON("./tree-candidate-new/Donna Haraway.json");
-    // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");
-    // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");
-    // data = loadJSON("./tree-candidate-new/Jane Goodall.json");
-    // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");
-    // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");
-    // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");
-    // data = loadJSON("./tree-candidate-new/Niels Bohr.json");
-    // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");
-    // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");
-    // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");
+    // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40
+    // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
+    // data = loadJSON("./tree-candidate-new/Donna Haraway.json");//40
+    // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");//60
+    // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
+    // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
+    // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
+
+    // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
+    // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
+    // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
+    // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
+    // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
+    // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");
-    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
+    data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
 
 }
 
@@ -131,6 +135,7 @@ function draw() {
         }
 
     }
+    // Comment below if you don't want to export svg
     // save("tree.svg"); // give file name
     // print("saved svg");
     // noLoop(); // export once
@@ -184,8 +189,6 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
 
         // < Tree Tilting Schema>
-        // coefficient bigger -> male and female gap smaller
-        const coefficient = 40;
         //W->R, M->L
         if (children[i].gender === 'woman') {
             newEnd.rotate((womanNum + 1) * PI / (coefficient - degreeA - degreeB));
