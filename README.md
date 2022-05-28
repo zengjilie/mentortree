@@ -2,44 +2,15 @@
 
 ## Version 3
 
-### William James
+![image](./images/version3/animation.gif)
 
-HSB
-![william1-hsb](./images/version3/william1-hsb.png)
+![image](./images/version3/Charles%20Sanders%20Peirce.png)
 
-Random
-![william3](./images/version3/william3.png)
+![image](./images/version3/CHRISTIAN%20GOTTFRIED%20DANIEL%20NEES%20VON%20ESENBECK%20(most%20curly).png)
 
-![william2](./images/version3/william2.png)
+![image](./images/version3/Brad%20A%20Myers.png)
 
-![william1](./images/version3/william1.png)
 
-### Hery Garrett
-
-HSB
-![hery2-hsb](./images/version3/hery2-hsb.png)
-
-![hery1-hsb](./images/version3/hery1-hsb.png)
-
-Random
-![hery1](./images/version3/hery1.png)
-
-### Francis Galton
-
-HSB
-![francis1-hsb](./images/version3/francis1-hsb.png)
-
-Random
-![francis1](./images/version3/francis1.png)
-
-### George Church
-
-HSB
-
-![geroge1-hsb](./images/version3/geroge1-hsb.png)
-
-Random
-![geroge1](./images/version3/geroge1.png)
 
 ## Version 2
 
