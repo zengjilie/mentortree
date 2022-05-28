@@ -5,21 +5,25 @@ var sliderB;
 
 // < Loading Data > 
 function preload() {
-    data = loadJSON("./tree-candidate-new/BradAMyers.json"); //110 
-    // data = loadJSON("./tree-candidate-new/CharlesSandersPeirce.json");//110
-    // data = loadJSON("./tree-candidate-new/ChristianGottfriedDanielNeesvonEsenbeck(most-curly).json");//60
-    // data = loadJSON("./tree-candidate-new/DonnaHaraway.json");
-    // data = loadJSON("./tree-candidate-new/HiroshiIshii.json");
-    // data = loadJSON("./tree-candidate-new/JaneGoodall.json");
-    // data = loadJSON("./tree-candidate-new/JenniferADoudna.json");
-    // data = loadJSON("./tree-candidate-new/LudwigBoltzmann.json");
-    // data = loadJSON("./tree-candidate-new/NielsBohr.json");
-    // data = loadJSON("./tree-candidate-new/RichardPFeynman.json");
-    // data = loadJSON("./tree-candidate-new/RobertHare.json");
-    // data = loadJSON("./tree-candidate-new/SebaldRau(most-male-tilted).json");
-    // data = loadJSON("./tree-candidate-new/StephenHawking.json");
-    // data = loadJSON("./tree-candidate-new/WilliamJames.json");
-    // data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
+
+    // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
+    // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
+    data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40
+    // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");
+    // data = loadJSON("./tree-candidate-new/Donna Haraway.json");
+    // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");
+    // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");
+    // data = loadJSON("./tree-candidate-new/Jane Goodall.json");
+    // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");
+    // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");
+    // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");
+    // data = loadJSON("./tree-candidate-new/Niels Bohr.json");
+    // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");
+    // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");
+    // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");
+    // data = loadJSON("./tree-candidate-new/William James.json");
+    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
+
 }
 
 
@@ -186,14 +190,10 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
         if (children[i].gender === 'woman') {
             newEnd.rotate((womanNum + 1) * PI / (coefficient - degreeA - degreeB));
             womanNum++;
-            // newEnd.rotate((i + 1) * PI / 46);
-            // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
 
         } else if (children[i].gender === 'man') {
             newEnd.rotate((maleNum + 1) * -PI / (coefficient - degreeA));
             maleNum++;
-            // newEnd.rotate((i + 1) * -PI / 23);
-            // newEnd.rotate((i + 1) * -PI / coefficient - degree);
         }
 
         //Evenly

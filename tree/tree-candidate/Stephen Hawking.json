@@ -1,0 +1,975 @@
+{
+    "name": "STEPHEN  HAWKING",
+    "gender": "man",
+    "gender_color": "blue",
+    "researcharea": [
+        "physics"
+    ],
+    "children_num": 101,
+    "children": [
+        {
+            "name": "FAY  DOWKER",
+            "gender": "woman",
+            "gender_color": "red",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "JONATHAN  HALLIWELL",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 5,
+            "children": [
+                {
+                    "name": "TING  YU",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 4,
+                    "children": [
+                        {
+                            "name": "BRITTANY  CORN",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "SAMUEL R HEDEMANN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "WENCHONG  SHU",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "YUSUI  CHEN",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ALAN  YUILLE",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "neuro",
+                "computerscience"
+            ],
+            "children_num": 31,
+            "children": [
+                {
+                    "name": "XINGYAO  YE",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "ROOZBEH  MOTTAGHI",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "HONGJING  LU",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 9,
+                    "children": [
+                        {
+                            "name": "AKILA  KADAMBI",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "YUJIA  PENG",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "JEROEN J A VAN BOXTEL",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 3,
+                            "children": [
+                                {
+                                    "name": "MATTHEW J DAVIDSON",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "neuro"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "NOAM  GORDON",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "neuro"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "JULIAN RODNEY MATTHEWS",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "neuro"
+                                    ],
+                                    "children_num": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "GENNADY  ERLIKHMAN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro",
+                                "psych"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "YI-CHIA  CHEN",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "STEVEN M THURMAN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "JASON  CORSO",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 4,
+                    "children": [
+                        {
+                            "name": "IFEOMA O NWOGU",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "JEFFREY A DELMERICO",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "CAIMING  XIONG",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "VIKAS  DHIMAN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "RUSSELL  EPSTEIN",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 11,
+                    "children": [
+                        {
+                            "name": "MARIA  OLKKONEN",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "VANESSA  TROIANI",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "TERESA  PEGORS",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "LINFENG  HAN",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "VICTOR ROGER SCHINAZI",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro",
+                                "psych"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "ALON  HAFRI",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "psych"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "LINDSAY K VASS",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "MICHAEL F BONNER",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "SETH E BOUVIER",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "JOSHUA B JULIAN",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "SEAN P MACEVOY",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "SONGFENG  ZHENG",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "LONG  ZHU",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "RAPHAEL  BOUSSO",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 4,
+            "children": [
+                {
+                    "name": "I-SHENG  YANG",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "STEFAN  LEICHENAUER",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "VLADIMIR  ROSENHAUS",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "ALEKSEY L MINTS",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "JIUN-HUEI PROTY WU",
+            "gender": "unknown",
+            "gender_color": "grey",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 0
+        },
+        {
+            "name": "NICHOLAS P WARNER",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 5,
+            "children": [
+                {
+                    "name": "KRISTIAN D KENNAWAY",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "CHETHAN N GOWDIGERE",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "NIKOLAY P BOBEV",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "BENJAMIN E NIEHOFF",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "ALEXEI  KHAVAEV",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "GARY W GIBBONS",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 1,
+            "children": [
+                {
+                    "name": "SEAN A HARTNOLL",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "DON NELSON PAGE",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 7,
+            "children": [
+                {
+                    "name": "SHIMA  YAGHOOBPOUR TARI",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "IVAN S BOOTH",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "JASON  TWAMLEY",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 2,
+                    "children": [
+                        {
+                            "name": "RESSA S SAID",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "GERARDO ANDRES PAZ-SILVA",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "KIPP  CANNON",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "STEPHEN  BRAHAM",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "BRUCE  ALLEN",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 8,
+            "children": [
+                {
+                    "name": "ROBERT REYNOLDS CALDWELL",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "astronomy"
+                    ],
+                    "children_num": 6,
+                    "children": [
+                        {
+                            "name": "JANNIS  BIELEFELD",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "astronomy"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "PENG P YU",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "astronomy"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "SCOTT F DANIEL",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "astronomy"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "LEONARDO  MOTTA",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "astronomy"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "CHRIS  DEVULDER",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "astronomy"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "DHRUBO  JYOTI",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "astronomy"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "HOLGER JOHANNES PLETSCH",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "EDWARD PAUL SCOTT SHELLARD",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 4,
+            "children": [
+                {
+                    "name": "CORA  UHLEMANN",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "RICHARD A BATTYE",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 1,
+                    "children": [
+                        {
+                            "name": "ALAN R DUFFY",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "IVAN  AGULLO",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "MALCOLM J PERRY",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 10,
+            "children": [
+                {
+                    "name": "MIGUEL  COSTA",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 1,
+                    "children": [
+                        {
+                            "name": "JOAO  PENEDONES",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                },
+                {
+                    "name": "ROBERT C MYERS",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 7,
+                    "children": [
+                        {
+                            "name": "ANINDA  SINHA",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 6,
+                            "children": [
+                                {
+                                    "name": "KALLOL  SEN",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "ARPAN  BHATTACHARYYA",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "APRATIM  KAVIRAJ",
+                                    "gender": "unknown",
+                                    "gender_color": "grey",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "KAUSIK  GHOSH",
+                                    "gender": "unknown",
+                                    "gender_color": "grey",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "PARIJAT  DEY",
+                                    "gender": "unknown",
+                                    "gender_color": "grey",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "PARTHIV  HALDAR",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "physics"
+                                    ],
+                                    "children_num": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "RAYMOND  LAFLAMME",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "chemistry"
+            ],
+            "children_num": 5,
+            "children": [
+                {
+                    "name": "NAYELI A  RODRIGUEZ BRIONES",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "CHRISTOPHER ABRAHAM CHAMBERLAND",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "YUVAL R SANDERS",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "JONATHAN DANIEL BAUGH",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "URBASI  SINHA",
+                    "gender": "unknown",
+                    "gender_color": "grey",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 0
+                }
+            ]
+        },
+        {
+            "name": "BERNARD J CARR",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 7,
+            "children": [
+                {
+                    "name": "JAMES E LIDSEY",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 4,
+                    "children": [
+                        {
+                            "name": "DOMINIC  CLANCY",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "EDWARD  ANDERSON",
+                            "gender": "man",
+                            "gender_color": "blue",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 2,
+                            "children": [
+                                {
+                                    "name": "ADRIAN S LEWIS",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "math"
+                                    ],
+                                    "children_num": 1,
+                                    "children": [
+                                        {
+                                            "name": "HRISTO S SENDOV",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "math"
+                                            ],
+                                            "children_num": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "EAMONN J KERINS",
+                    "gender": "man",
+                    "gender_color": "blue",
+                    "researcharea": [
+                        "physics"
+                    ],
+                    "children_num": 1,
+                    "children": [
+                        {
+                            "name": "SUPACHAI  AWIPHAN",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "physics"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "IAN  MOSS",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "physics"
+            ],
+            "children_num": 0
+        }
+    ]
+}

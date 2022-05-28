@@ -1,0 +1,270 @@
+{
+    "name": "DONALD  REIFF",
+    "gender": "man",
+    "gender_color": "blue",
+    "researcharea": [
+        "ling"
+    ],
+    "children_num": 27,
+    "children": [
+        {
+            "name": "ADRIENNE  LEHRER",
+            "gender": "woman",
+            "gender_color": "red",
+            "researcharea": [
+                "ling"
+            ],
+            "children_num": 26,
+            "children": [
+                {
+                    "name": "BONNIBETH B FONSECA-GREBER",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "ling"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "MIKI  SHIBATA",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "ling"
+                    ],
+                    "children_num": 0
+                },
+                {
+                    "name": "SALLY  MCCONNELL-GINET",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "ling"
+                    ],
+                    "children_num": 23,
+                    "children": [
+                        {
+                            "name": "POLLY  SZATROWSKI",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "ling"
+                            ],
+                            "children_num": 14,
+                            "children": [
+                                {
+                                    "name": "KIMBERLY  JONES",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "ling"
+                                    ],
+                                    "children_num": 8,
+                                    "children": [
+                                        {
+                                            "name": "HARUMI  YAMAJI",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "YUKA  MATSUGU",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "MAGGIE  CAMP",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 2,
+                                            "children": [
+                                                {
+                                                    "name": "RYAN  REDMOND",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "ling"
+                                                    ],
+                                                    "children_num": 0
+                                                },
+                                                {
+                                                    "name": "PATRICK  MURPHY",
+                                                    "gender": "man",
+                                                    "gender_color": "blue",
+                                                    "researcharea": [
+                                                        "ling"
+                                                    ],
+                                                    "children_num": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "ATSUKO  OYAMA",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "GWYNNE  GONZALEZ",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        },
+                                        {
+                                            "name": "TETSUYA  SATO",
+                                            "gender": "man",
+                                            "gender_color": "blue",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "TOMOKO H HOOGENBOOM",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "ling"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "MARIKO  KARATSU",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "ling"
+                                    ],
+                                    "children_num": 1,
+                                    "children": [
+                                        {
+                                            "name": "HIROMI  ONISHI",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "CHARLES J QUINN",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "ling"
+                                    ],
+                                    "children_num": 1,
+                                    "children": [
+                                        {
+                                            "name": "HANNAH E DAHLBERG-DODD",
+                                            "gender": "woman",
+                                            "gender_color": "red",
+                                            "researcharea": [
+                                                "ling"
+                                            ],
+                                            "children_num": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "MARI  NODA",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "educ"
+                            ],
+                            "children_num": 3,
+                            "children": [
+                                {
+                                    "name": "PRIYA  ANANTH",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "educ"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "SANAE  EDA",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "educ"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "STEPHEN D LUFT",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "educ"
+                                    ],
+                                    "children_num": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "MANDY  SIMONS",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "ling"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "TANYA L MATTHEWS",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "ling"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "MARIA  DEL TESO CRAVIOTTO",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "ling"
+                            ],
+                            "children_num": 0
+                        },
+                        {
+                            "name": "WHITNEY A POSTMAN",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "ling"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

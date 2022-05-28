@@ -1,58 +1,44 @@
 var data;
-// < Data for testing >
-// data = {
-//     name: 'Gege',
-//     gender: 'man',
-//     gender_color: 'blue',
-//     children: [
-//         {
-//             name: 'Jiejie',
-//             gender: 'man',
-//             gender_color: 'blue',
-//             children: [
-//                 {
-//                     name: 'Meimei',
-//                     gender: 'man',
-//                     gender_color: 'blue',
-//                 },
-//                 {
-//                     name: 'Didi',
-//                     gender: 'woman',
-//                     gender_color: 'red',
-//                 },
-//             ]
-//         },
-//         {
-//             name: 'Dama',
-//             gender: 'woman',
-//             gender_color: 'red',
-//         },
-//         {
-//             name: 'Dashu',
-//             gender: 'woman',
-//             gender_color: 'red',
-//         },
-//     ]
-// }
-
 // < Data import >
-// data = require("./tree-candidate/BradAMyers.json");
-// data = require("./tree-candidate/CharlesSandersPeirce.json");
-data = require("./tree-candidate/ChristianGottfriedDanielNeesvonEsenbeck(most-curly).json");
-// data = require("./tree-candidate/DonnaHaraway.json");
-// data = require("./tree-candidate/HiroshiIshii.json");
-// data = require("./tree-candidate/JaneGoodall.json");
-// data = require("./tree-candidate/JenniferADoudna.json");
-// data = require("./tree-candidate/LudwigBoltzmann.json");
-// data = require("./tree-candidate/NielsBohr.json");
-// data = require("./tree-candidate/RichardPFeynman.json");
-// data = require("./tree-candidate/RobertHare.json");
-// data = require("./tree-candidate/SebaldRau(most-male-tilted).json");
-// data = require("./tree-candidate/StephenHawking.json");
-// data = require("./tree-candidate/WilliamJames.json");
-// data = require("./tree-candidate/WilliamSpencerHutchinson.json");
 
+// data = require("./tree-candidate/Brad A Myers.json");
+// data = require("./tree-candidate/Charles Sanders Peirce.json");
+// data = require("./tree-candidate/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");
+// data = require("./tree-candidate/DONALD REIFF (most female-tilted).json");
+// data = require("./tree-candidate/Donna Haraway.json");
+// data = require("./tree-candidate/FRANCIS GALTON (Widest and Tallest).json");
+// data = require("./tree-candidate/Hiroshi Ishii.json");
+// data = require("./tree-candidate/Jane Goodall.json");
+// data = require("./tree-candidate/Jennifer A Doudna.json");
+// data = require("./tree-candidate/JOHANN MULLER (most male-tilted).json");
+// data = require("./tree-candidate/Ludwig Boltzmann.json");
+// data = require("./tree-candidate/Niels Bohr.json");
+// data = require("./tree-candidate/Richard P Feynman.json");
+// data = require("./tree-candidate/ROBERT HARE.json");
+// data = require("./tree-candidate/Stephen Hawking.json");
+// data = require("./tree-candidate/William James.json");
+data = require("./tree-candidate/WILLIAM SPENCER HUTCHINSON.json");
 const root = data;
+
+var path;
+
+// path = "./tree-candidate-new/Brad A Myers.json";
+// path = "./tree-candidate-new/Charles Sanders Peirce.json";
+// path = "./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json";
+// path = "./tree-candidate-new/DONALD REIFF (most female-tilted).json";
+// path = "./tree-candidate-new/Donna Haraway.json";
+// path = "./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json";
+// path = "./tree-candidate-new/Hiroshi Ishii.json";
+// path = "./tree-candidate-new/Jane Goodall.json";
+// path = "./tree-candidate-new/Jennifer A Doudna.json";
+// path = "./tree-candidate-new/JOHANN MULLER (most male-tilted).json";
+// path = "./tree-candidate-new/Ludwig Boltzmann.json";
+// path = "./tree-candidate-new/Niels Bohr.json";
+// path = "./tree-candidate-new/Richard P Feynman.json";
+// path = "./tree-candidate-new/ROBERT HARE.json";
+// path = "./tree-candidate-new/Stephen Hawking.json";
+// path = "./tree-candidate-new/William James.json";
+path = "./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json";
 
 //< Procedure >
 /**
@@ -216,54 +202,6 @@ let weightedData = JSON.stringify(root);
 
 fs = require('fs');
 
-var path;
-//Apr 13
-//  path ="./tree-candidate-new/psych_id783121.json";
-// path = "./tree-candidate-new/FrancisGalton.json";//0.1
-// path = "./tree-candidate-new/GeorgeMChurch.json";//0.1
-// path = "./tree-candidate-new/HenryGarret.json";
-
-//Apr 20
-// path = "./tree-candidate-new/CharlesSandersPeirce.json";// 0.1
-// path = "./tree-candidate-new/DonnaHaraway.json"; // 0.4
-// path = "./tree-candidate-new/JenniferADoudna.json"; // 0.1
-
-// path = "./tree-candidate-new/JaneGoodall.json"; // too few mentees
-// path = "./tree-candidate-new/LudwigBoltzmann.json";// 0.06
-// path = "./tree-candidate-new/NielsBohr.json";// 0.07
-// path = "./tree-candidate-new/RichardPFeynman.json"; //0.1
-// path = "./tree-candidate-new/StephenHawking.json";//0.1
-// path = "./tree-candidate-new/WilliamJames.json";// 0.1
-
-//Special path
-// path = "./special-new/curly-tree.json"; // 0.1
-// path = "./special-new/female-titled-tree.json";
-//  path = "./special-new/male-titled-tree.json";
-// path = "./special-new/tallest-tree.json"; //0.1
-// path = "./special-new/widest-tree.json";//0.1
-
-//May 19
-// path = "./tree-candidate-new/BradAMyers.json";//0.5
-// path = "./tree-candidate-new/HiroshiIshii.json";
-// path = "./tree-candidate-new/RobertHare.json";//0.05
-// path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.1
-
-
-// path = "./tree-candidate-new/BradAMyers.json";
-// path = "./tree-candidate-new/CharlesSandersPeirce.json";
-path = "./tree-candidate-new/ChristianGottfriedDanielNeesvonEsenbeck(most-curly).json";
-// path = "./tree-candidate-new/DonnaHaraway.json";
-// path = "./tree-candidate-new/HiroshiIshii.json";
-// path ="./tree-candidate-new/JaneGoodall.json";
-// path ="./tree-candidate-new/JenniferADoudna.json";
-// path ="./tree-candidate-new/LudwigBoltzmann.json";
-// path ="./tree-candidate-new/NielsBohr.json";
-// path ="./tree-candidate-new/RichardPFeynman.json";
-// path ="./tree-candidate-new/RobertHare.json";
-// path ="./tree-candidate-new/SebaldRau(most-male-tilted).json";
-// path ="./tree-candidate-new/StephenHawking.json";
-// path ="./tree-candidate-new/WilliamJames.json";
-// path ="./tree-candidate-new/WilliamSpencerHutchinson.json";
 
 // Write File
 fs.writeFile(path, weightedData, function (err) {
@@ -271,3 +209,39 @@ fs.writeFile(path, weightedData, function (err) {
 });
 
 // console.log(root);
+
+// < Data for testing >
+// data = {
+//     name: 'Gege',
+//     gender: 'man',
+//     gender_color: 'blue',
+//     children: [
+//         {
+//             name: 'Jiejie',
+//             gender: 'man',
+//             gender_color: 'blue',
+//             children: [
+//                 {
+//                     name: 'Meimei',
+//                     gender: 'man',
+//                     gender_color: 'blue',
+//                 },
+//                 {
+//                     name: 'Didi',
+//                     gender: 'woman',
+//                     gender_color: 'red',
+//                 },
+//             ]
+//         },
+//         {
+//             name: 'Dama',
+//             gender: 'woman',
+//             gender_color: 'red',
+//         },
+//         {
+//             name: 'Dashu',
+//             gender: 'woman',
+//             gender_color: 'red',
+//         },
+//     ]
+// }

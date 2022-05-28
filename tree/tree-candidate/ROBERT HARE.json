@@ -1,0 +1,43 @@
+{
+    "name": "ROBERT  HARE",
+    "gender": "man",
+    "gender_color": "blue",
+    "researcharea": [
+        "neuro",
+        "chemistry"
+    ],
+    "children_num": 3,
+    "children": [
+        {
+            "name": "TIMOTHY J HARPUR",
+            "gender": "man",
+            "gender_color": "blue",
+            "researcharea": [
+                "neuro"
+            ],
+            "children_num": 2,
+            "children": [
+                {
+                    "name": "JENNIFER  ISOM-SCHMIDTKE",
+                    "gender": "woman",
+                    "gender_color": "red",
+                    "researcharea": [
+                        "neuro"
+                    ],
+                    "children_num": 1,
+                    "children": [
+                        {
+                            "name": "CHARLENE J FUENTES",
+                            "gender": "woman",
+                            "gender_color": "red",
+                            "researcharea": [
+                                "neuro"
+                            ],
+                            "children_num": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

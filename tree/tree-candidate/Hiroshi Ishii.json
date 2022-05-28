@@ -1,0 +1,20 @@
+{
+    "name":"HIROSHI  ISHII",
+    "gender":"man",
+    "gender_color":"blue",
+    "researcharea":[
+        "computerscience"
+    ],
+    "children_num":1,
+    "children":[
+        {
+            "name":"CARLO  RATTI",
+            "gender":"man",
+            "gender_color":"blue",
+            "researcharea":[
+                "architecture"
+            ],
+            "children_num":0
+        }
+    ]
+}

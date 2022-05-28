@@ -1,0 +1,10 @@
+{
+    "name": "JANE  GOODALL",
+    "gender": "woman",
+    "gender_color": "red",
+    "researcharea": [
+        "neuro",
+        "primate"
+    ],
+    "children_num": 0
+}
