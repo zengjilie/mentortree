@@ -306,76 +306,76 @@ function drawLeaf(begin, end, color, leafWidth) {
 }
 
 //Data for testing
-data = {
-    name: "Gege",
-    gender: "man",
-    gender_color: "blue",
-    "researcharea": [
-        "1"
-    ],
-    children: [
-        {
-            name: "Jiejie",
-            gender: "man",
-            gender_color: "blue",
-            "researcharea": [
-                "2"
-            ],
-            children: [
-                {
-                    name: "Dama2",
-                    gender: "man",
-                    gender_color: "blue",
-                    weight: 0.09090909090909091,
-                    "researcharea": [
-                        "2"
-                    ],
-                },
-                {
-                    name: "Dama2",
-                    gender: "woman",
-                    gender_color: "red",
-                    weight: 0.09090909090909091,
-                    "researcharea": [
-                        "2"
-                    ],
-                },
-            ],
-            weight: 0.09090909090909091
-        },
-        {
-            name: "Dama2",
-            gender: "man",
-            gender_color: "blue",
-            weight: 0.09090909090909091,
-            "researcharea": [
-                "2"
-            ],
-        },
-        {
-            name: "Dama",
-            gender: "woman",
-            gender_color: "red",
-            weight: 0.09090909090909091,
-            "researcharea": [
-                "2"
-            ],
-        },
-        {
-            name: "Dashu",
-            gender: "woman",
-            gender_color: "red",
-            weight: 0.09090909090909091,
-            "researcharea": [
-                "2"
-            ],
-        }
-    ],
-    weight: 0.09090909090909091,
-    allResearchAreas: [
-        "1",
-        "2",
-        "3"
-    ]
-}
+// data = {
+//     name: "Gege",
+//     gender: "man",
+//     gender_color: "blue",
+//     "researcharea": [
+//         "1"
+//     ],
+//     children: [
+//         {
+//             name: "Jiejie",
+//             gender: "man",
+//             gender_color: "blue",
+//             "researcharea": [
+//                 "2"
+//             ],
+//             children: [
+//                 {
+//                     name: "Dama2",
+//                     gender: "man",
+//                     gender_color: "blue",
+//                     weight: 0.09090909090909091,
+//                     "researcharea": [
+//                         "2"
+//                     ],
+//                 },
+//                 {
+//                     name: "Dama2",
+//                     gender: "woman",
+//                     gender_color: "red",
+//                     weight: 0.09090909090909091,
+//                     "researcharea": [
+//                         "2"
+//                     ],
+//                 },
+//             ],
+//             weight: 0.09090909090909091
+//         },
+//         {
+//             name: "Dama2",
+//             gender: "man",
+//             gender_color: "blue",
+//             weight: 0.09090909090909091,
+//             "researcharea": [
+//                 "2"
+//             ],
+//         },
+//         {
+//             name: "Dama",
+//             gender: "woman",
+//             gender_color: "red",
+//             weight: 0.09090909090909091,
+//             "researcharea": [
+//                 "2"
+//             ],
+//         },
+//         {
+//             name: "Dashu",
+//             gender: "woman",
+//             gender_color: "red",
+//             weight: 0.09090909090909091,
+//             "researcharea": [
+//                 "2"
+//             ],
+//         }
+//     ],
+//     weight: 0.09090909090909091,
+//     allResearchAreas: [
+//         "1",
+//         "2",
+//         "3"
+//     ]
+// }
 
