@@ -59,11 +59,11 @@ function setup() {
     console.log(colorMap);
     console.log(data.allResearchAreas.length);
 
-    sliderA = createSlider(0, 20, 1);
+    sliderA = createSlider(0, 40, 1);
     sliderA.position(10, 10);
     sliderA.style('width', '150px');
 
-    sliderB = createSlider(0, 20, 1);
+    sliderB = createSlider(0, 40, 1);
     sliderB.position(200, 10);
     sliderB.style('width', '150px');
 }
@@ -195,7 +195,7 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
             womanNum++;
 
         } else if (children[i].gender === 'man') {
-            newEnd.rotate((maleNum + 1) * -PI / (coefficient - degreeA));
+            newEnd.rotate((maleNum + 1) * -PI / (coefficient + degreeA));
             maleNum++;
         }
 
