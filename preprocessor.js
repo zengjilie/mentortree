@@ -1,22 +1,22 @@
 
 const files = [
     "Brad A Myers.json",
-    // "Charles Sanders Peirce.json",
-    // "CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json",
-    // "DONALD REIFF (most female-tilted).json",
-    // "Donna Haraway.json",
-    // "FRANCIS GALTON (Widest and Tallest).json",
-    // "Hiroshi Ishii.json",
-    // "Jane Goodall.json",
-    // "Jennifer A Doudna.json",
-    // "JOHANN MULLER (most male-tilted).json",
-    // "Ludwig Boltzmann.json",
-    // "Niels Bohr.json",
-    // "Richard P Feynman.json",
-    // "ROBERT HARE.json",
-    // "Stephen Hawking.json",
-    // "William James.json",
-    // "WILLIAM SPENCER HUTCHINSON.json",
+    "Charles Sanders Peirce.json",
+    "CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json",
+    "DONALD REIFF (most female-tilted).json",
+    "Donna Haraway.json",
+    "FRANCIS GALTON (Widest and Tallest).json",
+    "Hiroshi Ishii.json",
+    "Jane Goodall.json",
+    "Jennifer A Doudna.json",
+    "JOHANN MULLER (most male-tilted).json",
+    "Ludwig Boltzmann.json",
+    "Niels Bohr.json",
+    "Richard P Feynman.json",
+    "ROBERT HARE.json",
+    "Stephen Hawking.json",
+    "William James.json",
+    "WILLIAM SPENCER HUTCHINSON.json",
 ]
 
 files.forEach(e => {
@@ -103,11 +103,12 @@ files.forEach(e => {
     range_mean = (max - min) / 2;
 
     console.log(
-        '', `sum: ${sum}`, '\n',
+        '', `${e}`, '\n',
+        `sum: ${sum}`, '\n',
         `map size: ${map.size}`, '\n',
         `max: ${max}`, '\n',
         `min: ${min}`, '\n',
-        `range_mean: ${range_mean}`
+        `range_mean: ${range_mean}`, `\n`
     );
 
     for (let [key, value] of map) {
