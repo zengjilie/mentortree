@@ -6,12 +6,12 @@ var sliderB;
 var degreeA;
 var degreeB;
 
-//degreeAnimation default value can change
-var ANIMATIONRANGE_MAX = 200;
-var ANIMATIONRANGE_MIN = 50;
-var ANIMATIONSPEED = 1; // the bggier the quicker
+var ANIMATIONRANGE_MAX = 200;// End curl
+var ANIMATIONRANGE_MIN = 20;// Start curl
+var ANIMATIONSPEED = 2; // the bggier the quicker
 var degreeAnimation = ANIMATIONRANGE_MIN;
-let goRight = true;
+let bounce = true;
+var useAnimation = true; // make this false if you want to use slider
 
 // Color(Hue) ranges between 0 to 360, 
 var colorMap = new Map();// researchArea:string => color:number
@@ -33,12 +33,12 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
     // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
 
-    // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
+    data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
     // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
-    data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
+    // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");
     // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
 }
@@ -66,7 +66,7 @@ function draw() {
     degreeB = sliderB.value();
 
     //animation
-    if (goRight) {
+    if (bounce) {
         degreeAnimation = degreeAnimation + ANIMATIONSPEED;
     } else {
         degreeAnimation = degreeAnimation - ANIMATIONSPEED;
@@ -74,12 +74,11 @@ function draw() {
     }
 
     if (degreeAnimation >= ANIMATIONRANGE_MAX) {
-        goRight = false;
+        bounce = false;
     } else if (degreeAnimation < ANIMATIONRANGE_MIN) {
-        goRight = true;
+        bounce = true;
     }
 
-    console.log(degreeAnimation);
     // Starting point
     translate(width / 2, height);
 
@@ -177,18 +176,19 @@ function buildTree(children, begin, end) {
         const newEnd = createVector(end.x, end.y);
 
         if (children[i].gender === 'woman') {
-            // newEnd.rotate((womanNum + 1) * PI / (COEFFICIENT - degreeB));
-            newEnd.rotate((womanNum + 1) * PI / (degreeAnimation));
+            if (useAnimation) {
+                newEnd.rotate((womanNum + 1) * PI / (ANIMATIONRANGE_MAX - degreeAnimation + 20));
+            } else {
+                newEnd.rotate((womanNum + 1) * PI / (COEFFICIENT - degreeB));
+            }
             womanNum++;
 
         } else if (children[i].gender === 'man') {
-            //Manual
-            // newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT + degreeA));
-
-            //Animation
-            newEnd.rotate((maleNum + 1) * -PI / (degreeAnimation));
-
-
+            if (useAnimation) {
+                newEnd.rotate((maleNum + 1) * -PI / (degreeAnimation));
+            } else {
+                newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT + degreeA));
+            }
             maleNum++;
         }
 
