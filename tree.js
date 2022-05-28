@@ -6,6 +6,13 @@ var sliderB;
 var degreeA;
 var degreeB;
 
+//degreeAnimation default value can change
+var ANIMATIONRANGE_MAX = 200;
+var ANIMATIONRANGE_MIN = 50;
+var ANIMATIONSPEED = 1; // the bggier the quicker
+var degreeAnimation = ANIMATIONRANGE_MIN;
+let goRight = true;
+
 // Color(Hue) ranges between 0 to 360, 
 var colorMap = new Map();// researchArea:string => color:number
 
@@ -16,7 +23,7 @@ var LEAFWIDTH = 100;
 var CIRCLESIZE = 4;
 
 function preload() {
-    data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
+    // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
     // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40
     // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
@@ -31,25 +38,11 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
     // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
-    // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
+    data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");
     // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
 }
 
-/**
- * 
- * @returns 
- */
-function assignColor() {
-    const gap = 360 / data.allResearchAreas.length;
-    let j = 0
-    for (let i = 1; i <= 360; i += gap) {
-        colorMap.set(data.allResearchAreas[j], i);
-        j++;
-    }
-
-    return;
-}
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight, SVG);
@@ -72,6 +65,21 @@ function draw() {
     degreeA = sliderA.value();
     degreeB = sliderB.value();
 
+    //animation
+    if (goRight) {
+        degreeAnimation = degreeAnimation + ANIMATIONSPEED;
+    } else {
+        degreeAnimation = degreeAnimation - ANIMATIONSPEED;
+
+    }
+
+    if (degreeAnimation >= ANIMATIONRANGE_MAX) {
+        goRight = false;
+    } else if (degreeAnimation < ANIMATIONRANGE_MIN) {
+        goRight = true;
+    }
+
+    console.log(degreeAnimation);
     // Starting point
     translate(width / 2, height);
 
@@ -115,6 +123,21 @@ function draw() {
 }
 
 /**
+ * 
+ * @returns 
+ */
+function assignColor() {
+    const gap = 360 / data.allResearchAreas.length;
+    let j = 0
+    for (let i = 1; i <= 360; i += gap) {
+        colorMap.set(data.allResearchAreas[j], i);
+        j++;
+    }
+
+    return;
+}
+
+/**
  * Draw legend
  * @param {*} text 
  * @param {*} color 
@@ -154,11 +177,18 @@ function buildTree(children, begin, end) {
         const newEnd = createVector(end.x, end.y);
 
         if (children[i].gender === 'woman') {
-            newEnd.rotate((womanNum + 1) * PI / (COEFFICIENT - degreeB));
+            // newEnd.rotate((womanNum + 1) * PI / (COEFFICIENT - degreeB));
+            newEnd.rotate((womanNum + 1) * PI / (degreeAnimation));
             womanNum++;
 
         } else if (children[i].gender === 'man') {
-            newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT + degreeA));
+            //Manual
+            // newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT + degreeA));
+
+            //Animation
+            newEnd.rotate((maleNum + 1) * -PI / (degreeAnimation));
+
+
             maleNum++;
         }
 
