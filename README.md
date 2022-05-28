@@ -4,6 +4,8 @@
 
 ![image](./images/version3/animation.gif)
 
+![image](./images/version3/slider.gif)
+
 ![image](./images/version3/Charles%20Sanders%20Peirce.png)
 
 ![image](./images/version3/CHRISTIAN%20GOTTFRIED%20DANIEL%20NEES%20VON%20ESENBECK%20(most%20curly).png)
