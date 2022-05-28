@@ -143,39 +143,3 @@ files.forEach(e => {
         if (err) console.log('error', err);
     });
 })
-
-// Data for testing
-// data = {
-//     name: 'Gege',
-//     gender: 'man',
-//     gender_color: 'blue',
-//     children: [
-//         {
-//             name: 'Jiejie',
-//             gender: 'man',
-//             gender_color: 'blue',
-//             children: [
-//                 {
-//                     name: 'Meimei',
-//                     gender: 'man',
-//                     gender_color: 'blue',
-//                 },
-//                 {
-//                     name: 'Didi',
-//                     gender: 'woman',
-//                     gender_color: 'red',
-//                 },
-//             ]
-//         },
-//         {
-//             name: 'Dama',
-//             gender: 'woman',
-//             gender_color: 'red',
-//         },
-//         {
-//             name: 'Dashu',
-//             gender: 'woman',
-//             gender_color: 'red',
-//         },
-//     ]
-// }
