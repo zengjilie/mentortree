@@ -1,40 +1,24 @@
 // Global variables
 var data;
 var sliderA;
-var sliderF;
+var sliderB;
 
 // < Loading Data > 
 function preload() {
-    //First batch
-    // data = loadJSON('./tree-candidate-new/psych_id783121_new.json');
-
-    //Second batch
-    // data = loadJSON('./tree-candidate-new/FrancisGalton.json');
-    // data = loadJSON('./tree-candidate-new/GeorgeMChurch.json');
-    // data = loadJSON('./tree-candidate-new/HenryGarret.json');
-
-    //Thrid batch
-    // data = loadJSON("./tree-candidate-new/CharlesSandersPeirce.json");
+    data = loadJSON("./tree-candidate-new/BradAMyers.json"); //110 
+    // data = loadJSON("./tree-candidate-new/CharlesSandersPeirce.json");//110
+    // data = loadJSON("./tree-candidate-new/ChristianGottfriedDanielNeesvonEsenbeck(most-curly).json");//60
     // data = loadJSON("./tree-candidate-new/DonnaHaraway.json");
+    // data = loadJSON("./tree-candidate-new/HiroshiIshii.json");
+    // data = loadJSON("./tree-candidate-new/JaneGoodall.json");
     // data = loadJSON("./tree-candidate-new/JenniferADoudna.json");
-    // data = loadJSON("./tree-candidate-new/JaneGoodall.json"); // too few mentees
     // data = loadJSON("./tree-candidate-new/LudwigBoltzmann.json");
     // data = loadJSON("./tree-candidate-new/NielsBohr.json");
     // data = loadJSON("./tree-candidate-new/RichardPFeynman.json");
+    // data = loadJSON("./tree-candidate-new/RobertHare.json");
+    // data = loadJSON("./tree-candidate-new/SebaldRau(most-male-tilted).json");
     // data = loadJSON("./tree-candidate-new/StephenHawking.json");
     // data = loadJSON("./tree-candidate-new/WilliamJames.json");
-
-    //Special Trees
-    // data = loadJSON("./special-new/curly-tree.json");
-    // data = loadJSON("./special-new/female-titled-tree.json");
-    // data = loadJSON("./special-new/male-titled-tree.json");
-    data = loadJSON("./special-new/tallest-tree.json");
-    // data = loadJSON("./special-new/widest-tree.json");
-
-    //May 19
-    // data = loadJSON("./tree-candidate-new/BradAMyers.json");
-    // data = loadJSON("./tree-candidate-new/HiroshiIshii.json");
-    // data = loadJSON("./tree-candidate-new/RobertHare.json");
     // data = loadJSON("./tree-candidate-new/WilliamSpencerHutchinson.json");
 }
 
@@ -67,7 +51,7 @@ function setup() {
     console.log(colorMap);
     console.log(data.allResearchAreas.length);
 
-    sliderA = createSlider(0, 5, 1);
+    sliderA = createSlider(0, 10, 1);
     sliderA.position(10, 10);
     sliderA.style('width', '150px');
 
@@ -76,11 +60,10 @@ function setup() {
 
 
 var degree = 0;
-var degreeF = 0;
 
 function draw() {
     //< Slider Value > 
-    degree = (sliderA.value() * 0.1).toFixed(1);
+    degree = sliderA.value();
     console.log(degree);
 
     //< Background color >
@@ -120,23 +103,23 @@ function draw() {
     circle(end.x, end.y, circleSize);
 
     //legend
-    let lgWidth = width - 1500;
+    let lgWidth = 200;
     let lgHeight = - 60;
     let counter = 1;
     for (const [key, value] of colorMap) {
         if (counter === 1) {
-            lgWidth += 100;
+            lgWidth += 140;
             drawLegend(key, value, lgWidth, lgHeight);
             counter++
         } else if (counter == 2) {
-            lgWidth += 100;
+            lgWidth += 140;
             drawLegend(key, value, lgWidth, lgHeight);
             counter++
         } else if (counter == 3) {
-            lgWidth += 100;
+            lgWidth += 140;
             drawLegend(key, value, lgWidth, lgHeight);
             counter = 1;
-            lgWidth -= 300;
+            lgWidth -= 420;
             lgHeight -= 20;
         }
 
@@ -146,6 +129,13 @@ function draw() {
     // noLoop(); // export once
 }
 
+/**
+ * 
+ * @param {*} key 
+ * @param {*} value 
+ * @param {*} x 
+ * @param {*} y 
+ */
 function drawLegend(key, value, x, y) {
     colorMode(HSB);
     fill(value, 100, 100);
@@ -154,6 +144,17 @@ function drawLegend(key, value, x, y) {
     textSize(10);
     text(key, x + 20, y + 7);
 }
+
+/**
+ * 
+ * @param {*} children 
+ * @param {*} begin 
+ * @param {*} end 
+ * @param {*} strokeW 
+ * @param {*} circleSize 
+ * @param {*} angle 
+ * @returns 
+ */
 function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
     const branchNum = children?.length;
@@ -164,6 +165,9 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
     }
 
     //Recurse on all the nodes
+
+    let maleNum = 0;
+    let womanNum = 0;
     for (let i = 0; i < branchNum; i++) {
         //Move current end point as the start point
         translate(end.x, end.y);
@@ -173,17 +177,20 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 
 
         // < Tree Tilting Schema>
-
-        // Weighted, W->L, M->R
+        // coefficient bigger -> male and female gap smaller
+        const coefficient = 40;
+        //W->R, M->L
         if (children[i].gender === 'woman') {
-            const coefficient = 210;
-            // newEnd.rotate((i + 1) * PI / coefficient);
-            newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
+            newEnd.rotate((womanNum + 1) * PI / (coefficient - degree));
+            womanNum++;
+            // newEnd.rotate((i + 1) * PI / 46);
+            // newEnd.rotate((i + 1) * PI / coefficient + degree / 2);
 
         } else if (children[i].gender === 'man') {
-            const coefficient = 210;
-            // newEnd.rotate((i + 1) * -PI / coefficient);
-            newEnd.rotate((i + 1) * -PI / coefficient - degree);
+            newEnd.rotate((maleNum + 1) * -PI / (coefficient - degree));
+            maleNum++;
+            // newEnd.rotate((i + 1) * -PI / 23);
+            // newEnd.rotate((i + 1) * -PI / coefficient - degree);
         }
 
         //Evenly
@@ -240,6 +247,13 @@ function buildTree(children, begin, end, strokeW, circleSize, angle) {
 }
 
 
+/**
+ * 
+ * @param {*} begin 
+ * @param {*} end 
+ * @param {*} color 
+ * @param {*} strokeW 
+ */
 function drawLeaf(begin, end, color, strokeW) {
     // console.log(end);
     let slope = 0;
@@ -330,10 +344,6 @@ function drawLeaf(begin, end, color, strokeW) {
 
 }
 
-function drawRec(begin, end, color, strokeW) {
-
-}
-
 data = {
     name: "Gege",
     gender: "man",
@@ -351,25 +361,34 @@ data = {
             ],
             children: [
                 {
-                    name: "Meimei",
+                    name: "Dama2",
                     gender: "man",
                     gender_color: "blue",
                     weight: 0.09090909090909091,
                     "researcharea": [
-                        "3"
+                        "2"
                     ],
                 },
                 {
-                    name: "Didi",
+                    name: "Dama2",
                     gender: "woman",
                     gender_color: "red",
                     weight: 0.09090909090909091,
                     "researcharea": [
-                        "3"
+                        "2"
                     ],
-                }
+                },
             ],
-            weight: 0.18181818181818182
+            weight: 0.09090909090909091
+        },
+        {
+            name: "Dama2",
+            gender: "man",
+            gender_color: "blue",
+            weight: 0.09090909090909091,
+            "researcharea": [
+                "2"
+            ],
         },
         {
             name: "Dama",
@@ -390,7 +409,7 @@ data = {
             ],
         }
     ],
-    weight: 0.45454545454545453,
+    weight: 0.09090909090909091,
     allResearchAreas: [
         "1",
         "2",

@@ -5,7 +5,7 @@
     "researcharea": [
         "computerscience"
     ],
-    "children_num": 8,
+    "children_num": 20,
     "children": [
         {
             "name": "JOHN F PANE",
@@ -15,7 +15,7 @@
                 "computerscience"
             ],
             "children_num": 0,
-            "weight": 0.14473684210526316
+            "weight": 0.02469879518072289
         },
         {
             "name": "JACOB O WOBBROCK",
@@ -25,7 +25,7 @@
                 "computerscience"
             ],
             "children_num": 0,
-            "weight": 0.14473684210526316
+            "weight": 0.02469879518072289
         },
         {
             "name": "JEFFREY  NICHOLS",
@@ -35,7 +35,7 @@
                 "computerscience"
             ],
             "children_num": 0,
-            "weight": 0.14473684210526316
+            "weight": 0.02469879518072289
         },
         {
             "name": "ANDREW J KO",
@@ -45,7 +45,7 @@
                 "computerscience"
             ],
             "children_num": 0,
-            "weight": 0.14473684210526316
+            "weight": 0.02469879518072289
         },
         {
             "name": "JEFFREY  STYLOS",
@@ -55,7 +55,7 @@
                 "computerscience"
             ],
             "children_num": 0,
-            "weight": 0.14473684210526316
+            "weight": 0.02469879518072289
         },
         {
             "name": "THOMAS D LATOZA",
@@ -65,7 +65,7 @@
                 "computerscience"
             ],
             "children_num": 0,
-            "weight": 0.14473684210526316
+            "weight": 0.02469879518072289
         },
         {
             "name": "JAMES  LANDAY",
@@ -74,7 +74,7 @@
             "researcharea": [
                 "computerscience"
             ],
-            "children_num": 1,
+            "children_num": 13,
             "children": [
                 {
                     "name": "SCOTT  KLEMMER",
@@ -83,16 +83,141 @@
                     "researcharea": [
                         "neuro"
                     ],
-                    "children_num": 0,
-                    "weight": 0.14473684210526316
+                    "children_num": 12,
+                    "children": [
+                        {
+                            "name": "BJOERN  HARTMANN",
+                            "gender": "unknown",
+                            "gender_color": "rgba(255,95,145,0.5)",
+                            "researcharea": [
+                                "computerscience"
+                            ],
+                            "children_num": 11,
+                            "children": [
+                                {
+                                    "name": "AMY  PAVEL",
+                                    "gender": "woman",
+                                    "gender_color": "rgba(255,95,145,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "LORA A OEHLBERG",
+                                    "gender": "woman",
+                                    "gender_color": "rgba(255,95,145,0.5)",
+                                    "researcharea": [
+                                        "educ"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "PEGGY  CHI",
+                                    "gender": "woman",
+                                    "gender_color": "rgba(255,95,145,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "VALKYRIE  SAVAGE",
+                                    "gender": "unknown",
+                                    "gender_color": "rgba(255,95,145,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "WILL  MCGRATH",
+                                    "gender": "man",
+                                    "gender_color": "rgba(115,255,218,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "KENRICK C KIN",
+                                    "gender": "man",
+                                    "gender_color": "rgba(115,255,218,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "BALASARAVANAN  THORAVI KUMARAVEL",
+                                    "gender": "unknown",
+                                    "gender_color": "rgba(255,95,145,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "ELDON  SCHOOP",
+                                    "gender": "man",
+                                    "gender_color": "rgba(115,255,218,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "JEREMY  WARNER",
+                                    "gender": "man",
+                                    "gender_color": "rgba(115,255,218,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "ANDREW  HEAD",
+                                    "gender": "man",
+                                    "gender_color": "rgba(115,255,218,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                },
+                                {
+                                    "name": "RICHARD  LIN",
+                                    "gender": "man",
+                                    "gender_color": "rgba(115,255,218,0.5)",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0,
+                                    "weight": 0.02469879518072289
+                                }
+                            ],
+                            "weight": 0.14397590361445783
+                        }
+                    ],
+                    "weight": 0.16566265060240964
                 }
             ],
-            "weight": 0.17105263157894737
+            "weight": 0.18734939759036146
         }
     ],
     "allResearchAreas": [
         "computerscience",
-        "neuro"
+        "neuro",
+        "educ"
     ],
-    "weight": 0.3815789473684211
+    "weight": 0.2740963855421687
 }

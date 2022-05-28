@@ -5,7 +5,7 @@
     "researcharea": [
         "computerscience"
     ],
-    "children_num": 8,
+    "children_num": 20,
     "children": [
         {
             "name": "JOHN F PANE",
@@ -68,7 +68,7 @@
             "researcharea": [
                 "computerscience"
             ],
-            "children_num": 1,
+            "children_num": 13,
             "children": [
                 {
                     "name": "SCOTT  KLEMMER",
@@ -77,7 +77,119 @@
                     "researcharea": [
                         "neuro"
                     ],
-                    "children_num": 0
+                    "children_num": 12,
+                    "children": [
+                        {
+                            "name": "BJOERN  HARTMANN",
+                            "gender": "unknown",
+                            "gender_color": "grey",
+                            "researcharea": [
+                                "computerscience"
+                            ],
+                            "children_num": 11,
+                            "children": [
+                                {
+                                    "name": "AMY  PAVEL",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "LORA A OEHLBERG",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "educ"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "PEGGY  CHI",
+                                    "gender": "woman",
+                                    "gender_color": "red",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "VALKYRIE  SAVAGE",
+                                    "gender": "unknown",
+                                    "gender_color": "grey",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "WILL  MCGRATH",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "KENRICK C KIN",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "BALASARAVANAN  THORAVI KUMARAVEL",
+                                    "gender": "unknown",
+                                    "gender_color": "grey",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "ELDON  SCHOOP",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "JEREMY  WARNER",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "ANDREW  HEAD",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                },
+                                {
+                                    "name": "RICHARD  LIN",
+                                    "gender": "man",
+                                    "gender_color": "blue",
+                                    "researcharea": [
+                                        "computerscience"
+                                    ],
+                                    "children_num": 0
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

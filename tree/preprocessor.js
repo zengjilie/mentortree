@@ -36,35 +36,21 @@ var data;
 // }
 
 // < Data import >
-//  data = require("./datasets/psych_id783121.json");
-// data = require("./tree-candidate/FrancisGalton.json");
-// data = require("./tree-candidate/GeorgeMChurch.json");
-// data = require("./tree-candidate/HenryGarret.json");
-
+// data = require("./tree-candidate/BradAMyers.json");
 // data = require("./tree-candidate/CharlesSandersPeirce.json");
+data = require("./tree-candidate/ChristianGottfriedDanielNeesvonEsenbeck(most-curly).json");
 // data = require("./tree-candidate/DonnaHaraway.json");
+// data = require("./tree-candidate/HiroshiIshii.json");
+// data = require("./tree-candidate/JaneGoodall.json");
 // data = require("./tree-candidate/JenniferADoudna.json");
-
-//  data = require("./tree-candidate/JaneGoodall.json");
 // data = require("./tree-candidate/LudwigBoltzmann.json");
 // data = require("./tree-candidate/NielsBohr.json");
 // data = require("./tree-candidate/RichardPFeynman.json");
+// data = require("./tree-candidate/RobertHare.json");
+// data = require("./tree-candidate/SebaldRau(most-male-tilted).json");
 // data = require("./tree-candidate/StephenHawking.json");
 // data = require("./tree-candidate/WilliamJames.json");
-
-//Special
-// data = require("./special/curly-tree.json");
-data = require("./special/female-titled-tree.json");
-//  data = require("./special/male-tilted-tree.json");
-// data = require("./special/tallest-tree.json");
-// data = require("./special/widest-tree.json");
-
-//May 19
-// data = require("./tree-candidate/BradAMyers.json");
-// data = require("./tree-candidate/HiroshiIshii.json");
-// data = require("./tree-candidate/RobertHare.json");
 // data = require("./tree-candidate/WilliamSpencerHutchinson.json");
-
 
 const root = data;
 
@@ -92,6 +78,11 @@ let areaSet = new Set();
  * recurse function will find the reseracher's name and their chidrenNum
  * */
 
+/**
+ * 
+ * @param {*} root 
+ * @returns 
+ */
 function recurse(root) {
     //< Warning: the "researcharea" property may not a string array, but a string >
     if (typeof root.researcharea === 'string') {
@@ -186,6 +177,11 @@ for (let [key, value] of map) {
 
 //=== add weight to data ===
 
+/**
+ * 
+ * @param {*} root 
+ * @returns 
+ */
 function traverse(root) {
     //< Gender color palette >
     if (root.gender_color == 'blue') {
@@ -232,7 +228,7 @@ var path;
 // path = "./tree-candidate-new/DonnaHaraway.json"; // 0.4
 // path = "./tree-candidate-new/JenniferADoudna.json"; // 0.1
 
-//  path = "./tree-candidate-new/JaneGoodall.json"; // too few mentees
+// path = "./tree-candidate-new/JaneGoodall.json"; // too few mentees
 // path = "./tree-candidate-new/LudwigBoltzmann.json";// 0.06
 // path = "./tree-candidate-new/NielsBohr.json";// 0.07
 // path = "./tree-candidate-new/RichardPFeynman.json"; //0.1
@@ -241,16 +237,33 @@ var path;
 
 //Special path
 // path = "./special-new/curly-tree.json"; // 0.1
-path = "./special-new/female-titled-tree.json";
+// path = "./special-new/female-titled-tree.json";
 //  path = "./special-new/male-titled-tree.json";
 // path = "./special-new/tallest-tree.json"; //0.1
 // path = "./special-new/widest-tree.json";//0.1
 
 //May 19
 // path = "./tree-candidate-new/BradAMyers.json";//0.5
-//  path = "./tree-candidate-new/HiroshiIshii.json";
+// path = "./tree-candidate-new/HiroshiIshii.json";
 // path = "./tree-candidate-new/RobertHare.json";//0.05
 // path = "./tree-candidate-new/WilliamSpencerHutchinson.json"; // 0.1
+
+
+// path = "./tree-candidate-new/BradAMyers.json";
+// path = "./tree-candidate-new/CharlesSandersPeirce.json";
+path = "./tree-candidate-new/ChristianGottfriedDanielNeesvonEsenbeck(most-curly).json";
+// path = "./tree-candidate-new/DonnaHaraway.json";
+// path = "./tree-candidate-new/HiroshiIshii.json";
+// path ="./tree-candidate-new/JaneGoodall.json";
+// path ="./tree-candidate-new/JenniferADoudna.json";
+// path ="./tree-candidate-new/LudwigBoltzmann.json";
+// path ="./tree-candidate-new/NielsBohr.json";
+// path ="./tree-candidate-new/RichardPFeynman.json";
+// path ="./tree-candidate-new/RobertHare.json";
+// path ="./tree-candidate-new/SebaldRau(most-male-tilted).json";
+// path ="./tree-candidate-new/StephenHawking.json";
+// path ="./tree-candidate-new/WilliamJames.json";
+// path ="./tree-candidate-new/WilliamSpencerHutchinson.json";
 
 // Write File
 fs.writeFile(path, weightedData, function (err) {
