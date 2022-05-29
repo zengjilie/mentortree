@@ -13,7 +13,7 @@ var ANIMATIONRANGE_MIN = 17;// Start curl
 var ANIMATIONSPEED = 2; // the bggier the quicker
 var degreeAnimation = ANIMATIONRANGE_MIN;
 let bounce = true;
-var useAnimation = true; // make this false if you want to use slider
+var useAnimation = false; // make this false if you want to use slider
 
 // Color(Hue) ranges between 0 to 360, 
 var colorMap = new Map();// researchArea:string => color:number
@@ -35,14 +35,14 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
     // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
-    data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
+    // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
     // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
-    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");//60
+    data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");//60
 }
 
 
@@ -88,7 +88,7 @@ function draw() {
     const begin = createVector(0, 0);
     const end = createVector(0, -100);
 
-    buildTree(data.children, begin, end, LEAFWIDTH, CIRCLESIZE);
+    buildTree(data.children, begin, end);
 
     let color = data.gender_color;
     drawLeaf(begin, end, color, LEAFWIDTH * data.weight);
@@ -96,7 +96,7 @@ function draw() {
 
     //legend
     let lgWidth = 200;
-    let lgHeight = - 60;
+    let lgHeight = -60;
     let counter = 1;
     for (const [key, value] of colorMap) {
         if (counter === 1) {
@@ -114,16 +114,17 @@ function draw() {
             lgWidth -= 420;
             lgHeight -= 20;
         }
-
     }
 
+    // Uncomment below code if you want export svg
     // save("tree.svg"); // give file name
     // print("saved svg");
     // noLoop(); // export oncDonna Harawaye
 }
 
 /**
- * 
+ * Assign color to researchAreas
+ * researchArea:string => color:number
  * @returns 
  */
 function assignColor() {
@@ -139,18 +140,18 @@ function assignColor() {
 
 /**
  * Draw legend
- * @param {*} text 
+ * @param {*} researchArea
  * @param {*} color 
  * @param {*} x 
  * @param {*} y 
  */
-function drawLegend(area, color, x, y) {
+function drawLegend(researchArea, color, x, y) {
     colorMode(HSB);
     fill(color, 100, 100);
     rect(x, y, 10, 10);
     fill(180, 255, 100);
     textSize(10);
-    text(area, x + 20, y + 7);
+    text(researchArea, x + 20, y + 7);
 }
 
 /**
@@ -222,11 +223,10 @@ function buildTree(children, begin, end) {
  * @param {*} leafWidth
  */
 function drawLeaf(begin, end, color, leafWidth) {
-    // console.log(end);
     let slope = 0;
 
-
-    if (Math.abs(begin.x.toFixed(2)) === Math.abs(end.x.toFixed(2)) || Math.abs(((end.x - begin.x) / (end.y - begin.y)).toFixed(2)) === 0) {// parallel to Y axis
+    if (Math.abs(begin.x.toFixed(2)) === Math.abs(end.x.toFixed(2)) || Math.abs(((end.x - begin.x) / (end.y - begin.y)).toFixed(2)) === 0) {
+        // parallel to Y axis
         /**
          *   b
          * 1   2
@@ -252,11 +252,12 @@ function drawLeaf(begin, end, color, leafWidth) {
         curveVertex(x2, y2);//2
         endShape(CLOSE);
 
-    } else if (Math.abs(((end.y - begin.y) / (end.x - begin.x)).toFixed(2)) === 0) {//parallel to X  axis
+    } else if (Math.abs(((end.y - begin.y) / (end.x - begin.x)).toFixed(2)) === 0) {
+        //parallel to X  axis
         /**
-         *    1 
-         * b     e
-         *    2 
+         *   1 
+         * b   e
+         *   2 
          */
         //1
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
@@ -277,17 +278,17 @@ function drawLeaf(begin, end, color, leafWidth) {
         curveVertex(x2, y2);//2
         endShape(CLOSE);
 
-    } else { //normal case
-        slope = ((end.y - begin.y) / (end.x - begin.x)).toFixed(2);
-
-        const newSlope = -1 / slope;
-        const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
-
+    } else { 
+        //normal case
         /**
          * a
          * 1  2
          *    b
          */
+        slope = ((end.y - begin.y) / (end.x - begin.x)).toFixed(2);
+
+        const newSlope = -1 / slope;
+        const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
 
         //1
         const x1 = midPoint.x + leafWidth * Math.sqrt(1 / (1 + newSlope * newSlope));
