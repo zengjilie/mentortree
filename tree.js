@@ -8,19 +8,19 @@ var degreeB;
 var DEGREEA_MAX = 360;
 var DEGREEB_MAX = 40;
 
-var ANIMATIONRANGE_MAX = 200;// End curl
-var ANIMATIONRANGE_MIN = 20;// Start curl
-var ANIMATIONSPEED = 0.5; // the bggier the quicker
+var ANIMATIONRANGE_MAX = 100;// End curl
+var ANIMATIONRANGE_MIN = 17;// Start curl
+var ANIMATIONSPEED = 2; // the bggier the quicker
 var degreeAnimation = ANIMATIONRANGE_MIN;
 let bounce = true;
-var useAnimation = false; // make this false if you want to use slider
+var useAnimation = true; // make this false if you want to use slider
 
 // Color(Hue) ranges between 0 to 360, 
 var colorMap = new Map();// researchArea:string => color:number
 
 // coefficient increase => male and female curl smaller
 // COEFFICIENT must bigger than DEGREEB_MAX
-var COEFFICIENT = 80;
+var COEFFICIENT = 50;
 
 var LEAFWIDTH = 100;//the bigger the thcker
 var CIRCLESIZE = 4;// the bigger the bigger dots
@@ -34,16 +34,16 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");//60
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
-    data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
+    // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
 
-    // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
+    data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
     // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
-    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
+    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");//60
 }
 
 
@@ -120,7 +120,7 @@ function draw() {
 
     // save("tree.svg"); // give file name
     // print("saved svg");
-    // noLoop(); // export once
+    // noLoop(); // export oncDonna Harawaye
 }
 
 /**
@@ -179,7 +179,7 @@ function buildTree(children, begin, end) {
 
         if (children[i].gender === 'woman') {
             if (useAnimation) {
-                newEnd.rotate((womanNum + 1) * PI / (ANIMATIONRANGE_MAX - degreeAnimation + 20));
+                newEnd.rotate((womanNum + 1) * PI / (ANIMATIONRANGE_MAX - degreeAnimation + 10));
             } else {
                 newEnd.rotate((womanNum + 1) * PI / (COEFFICIENT - degreeB));
             }
