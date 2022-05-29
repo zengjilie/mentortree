@@ -26,7 +26,7 @@ var LEAFWIDTH = 100;//the bigger the thcker
 var CIRCLESIZE = 4;// the bigger the bigger dots
 
 function preload() {
-    data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
+    // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
     // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40
     // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
@@ -43,7 +43,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
-    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
+    data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
 }
 
 
