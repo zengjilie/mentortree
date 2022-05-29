@@ -1,4 +1,3 @@
-
 const files = [
     "Brad A Myers.json",
     "Charles Sanders Peirce.json",
@@ -137,8 +136,6 @@ files.forEach(e => {
     }
 
     addPrecentage(root);
-
-    let weightedData = JSON.stringify(root);
 
     fs = require('fs');
 

@@ -35,7 +35,6 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
     // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
-
     data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
@@ -234,6 +233,7 @@ function drawLeaf(begin, end, color, leafWidth) {
          *   e
          */
         slope = 0;
+
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
 
         const x1 = midPoint.x + leafWidth;
@@ -261,7 +261,6 @@ function drawLeaf(begin, end, color, leafWidth) {
         //1
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
 
-
         const x1 = midPoint.x;
         const y1 = midPoint.y + leafWidth;
         //2
@@ -280,6 +279,7 @@ function drawLeaf(begin, end, color, leafWidth) {
 
     } else { //normal case
         slope = ((end.y - begin.y) / (end.x - begin.x)).toFixed(2);
+
         const newSlope = -1 / slope;
         const midPoint = createVector((begin.x + end.x) / 2, (begin.y + end.y) / 2);
 

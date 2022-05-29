@@ -1,6 +1,8 @@
-# Mentor tree
+# Research Project: Mentor Tree(Computer Vision)
 
-## Version 3
+## Introduction
+
+## Final Version
 
 ![image](./images/version3/animation.gif)
 
@@ -12,16 +14,11 @@
 
 ![image](./images/version3/Brad%20A%20Myers.png)
 
-
-
 ## Version 2
 
-### Psych
 ![psych2](./images/version2/psych2.png)
 
 ![psych1](./images/version2/psych1.png)
-
-### George Church
 
 ![geroge2](./images/version2/geroge2.png)
 
@@ -29,7 +26,6 @@
 
 ## Version 1
 
-### Psych
 ![tree](./images/version1/tree-1.png)
 
 ![tree](./images/version1/tree-2.png)
