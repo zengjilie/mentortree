@@ -26,7 +26,7 @@ var LEAFWIDTH = 100;//the bigger the thcker
 var CIRCLESIZE = 4;// the bigger the bigger dots
 
 function preload() {
-    // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
+    // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40(coefficient);
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
     // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40;
     // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
@@ -278,7 +278,7 @@ function drawLeaf(begin, end, color, leafWidth) {
         curveVertex(x2, y2);//2
         endShape(CLOSE);
 
-    } else { 
+    } else {
         //normal case
         /**
          * a
