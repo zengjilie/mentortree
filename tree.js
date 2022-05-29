@@ -22,8 +22,8 @@ var colorMap = new Map();// researchArea:string => color:number
 // COEFFICIENT must bigger than DEGREEB_MAX
 var COEFFICIENT = 50;
 
-var LEAFWIDTH = 100;
-var CIRCLESIZE = 4;
+var LEAFWIDTH = 100;//the bigger the thcker
+var CIRCLESIZE = 4;// the bigger the bigger dots
 
 function preload() {
     data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
