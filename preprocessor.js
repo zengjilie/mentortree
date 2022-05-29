@@ -35,10 +35,12 @@ files.forEach(e => {
     function getTreeData(root) {
 
         //Apply color palette
-        if (root.gender_color == 'blue') {
+        if (root.gender_color === 'blue') {
             root.gender_color = 'rgba(115,255,218,0.5)';
-        } else {
+        } else if (root.gender_color === 'red') {
             root.gender_color = 'rgba(255,95,145,0.5)';
+        } else if (root.gender_color === 'grey') {
+            root.gender_color = 'rgba(220,220,220,0.8)';
         }
 
         // areaSet
