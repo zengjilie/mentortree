@@ -20,7 +20,7 @@ var colorMap = new Map();// researchArea:string => color:number
 
 // coefficient increase => male and female curl smaller
 // COEFFICIENT must bigger than DEGREEB_MAX
-var COEFFICIENT = 50;
+var COEFFICIENT = 80;
 
 var LEAFWIDTH = 100;//the bigger the thcker
 var CIRCLESIZE = 4;// the bigger the bigger dots
@@ -28,13 +28,13 @@ var CIRCLESIZE = 4;// the bigger the bigger dots
 function preload() {
     // data = loadJSON("./tree-candidate-new/Brad A Myers.json");//40;
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
-    // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40
+    // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40;
     // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Donna Haraway.json");//40
     // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");//60
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
-    // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
+    data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
 
     // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
@@ -43,7 +43,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
-    data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
+    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");
 }
 
 
@@ -193,11 +193,7 @@ function buildTree(children, begin, end) {
             }
             maleNum++;
         } else if (children[i].gender === 'unknown') {
-            if (useAnimation) {
-                newEnd.rotate((maleNum + 1) * -PI / (degreeAnimation));
-            } else {
-                newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT + degreeA));
-            }
+            //do nothing
         }
 
         buildTree(children[i].children, begin, newEnd);
