@@ -95,24 +95,24 @@ function draw() {
     circle(end.x, end.y, CIRCLESIZE);
 
     //legend
-    let lgWidth = 200;
-    let lgHeight = -60;
-    let counter = 1;
+    let legendX = 200;
+    let legendY = -60;
+    let lgCounter = 1;
     for (const [key, value] of colorMap) {
-        if (counter === 1) {
+        if (lgCounter === 1) {
             lgWidth += 140;
-            drawLegend(key, value, lgWidth, lgHeight);
-            counter++
-        } else if (counter == 2) {
+            drawLegend(key, value, legendX, legendY);
+            lgCounter++
+        } else if (legenderCounter === 2) {
             lgWidth += 140;
-            drawLegend(key, value, lgWidth, lgHeight);
-            counter++
-        } else if (counter == 3) {
+            drawLegend(key, value, legendX, legendY);
+            lgCounter++
+        } else if (legenderCounter === 3) {
             lgWidth += 140;
-            drawLegend(key, value, lgWidth, lgHeight);
-            counter = 1;
-            lgWidth -= 420;
-            lgHeight -= 20;
+            drawLegend(key, value, legendX, legendY);
+            lgCounter = 1;
+            legendX -= 420;
+            legendY -= 20;
         }
     }
 
@@ -145,17 +145,18 @@ function assignColor() {
  * @param {*} x 
  * @param {*} y 
  */
-function drawLegend(researchArea, color, x, y) {
+function drawLegend(researchArea, color, legendX, legendY) {
     colorMode(HSB);
     fill(color, 100, 100);
-    rect(x, y, 10, 10);
+    rect(legendX, legendY, 10, 10);
     fill(180, 255, 100);
     textSize(10);
-    text(researchArea, x + 20, y + 7);
+    text(researchArea, legendX + 20, legendY + 7);
 }
 
 /**
  * Build Tree
+ * recursive function
  * @param {*} children 
  * @param {*} begin 
  * @param {*} end 
