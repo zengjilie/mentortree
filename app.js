@@ -16,4 +16,3 @@ app.get("/", async (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
     console.log("Listening to port 5000");
 })
-
