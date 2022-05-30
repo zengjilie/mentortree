@@ -47,6 +47,7 @@ function preload() {
 
 
 function setup() {
+
     createCanvas(window.innerWidth, window.innerHeight, SVG);
 
     assignColor();
@@ -100,15 +101,15 @@ function draw() {
     let lgCounter = 1;
     for (const [key, value] of colorMap) {
         if (lgCounter === 1) {
-            lgWidth += 140;
+            legendX += 140;
             drawLegend(key, value, legendX, legendY);
             lgCounter++
-        } else if (legenderCounter === 2) {
-            lgWidth += 140;
+        } else if (lgCounter === 2) {
+            legendX += 140;
             drawLegend(key, value, legendX, legendY);
             lgCounter++
-        } else if (legenderCounter === 3) {
-            lgWidth += 140;
+        } else if (lgCounter === 3) {
+            legendX += 140;
             drawLegend(key, value, legendX, legendY);
             lgCounter = 1;
             legendX -= 420;
