@@ -5,12 +5,13 @@ var sliderA;
 var sliderB;
 var degreeA;
 var degreeB;
-var DEGREEA_MAX = 360;
-var DEGREEB_MAX = 40;
+var DEGREE_MAX = 340
+var DEGREEA_MAX = DEGREE_MAX;
+var DEGREEB_MAX = DEGREE_MAX;
 
 var ANIMATIONRANGE_MAX = 100;// End curl
 var ANIMATIONRANGE_MIN = 17;// Start curl
-var ANIMATIONSPEED = 2; // the bggier the quicker
+var ANIMATIONSPEED = 1; // the bggier the quicker
 var degreeAnimation = ANIMATIONRANGE_MIN;
 let bounce = true;
 var useAnimation = false; // make this false if you want to use slider
@@ -19,8 +20,8 @@ var useAnimation = false; // make this false if you want to use slider
 var colorMap = new Map();// researchArea:string => color:number
 
 // coefficient increase => male and female curl smaller
-// COEFFICIENT must bigger than DEGREEB_MAX
-var COEFFICIENT = 50;
+// COEFFICIENT must bigger than DEGREEB_MAX and DEGREEA_MAX
+var COEFFICIENT = 360;
 
 var LEAFWIDTH = 100;//the bigger the thcker
 var CIRCLESIZE = 4;// the bigger the bigger dots
@@ -30,7 +31,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
     // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40;
     // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
-    // data = loadJSON("./tree-candidate-new/Donna Haraway.json");//40
+    data = loadJSON("./tree-candidate-new/Donna Haraway.json");//40
     // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");//60
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
@@ -42,7 +43,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
-    data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");//60
+    // data = loadJSON("./tree-candidate-new/WILLIAM SPENCER HUTCHINSON.json");//60
 }
 
 
@@ -181,7 +182,8 @@ function buildTree(children, begin, end) {
 
         if (children[i].gender === 'woman') {
             if (useAnimation) {
-                newEnd.rotate((womanNum + 1) * PI / (ANIMATIONRANGE_MAX - degreeAnimation + 10));
+                // newEnd.rotate((womanNum + 1) * PI / (ANIMATIONRANGE_MAX - degreeAnimation + 10));
+                newEnd.rotate((womanNum + 1) * PI / (degreeAnimation));
             } else {
                 newEnd.rotate((womanNum + 1) * PI / (COEFFICIENT - degreeB));
             }
@@ -191,7 +193,7 @@ function buildTree(children, begin, end) {
             if (useAnimation) {
                 newEnd.rotate((maleNum + 1) * -PI / (degreeAnimation));
             } else {
-                newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT + degreeA));
+                newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT - degreeA));
             }
             maleNum++;
         } else if (children[i].gender === 'unknown') {
@@ -311,78 +313,3 @@ function drawLeaf(begin, end, color, leafWidth) {
     }
 
 }
-
-//Data for testing
-// data = {
-//     name: "Gege",
-//     gender: "man",
-//     gender_color: "blue",
-//     "researcharea": [
-//         "1"
-//     ],
-//     children: [
-//         {
-//             name: "Jiejie",
-//             gender: "man",
-//             gender_color: "blue",
-//             "researcharea": [
-//                 "2"
-//             ],
-//             children: [
-//                 {
-//                     name: "Dama2",
-//                     gender: "man",
-//                     gender_color: "blue",
-//                     weight: 0.09090909090909091,
-//                     "researcharea": [
-//                         "2"
-//                     ],
-//                 },
-//                 {
-//                     name: "Dama2",
-//                     gender: "woman",
-//                     gender_color: "red",
-//                     weight: 0.09090909090909091,
-//                     "researcharea": [
-//                         "2"
-//                     ],
-//                 },
-//             ],
-//             weight: 0.09090909090909091
-//         },
-//         {
-//             name: "Dama2",
-//             gender: "man",
-//             gender_color: "blue",
-//             weight: 0.09090909090909091,
-//             "researcharea": [
-//                 "2"
-//             ],
-//         },
-//         {
-//             name: "Dama",
-//             gender: "woman",
-//             gender_color: "red",
-//             weight: 0.09090909090909091,
-//             "researcharea": [
-//                 "2"
-//             ],
-//         },
-//         {
-//             name: "Dashu",
-//             gender: "woman",
-//             gender_color: "red",
-//             weight: 0.09090909090909091,
-//             "researcharea": [
-//                 "2"
-//             ],
-//         }
-//     ],
-//     weight: 0.09090909090909091,
-//     allResearchAreas: [
-//         "1",
-//         "2",
-//         "3"
-//     ]
-// }
-

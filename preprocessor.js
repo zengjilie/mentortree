@@ -19,8 +19,8 @@ const files = [
 ]
 
 files.forEach(e => {
-    const root = require(`./tree-candidate/${e}`);
-    const path = `./tree-candidate-new/${e}`;
+    const root = require(`./public/tree-candidate/${e}`); // open the file
+    const path = `./public/tree-candidate-new/${e}`; // where you want to save the file
 
     let map = new Map(); // researcher:string => childrenNum:number
     let areaSet = new Set(); //researchAreas:string
@@ -32,13 +32,12 @@ files.forEach(e => {
      * @returns 
      */
     function getTreeData(root) {
-
         //Apply color palette
         if (root.gender_color === 'blue') {
             root.gender_color = 'rgba(115,255,218,0.5)';
-        } else if (root.gender_color === 'red') {
+        } else if (root?.gender_color === 'red') {
             root.gender_color = 'rgba(255,95,145,0.5)';
-        } else if (root.gender_color === 'grey') {
+        } else if (root?.gender_color === 'grey') {
             root.gender_color = 'rgba(220,220,220,0.8)';
         }
 
@@ -52,19 +51,17 @@ files.forEach(e => {
             }
         }
 
-        // map
-        if (root?.children == null) {
+        if (root?.children_num == 0) {
             map.set(root.name, 1);
-            return 1;
+            return;
         } else {
-            let num = 1;
-            for (let i = 0; i < root.children.length; i++) {
-                const childNum = getTreeData(root?.children[i]);
-                num += childNum;
+            for (let i = 0; i < root?.children.length; i++) {
+                getTreeData(root?.children[i]);
             }
-            map.set(root.name, num);
-            return num + 1;
+            map.set(root.name, root.children_num + 1)
+            return;
         }
+
     }
 
     /**
@@ -73,14 +70,14 @@ files.forEach(e => {
      * @param {*} root 
      * @returns 
      */
-    function addPrecentage(root) {
+    function addWeight(root) {
         if (root?.children == null) {
             root.weight = map.get(root.name);
             return;
         } else {
             root.weight = map.get(root.name);
             for (let i = 0; i < root.children.length; i++) {
-                addPrecentage(root?.children[i]);
+                addWeight(root?.children[i]);
             }
             return;
         }
@@ -96,6 +93,8 @@ files.forEach(e => {
     let min = 1;
     let range_mean;
     for (let [key, value] of map) {
+        // key is researcher
+        // value is children_num
         sum += value;
         max = value > max ? value : max;
         min = value < min ? value : min;
@@ -119,8 +118,8 @@ files.forEach(e => {
         let newValue;
         const transformRate = 0.1;
 
-        //Do Undersampling when value > mean
-        //Do Oversampling when value < mean
+        //Do Undersampling when value > range_mean
+        //Do Oversampling when value < range_mean
         if (value > range_mean) {
             const distFromMean = value - range_mean;
             newValue = value - distFromMean * transformRate;
@@ -135,10 +134,12 @@ files.forEach(e => {
         map.set(key, precentage);
     }
 
-    addPrecentage(root);
+    // Add precentage to each person
+    addWeight(root);
 
     fs = require('fs');
 
+    const weightedData = JSON.stringify(root);
     fs.writeFile(path, weightedData, function (err) {
         if (err) console.log('error', err);
     });
