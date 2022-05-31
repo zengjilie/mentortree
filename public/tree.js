@@ -31,7 +31,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/Charles Sanders Peirce.json");//80
     // data = loadJSON("./tree-candidate-new/CHRISTIAN GOTTFRIED DANIEL NEES VON ESENBECK (most curly).json");//40;
     // data = loadJSON("./tree-candidate-new/DONALD REIFF (most female-tilted).json");//40
-    data = loadJSON("./tree-candidate-new/Donna Haraway.json");//40
+    // data = loadJSON("./tree-candidate-new/Donna Haraway.json");//40
     // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");//60
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
@@ -39,7 +39,7 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
-    // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
+    data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
@@ -130,9 +130,9 @@ function draw() {
  * @returns 
  */
 function assignColor() {
-    const gap = 360 / data.allResearchAreas.length;
+    const gap = 340 / data.allResearchAreas.length;
     let j = 0
-    for (let i = 1; i <= 360; i += gap) {
+    for (let i = 1; i <= 340; i += gap) {
         colorMap.set(data.allResearchAreas[j], i);
         j++;
     }

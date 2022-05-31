@@ -59,7 +59,20 @@
     File: tree.js, index.html
 
     Method: 
+    1. assignColor
+        a. hsb color system uses the value 0 from 360 to represent different colors, the color starts with red and ends with red, which might confuse users, so I took the value from 0 to 340 to avoid 
+           the cirlce. then I equally divided the value(340) by the number of research areas, and assigned a unique hue value to each of the research area. Finally, I store the research area name and
+           their coresponding hue value inside a colorMap
+    2. drawLegend
+        a. iterate over the colorMap, get the research area and its corrseponding color and plot them
+    3. buildTree (recursive function)
+        a. first we need to translate our starting point to (width/2, height), which is the mid-bottom point on the screen
+        a. default direction is defined by 2 vectors, "begin"(0,0) and "end"(0,-100). when you  
 
+        """
+        male tilting angle = -PI/(coefficient - degreeA)
 
-
+        female tilting angle = PI/(coefficient - degreeB)
+        """
+    4. drawLeaf
 
