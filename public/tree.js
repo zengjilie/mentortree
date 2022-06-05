@@ -142,10 +142,10 @@ function assignColor() {
 
 /**
  * Draw legend
- * @param {*} researchArea
- * @param {*} color 
- * @param {*} x 
- * @param {*} y 
+ * @param {*} researchArea:set
+ * @param {*} color:number
+ * @param {*} x:number
+ * @param {*} y:number
  */
 function drawLegend(researchArea, color, legendX, legendY) {
     colorMode(HSB);
@@ -159,9 +159,9 @@ function drawLegend(researchArea, color, legendX, legendY) {
 /**
  * Build Tree
  * recursive function
- * @param {*} children 
- * @param {*} begin 
- * @param {*} end 
+ * @param {*} children:array 
+ * @param {*} begin:vector
+ * @param {*} end:vector
  * @returns 
  */
 function buildTree(children, begin, end) {
@@ -207,7 +207,7 @@ function buildTree(children, begin, end) {
         //Draw Leaf
         drawLeaf(begin, newEnd, color, LEAFWIDTH * children[i].weight);
 
-        //Draw Circle
+        //Draw dot
         for (let area of children[i].researcharea) {
             colorMode(HSB);
             fill(colorMap.get(area), 100, 100);
@@ -221,10 +221,10 @@ function buildTree(children, begin, end) {
 
 /**
  * Draw leaf
- * @param {*} begin 
- * @param {*} end 
- * @param {*} color 
- * @param {*} leafWidth
+ * @param {*} begin:vector 
+ * @param {*} end:vector 
+ * @param {*} color:number 
+ * @param {*} leafWidth:float
  */
 function drawLeaf(begin, end, color, leafWidth) {
     let slope = 0;

@@ -66,9 +66,9 @@
     2. drawLegend
         a. iterate over the colorMap, get the research area and its corrseponding color and plot them
     3. buildTree (recursive function)
-        a. first we need to translate our starting point to (width/2, height), which is the mid-bottom point on the screen
+        a. first we need to translate the starting point to the bottom-center of the screen, because the default starting point for p5 is left-up corner
         b. default branch is defined by 2 vectors, "begin"(0,0) and "end"(0,-100). 
-        c. when it's traversing the current branch, it will first plot all its children, by changing the end 
+        c. 
 
         """
         male tilting angle = -PI/(coefficient - degreeA)
