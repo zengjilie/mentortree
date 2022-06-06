@@ -5,75 +5,72 @@ This data visualization design consists of 2 major parts: `preprocessor.js` and 
 ## Preprocessor
 
 - **Objective**: 
-    1. Map "children_num" to "weight", for the later data visualization
-    2. Add new color palette to "gender_color"
+1. Map "children_num" to "weight" for each researcher. Perparation for later data visualization
+2. Add new color palette to "gender_color"
 
 - **File**: `preprocessor.js`
 
-- **Steps**:
-    1. Use the recursive function "getTreeData" to traverse all the researchers. When traversing the current researcher, do the following 3 moves, assigning it a new gender_color,     
-     
+- **Steps**
+1. Use the recursive function "getTreeData" to traverse all researchers. We need to create a "set"to store all research areas, and a "map" to store all researchers' names and their corresponding children number. When traversing the current researcher, do the following 3 operations. Firstly, assigning it a new gender_color. Second, add its research area to the "set". Third, add the researcher's name and its children number to the "map".
 
-        a. traverse all person and assign new colors to their gender [man, woman, unknown]
-        b. find all unique research areas, store them inside a set
-        c. store researcher's name and their coresponding mentee number inside a map
+2. Calculate the weight for each researcher 
+```
+sum = all children number
+max = maximum children number
+min = minimum children number
+range_mean = (max - min) / 2
+```
 
-    2. calculate some important values
+3. Oversampling/Undersampling
 
-        a. sum = suming up all the mentee number inside the map
-        b. max = the maximum number inside the map
-        c. min = the minimum number inside the map
-        d. range_mean = (max - min) / 2
+If we plot each researcher using their "original" weights without doing oversampling/undersampling. It will cause a drastic weight difference between researchers who have very high children number and researchers whoes children number are low. The proportion of the "mentor tree" will be extremly imbalanced and weird. To avoid this situation, we need to performe oversampling/undersampling on each researcher's children number.
 
-    3.  oversampling/undersampling (for loop)
+```
+// Acronym
 
-        reason for doing this is that when plotting the trees using the original weights, some mentor have too many mentees, but other may have very few, make the tree look bad :)
-        show some math equation below:
+weight = w
+children number = cn
+range_mean = rm
+i = researcher i (just a random researcher)
 
-        """
-        weight = w
-        children_num = cn
-        range_mean = rm
+// Original Weight
 
-        Original equation:
-        w_i = cn_i / sum
+w_i = cn_i / sum
 
-        New equation:
-        [I tried serveral ways to calculate the weight while preserve the most information about the children_num distribution, this equation yields the best result]
+// New Euqation
 
-        w_i = [cn_i - |cn_i - rm| * 0.1] / sum ,(cn_i > rm)
+w_i = [cn_i - |cn_i - rm| * 0.1] / sum ,(cn_i > rm) undersampling
 
-              cn_i / sum, (cn_i = rm)
+      cn_i / sum, (cn_i = rm)
 
-              [cn_i + |cn_i - rm| * 0.1] / sum ,(cn_i < rm)
+      [cn_i + |cn_i - rm| * 0.1] / sum ,(cn_i < rm) oversampling
 
-        """
-
-    3. iterate the map and calculate the weight of each person using the equation above,
-        replace children_num with weight inside the map
+I tried serveral approaches to calculate the weight, so far this is the best
+``` 
+4. Iterate the "map" and replace the children number with the newly calculated weight using the new equation. Traverse all the researchers again and add the "weight" attribute to each of them.
 
 
-    4. addWeight(recursive function)
-        a. traverse all the researchers and add the calculated weight to each of them
+## Tree Implementation
 
-======================
+- **Objective**: plot the tree using p5js
 
-2. Tree Implementation
+- **File**: `tree.js` 
 
-   Objective: plot the tree using p5js
+- **Steps**
 
-   File: tree.js, index.html
+1. We will use the HSB color system to assign each research area a unique hue value. The hue value will range from 0 to 340. We didn't use hue value 360 because the color around 360 and 0 are similar, it's very easy to confuse the viewer.
 
-   Method:
+2. p5.js is a JavaScript library for creative coding, it's a highly customizable and versatile tool to create any type of data visualization. We will use it to plot the mentor tree.
 
-   1. assignColor
-      a. hsb color system uses the value 0 from 360 to represent different colors, the color starts with red and ends with red, which might confuse users, so I took the value from 0 to 340 to avoid
-      the cirlce. then I equally divided the value(340) by the number of research areas, and assigned a unique hue value to each of the research area. Finally, I store the research area name and
-      their coresponding hue value inside a colorMap
-   2. drawLegend
-      a. We can't plot all the legends in one single column, because that's going to exceed the height of the screen, so I choose to plot them in 3 columns
-      b. The basic idea is to iterate over the colorMap, which is consisted of research name and get the research area and its corrseponding color and plot them
-   3. buildTree (recursive function)
+3. Firstly, we need to move the starting point to the bottom center of the screen. Because the value in y axis gets bigger when it's closer to the bottom, so we need to subtract the branch length every time to mimic the direction of growing up. Second, we need to traverse all the researchers using a recursive function. When we are traversing the current researcher, if the researcher's gender is "unknown" it will stay the same direction as it's parent researcher, if the gender is "female", its end point will rotate R * i degrees towards the right of its parent researcher's direction, i is the number of "female" researchers that has already been traversed with the same parent researcher. If the gender is "male", its end point will rotate R * j degrees towards the left of its parent researcher's direction where j is the number of "male" researchers already traversed with the same parent researcher.
+
+4. When a researcher's end point has been determined, we need to draw a leaf shape, using its start and end point.
+```
+midpoint = ((start_x + end_x)/2, (start_y + end_y)/2)
+
+``` 
+
+buildTree (recursive function)
       a. first we need to translate our starting point to (width/2, height), which is the mid-bottom point on the screen
       b. default branch is defined by 2 vectors, "begin"(0,0) and "end"(0,-100).
       c. when it's traversing the current branch, it will first plot all its children, by changing the end

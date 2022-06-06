@@ -108,7 +108,6 @@ function draw() {
         degreeAnimation = degreeAnimation + ANIMATIONSPEED;
     } else {
         degreeAnimation = degreeAnimation - ANIMATIONSPEED;
-
     }
 
     if (degreeAnimation >= ANIMATIONRANGE_MAX) {
