@@ -1,3 +1,4 @@
+
 // Global variables
 var data;
 
@@ -9,12 +10,17 @@ var DEGREE_MAX = 340
 var DEGREEA_MAX = DEGREE_MAX;
 var DEGREEB_MAX = DEGREE_MAX;
 
+var sliderAnimeRangeMax;
+var sliderAnimeRangeMin;
+var sliderAnimeSpeed;
 var ANIMATIONRANGE_MAX = 100;// End curl
-var ANIMATIONRANGE_MIN = 17;// Start curl
+var ANIMATIONRANGE_MIN = 20;// Start curl
 var ANIMATIONSPEED = 1; // the bggier the quicker
 var degreeAnimation = ANIMATIONRANGE_MIN;
 let bounce = true;
-var useAnimation = false; // make this false if you want to use slider
+
+var btnAnimation;
+var isAnimation = false; // make this false if you want to use slider
 
 // Color(Hue) ranges between 0 to 360, 
 var colorMap = new Map();// researchArea:string => color:number
@@ -35,11 +41,11 @@ function preload() {
     // data = loadJSON("./tree-candidate-new/FRANCIS GALTON (Widest and Tallest).json");//60
     // data = loadJSON("./tree-candidate-new/Hiroshi Ishii.json");//60
     // data = loadJSON("./tree-candidate-new/Jane Goodall.json");//60
-    // data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
+    data = loadJSON("./tree-candidate-new/Jennifer A Doudna.json");//60
     // data = loadJSON("./tree-candidate-new/JOHANN MULLER (most male-tilted).json");//40
     // data = loadJSON("./tree-candidate-new/Ludwig Boltzmann.json");//110
     // data = loadJSON("./tree-candidate-new/Niels Bohr.json");//140
-    data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
+    // data = loadJSON("./tree-candidate-new/Richard P Feynman.json");//80
     // data = loadJSON("./tree-candidate-new/ROBERT HARE.json");//80
     // data = loadJSON("./tree-candidate-new/Stephen Hawking.json");//60
     // data = loadJSON("./tree-candidate-new/William James.json");//60
@@ -54,12 +60,28 @@ function setup() {
     assignColor();
 
     sliderA = createSlider(0, DEGREEA_MAX, 1);
-    sliderA.position(10, 10);
+    sliderA.position(20, 20);
     sliderA.style('width', '150px');
 
     sliderB = createSlider(0, DEGREEB_MAX, 1);
-    sliderB.position(200, 10);
+    sliderB.position(20, 70);
     sliderB.style('width', '150px');
+
+    sliderAnimeRangeMax = createSlider(100, 300, 1);
+    sliderAnimeRangeMax.position(20, 120);
+    sliderAnimeRangeMax.style('width', '150px');
+
+    sliderAnimeRangeMin = createSlider(20, 50, 1);
+    sliderAnimeRangeMin.position(20, 170);
+    sliderAnimeRangeMin.style('width', '150px');
+
+    sliderAnimeSpeed = createSlider(1, 10, 1);
+    sliderAnimeSpeed.position(20, 220);
+    sliderAnimeSpeed.style('width', '150px');
+
+    btnAnimation = createButton("Click")
+    btnAnimation.position(25, 270);
+    btnAnimation.mousePressed(useAnimation);
 }
 
 function draw() {
@@ -68,6 +90,18 @@ function draw() {
 
     degreeA = sliderA.value();
     degreeB = sliderB.value();
+
+    ANIMATIONRANGE_MAX = sliderAnimeRangeMax.value();// End curl
+    ANIMATIONRANGE_MIN = sliderAnimeRangeMin.value();// Start curl
+    ANIMATIONSPEED = sliderAnimeSpeed.value(); // the bggier the quicker
+    fill(180, 0, 100);
+    textSize(15);
+    text("Male Weight (0 ~ 340)", 200, 36)
+    text("Female Weight (0 ~ 340)", 200, 86)
+    text("Animation Range Start (100 ~ 300)", 200, 136)
+    text("Animation Range End (20 ~ 50)", 200, 186)
+    text("Animation Speed (1 ~ 10)", 200, 236)
+    text("Use Animation", 100, 286)
 
     //animation
     if (bounce) {
@@ -123,7 +157,9 @@ function draw() {
     // print("saved svg");
     // noLoop(); // export oncDonna Harawaye
 }
-
+function useAnimation() {
+    isAnimation = !isAnimation;
+}
 /**
  * Assign color to researchAreas
  * researchArea:string => color:number
@@ -151,7 +187,7 @@ function drawLegend(researchArea, color, legendX, legendY) {
     colorMode(HSB);
     fill(color, 100, 100);
     rect(legendX, legendY, 10, 10);
-    fill(180, 255, 100);
+    fill(180, 0, 100);
     textSize(10);
     text(researchArea, legendX + 20, legendY + 7);
 }
@@ -181,7 +217,7 @@ function buildTree(children, begin, end) {
         const newEnd = createVector(end.x, end.y);
 
         if (children[i].gender === 'woman') {
-            if (useAnimation) {
+            if (isAnimation) {
                 // newEnd.rotate((womanNum + 1) * PI / (ANIMATIONRANGE_MAX - degreeAnimation + 10));
                 newEnd.rotate((womanNum + 1) * PI / (degreeAnimation));
             } else {
@@ -190,7 +226,7 @@ function buildTree(children, begin, end) {
             womanNum++;
 
         } else if (children[i].gender === 'man') {
-            if (useAnimation) {
+            if (isAnimation) {
                 newEnd.rotate((maleNum + 1) * -PI / (degreeAnimation));
             } else {
                 newEnd.rotate((maleNum + 1) * -PI / (COEFFICIENT - degreeA));
