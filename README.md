@@ -1,4 +1,4 @@
-# Research Project: Mentor Tree(Computer Vision)
+# Research Project: Mentor Tree
 
 ## Introduction
 
