@@ -91,7 +91,7 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 ### Tree Implementation
 
-- **Objectives**: Just plot the tree using **p5**
+- **Objectives**: Just plot the tree in **p5**
 
 - **File**: `tree.js` 
 
