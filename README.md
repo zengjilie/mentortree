@@ -46,9 +46,9 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 - **Steps**
 	1. Use a recursive function to traverse all the researchers. When traversing a researcher ->
-		1. assign him/she/unknown a new `gender_color`.
-		2. add his/her/unknown's `research_area` to a **SET**.
-		3. store the `researcher_name` and his/her/unknown's `children_num` to a **MAP**.
+		1. Assign him/she/unknown a new `gender_color`.
+		2. Add his/her/unknown's `research_area` to a **SET**.
+		3. Store the `researcher_name` and his/her/unknown's `children_num` to a **MAP**.
 
 2. Calculate the `weight` of each researcher 
 
