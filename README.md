@@ -1,5 +1,7 @@
 # Mentor Trees
 
+Check out our sick website! [mentortrees.com](www.mentortrees.com)
+
 - [Mentor Trees](#mentor-trees)
 	- [Introduction](#introduction)
 	- [Tech Stack](#tech-stack)
