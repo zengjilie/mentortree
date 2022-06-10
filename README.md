@@ -81,9 +81,9 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 	|- New Weight
 
-		w_i = [cn_i - |cn_i - rm| * 0.1] / sum , (cn_i > rm)
+		w_i = 	[cn_i - |cn_i - rm| * 0.1] / sum , (cn_i > rm)
 
-			cn_i / sum , (cn_i = rm)
+			cn_i / sum 			 , (cn_i = rm)
 
 			[cn_i + |cn_i - rm| * 0.1] / sum , (cn_i < rm) 
 
