@@ -79,7 +79,7 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 		w_i = cn_i / sum
 
-	|- New Euqation
+	|- New Weight
 
 		w_i = [cn_i - |cn_i - rm| * 0.1] / sum , (cn_i > rm)
 
