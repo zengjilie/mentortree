@@ -1,6 +1,6 @@
 # Mentor Trees
 
-Check out our sick website! [mentortrees.com](www.mentortrees.com)
+Check out our sick website! [mentortrees.com](https://www.mentortrees.com/)
 
 - [Mentor Trees](#mentor-trees)
 	- [Introduction](#introduction)
