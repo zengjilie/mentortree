@@ -33,7 +33,7 @@ If you use NPM, you can
 
 Else if you use Docker, you can 
 
-Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> build the docker image `docker build . -t mentor-tree` -> run the image instead a container called "mentor-tree" `docker run -p 5000:5000 --name mentor-tree mentor-tree` -> stop running `docker stop mentor-tree`
+Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> build the docker image `docker build . -t mentor-tree` -> run the image inside a container called "mentor-tree" `docker run -p 5000:5000 --name mentor-tree mentor-tree` -> stop running `docker stop mentor-tree`
 
 ## Design Doc
 
