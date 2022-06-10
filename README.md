@@ -17,7 +17,7 @@ Submission for the 2022 IEEE VISAP.
 
 Topics: `Storytelling`, `Gender Equity`,`Gender in Academia`. 
 
-I am resposiable for the tree visualization :)
+I am responsiable for the tree visualization :)
 
 ## Tech Stack
 * Frontend: P5.js
