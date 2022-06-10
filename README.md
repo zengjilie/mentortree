@@ -97,5 +97,13 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 	1. Use the HSB color system to assign each `research_area` a unique hue value.
 
+	2. Use a recursive function to traverse all the researchers, when traversing a researcher ->
+		1. Draw his/her/unknown `research_area` (just a dot)
+		2. Draw the leaf using the following equation (easy peasy)
+
+			![image](images/leaf.png)
+		3. If it's a her -> tilte right, him -> tilte left, unknow -> none tilte
+
+			![image](images/version3/Charles%20Sanders%20Peirce.png)
 ## Acknowledgment
-[Jiabao Li](), [Houjiang Liu](), [Alec ](), [Di Wu](), [Ying Ding]()
+[Jiabao Li](https://github.com/jiabaoli), [Houjiang Liu](https://github.com/JialingJia), [Alec McGail](https://github.com/amcgail), [Di Wu](#acknowledgment), [Ying Ding](#acknowledgment)
