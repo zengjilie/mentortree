@@ -104,7 +104,7 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 		2. Draw the leaf using the following equation (easy peasy)
 
 			![image](images/leaf.png)
-		3. If it's a her -> tilte right, him -> tilte left, unknow -> none tilte
+		3. If it's a her -> tilt right, him -> tilt left, unknow -> none tilte
 
 			![image](images/version3/Charles%20Sanders%20Peirce.png)
 ## Acknowledgment
