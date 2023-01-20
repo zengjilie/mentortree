@@ -1,0 +1,79 @@
+[
+    {
+        "time": "2010",
+        "title": "multichannel compressive estimation of doubly selective channels in mimo ofdm systems exploiting and enhancing joint sparsity",
+        "x": 12,
+        "y": 57,
+        "color": "red"
+    },
+    {
+        "time": "2017",
+        "title": "structure aware classification using supervised dictionary learning",
+        "x": 41,
+        "y": 59,
+        "color": "red"
+    },
+    {
+        "time": "2008",
+        "title": "a covariance kernel for svm language recognition",
+        "x": 73,
+        "y": 59,
+        "color": "red"
+    },
+    {
+        "time": "2011",
+        "title": "probabilistic sinr constrained robust transmit beamforming a bernstein type inequality based conservative approach",
+        "x": 16,
+        "y": 49,
+        "color": "red"
+    },
+    {
+        "time": "2009",
+        "title": "reducing f0 frame error of f0 tracking algorithms under noisy conditions with an unvoiced voiced classification frontend",
+        "x": 45,
+        "y": 64,
+        "color": "red"
+    },
+    {
+        "time": "2015",
+        "title": "a consensus based decentralized algorithm for non convex optimization with application to dictionary learning",
+        "x": 41,
+        "y": 59,
+        "color": "red"
+    },
+    {
+        "time": "2007",
+        "title": "parameterization of prosodic feature distributions for svm modeling in speaker recognition",
+        "x": 86,
+        "y": 53,
+        "color": "red"
+    },
+    {
+        "time": "2002",
+        "title": "space time block coding for frequency selective channels",
+        "x": 40,
+        "y": 59,
+        "color": "red"
+    },
+    {
+        "time": "1989",
+        "title": "speaker verification over long distance telephone lines",
+        "x": 27,
+        "y": 41,
+        "color": "red"
+    },
+    {
+        "time": "2005",
+        "title": "language identification using pitch contour information",
+        "x": 39,
+        "y": 13,
+        "color": "red"
+    },
+    {
+        "time": "2017",
+        "title": "fast inverse tone mapping with reinhard s global operator",
+        "x": 41,
+        "y": 59,
+        "color": "red"
+    }
+]
