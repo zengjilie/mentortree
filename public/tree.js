@@ -15,7 +15,7 @@ var sliderAnimeRangeMin;
 var sliderAnimeSpeed;
 var ANIMATIONRANGE_MAX = 100;// End curl
 var ANIMATIONRANGE_MIN = 20;// Start curl
-var ANIMATIONSPEED = 1; // the bggier the quicker
+var ANIMATIONSPEED = 1; // the bigger the quicker
 var degreeAnimation = ANIMATIONRANGE_MIN;
 let bounce = true;
 

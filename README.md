@@ -17,7 +17,7 @@ Submission for the 2022 IEEE VISAP.
 
 Topics: `Storytelling`, `Gender Equity`,`Gender in Academia`. 
 
-I am responsiable for the tree visualization :)
+I am responsible for the tree visualization :)
 
 ## Tech Stack
 * Frontend: P5.js
@@ -46,9 +46,9 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 - **Steps**
 	1. Use a recursive function to traverse all the researchers. When traversing a researcher ->
-		1. assign him/she/unknown a new `gender_color`.
-		2. add his/her `research_area` to the **SET**.
-		3. store the `researcher_name` and his/her/unknown's `children_num` to the **MAP**.
+		1. Assign him/she/unknown a new `gender_color`.
+		2. Add his/her/unknown's `research_area` to a **SET**.
+		3. Store the `researcher_name` and his/her/unknown's `children_num` to a **MAP**.
 
 2. Calculate the `weight` of each researcher 
 
@@ -79,11 +79,11 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 		w_i = cn_i / sum
 
-	|- New Euqation
+	|- New Weight
 
-		w_i = [cn_i - |cn_i - rm| * 0.1] / sum , (cn_i > rm)
+		w_i = 	[cn_i - |cn_i - rm| * 0.1] / sum , (cn_i > rm)
 
-			cn_i / sum , (cn_i = rm)
+			cn_i / sum 			 , (cn_i = rm)
 
 			[cn_i + |cn_i - rm| * 0.1] / sum , (cn_i < rm) 
 
@@ -91,7 +91,7 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 
 ### Tree Implementation
 
-- **Objectives**: Just plot the tree using **p5**
+- **Objectives**: Just plot the tree in **p5**
 
 - **File**: `tree.js` 
 
@@ -104,7 +104,7 @@ Go to `Dockerfile` -> use `FROM node:16-alpine` instead of the linux one -> buil
 		2. Draw the leaf using the following equation (easy peasy)
 
 			![image](images/leaf.png)
-		3. If it's a her -> tilte right, him -> tilte left, unknow -> none tilte
+		3. If it's a her -> tilt right, him -> tilt left, unknow -> no tilt
 
 			![image](images/version3/Charles%20Sanders%20Peirce.png)
 ## Acknowledgment
